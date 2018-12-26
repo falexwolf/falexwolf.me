@@ -1,0 +1,1 @@
+For the structure, see https://jekyllrb.com/docs/structure/.

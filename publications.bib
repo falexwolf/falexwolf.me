@@ -1,0 +1,492 @@
+% Encoding: UTF8
+
+% preprints
+
+@article {lotfollahi18,
+  id = {P27},
+  author = {Mohammad Lotfollahi and F. Alexander Wolf† and Fabian J. Theis†},
+  title = {Generative modeling and latent space arithmetics predict single-cell perturbation response across cell types, studies and species},
+  year = {2018},
+  doi = {10.1101/478503},
+  publisher = {Cold Spring Harbor Laboratory},
+  abstract = {Accurately modeling cellular response to perturbations is a central goal of computational biology. While such modeling has been proposed based on statistical, mechanistic and machine learning models in specific settings, no generalization of predictions to phenomena absent from training data i.e. out-of-sample have yet been demonstrated. Here, we present scGen, a model combining variational autoencoders and latent space vector arithmetics for high-dimensional single-cell gene expression data. In benchmarks across a broad range of examples, we show that scGen accurately models dose and infection response of cells across cell types, studies and species. In particular, we demonstrate that scGen learns cell type and species specific response implying that it captures features that distinguish responding from non-responding genes and cells. With the upcoming availability of large-scale atlases of organs in healthy state, we envision scGen to become a tool for experimental design through in silico screening of perturbation response in the context of disease and drug treatment.},
+  pdf = {https://www.biorxiv.org/content/early/2018/11/29/478503.full.pdf},
+  journal = {bioRxiv},
+  code = {https://github.com/theislab/scgen}
+}
+
+@article {wolf17i,
+  id = {P26},
+  author = {F. Alexander Wolf and Fiona Hamey and Mireya Plass and Jordi Solana and Joakim S. Dahlin and Berthold Göttgens and Nikolaus Rajewsky and Lukas Simon and Fabian J. Theis},
+  title = {Graph abstraction reconciles clustering with trajectory inference through a topology preserving map of single cells},
+  year = {2017},
+  doi = {10.1101/208819},
+  publisher = {Cold Spring Harbor Laboratory},
+  abstract = {Single-cell RNA-seq allows quantification of biological heterogeneity across both discrete cell types and continuous cell differentiation transitions. We present approximate graph abstraction (AGA), an algorithm that reconciles the computational analysis strategies of clustering and trajectory inference by explaining cell-to-cell variation both in terms of discrete and continuous latent variables (https://github.com/theislab/graph_abstraction). This enables to generate cellular maps of differentiation manifolds with complex topologies --- efficiently and robustly across different datasets. Approximate graph abstraction quantifies the connectivity of partitions of a neighborhood graph of single cells, thereby generating a much simpler abstracted graph whose nodes label the partitions. Together with a random walk-based distance measure, this generates a topology preserving map of single cells --- a partial coordinatization of data useful for exploring and explaining its variation. We use the abstracted graph to assess which subsets of data are better explained by discrete clusters than by a continuous variable, to trace gene expression changes along aggregated single-cell paths through data and to infer abstracted trees that best explain the global topology of data. We demonstrate the power of the method by reconstructing differentiation processes with high numbers of branchings from single-cell gene expression datasets and by identifying biological trajectories from single-cell imaging data using a deep-learning based distance metric. Along with the method, we introduce measures for the connectivity of graph partitions, generalize random-walk based distance measures to disconnected graphs and introduce a path-based measure for topological similarity between graphs. Graph abstraction is computationally efficient and provides speedups of at least 30 times when compared to algorithms for the inference of lineage trees.},
+  journal = {bioRxiv},
+  timestamp = {2017.10.26},
+  code = {https://github.com/theislab/paga},
+  pdf = {https://rawgit.com/falexwolf/paga_paper/master/paga.pdf}
+}
+
+
+@article{buttner17,
+  id = {P25},
+  author = {Maren Büttner* and Zhichao Miao* and F Alexander Wolf and Sarah A Teichmann† and Fabian J Theis†},
+  title = {Assessment of batch-correction methods for scRNA-seq data with a new test metric},
+  year = {2017},
+  doi = {10.1101/200345},
+  publisher = {Cold Spring Harbor Laboratory},
+  abstract = {Single-cell transcriptomics is a versatile tool for exploring heterogeneous cell populations. As with all genomics experiments, batch effects can hamper data integration and interpretation. The success of batch effect correction is often evaluated by visual inspection of dimension reduced representations such as principal component analysis. This is inherently imprecise due to the high number of genes and non-normal distribution of gene expression. Here, we present a k-nearest neighbour batch effect test (kBET, https://github.com/theislab/kBET) to quantitatively measure batch effects. kBET is easier to interpret, more sensitive and more robust than visual evaluation and other measures of batch effects. We use kBET to assess commonly used batch regression and normalisation approaches, and quantify the extent to which they remove batch effects while preserving biological variability. Our results illustrate that batch correction based on log-transformation or scran pooling followed by ComBat reduced the batch effect while preserving structure across data sets. Finally we show that kBET can pinpoint successful data integration methods across multiple data sets, in this case from different publications all charting mouse embryonic development. This has important implications for future data integration efforts, which will be central to projects such as the Human Cell Atlas where data for the same tissue may be generated in multiple locations around the world.},
+  pdf = {https://www.biorxiv.org/content/early/2017/10/27/200345.full.pdf},
+  code = {https://github.com/theislab/kBET},
+  journal = {bioRxiv, accepted in Nat. Meth.},
+  timestamp = {2017.10.25},
+}
+
+
+% reviewed journal articles
+
+
+@Article{plass18,
+  id = {P24}
+  author    = {Mireya Plass* and Jordi Solana* and F. Alexander Wolf and Salah Ayoub and Aristotelis Misios and Petar Glažar and Benedikt Obermayer and Fabian J. Theis and Christine Kocks and Nikolaus Rajewsky},
+  title     = {Cell type atlas and lineage tree of a whole complex animal by single-cell transcriptomics},
+  journal   = {Science},
+  year      = {2018},
+  pages     = {eaaq1723},
+  month     = {apr},
+  doi       = {10.1126/science.aaq1723},
+  code = {https://github.com/rajewsky-lab/planarian_lineages},
+  publisher = {American Association for the Advancement of Science ({AAAS})},
+  timestamp = {2018.04.24},
+}
+
+
+@Article{wolf17,
+  id = {P23}
+  author    = {F. Alexander Wolf and P. Angerer and Fabian J. Theis},
+  title     = {Scanpy: large-scale single-cell gene expression data analysis},
+  journal  = {Genome Biology},
+  year      = {2018},
+  doi = {10.1186/s13059-017-1382-0},
+  biorxivdoi = {10.1101/174029},
+  code = {https://scanpy.readthedocs.io},
+  pdf = {https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-017-1382-0?site=genomebiology.biomedcentral.com}
+}
+
+
+@Article{angerer17,
+  id = {P22}
+  mark = {noncentral}
+  author    = {Philipp Angerer and Lukas Simon and Sophie Tritschler and F. Alexander Wolf and David Fischer and Fabian J. Theis},
+  title     = {Single cells make big data: New challenges and opportunities in transcriptomics},
+  journal   = {Current Opinion in Systems Biology},
+  year      = {2017},
+  volume    = {4},
+  pages     = {85 - 91},
+  issn      = {2452-3100},
+  doi       = {10.1016/j.coisb.2017.07.004},
+  keywords  = {Single-cell RNA-seq, Big data, Single-cell transcriptomics, Machine learning},
+  timestamp = {2017.09.28},
+}
+
+@Article{chlis16,
+  id = {P21}
+  author    = {Nikolaos K. Chlis and F. Alexander Wolf and Fabian J. Theis},
+  title     = {Model-based branching point detection in single-cell data by K-Branches clustering},
+  journal   = {Bioinformatics},
+  year      = {2017},
+  abstract  = {Motivation: The identification of heterogeneities in cell populations by utilizing single-cell technologies such as single-cell RNA-Seq, enables inference of cellular development and lineage trees. Several methods have been proposed for such inference from high-dimensional single-cell data. They typically assign each cell to a branch in a differentiation trajectory. However, they commonly assume specific geometries such as tree-like developmental hierarchies and lack statistically sound methods to decide on the number of branching events. Results: We present K-Branches, a solution to the above problem by locally fitting half-lines to single-cell data, introducing a clustering algorithm similar to K-Means. These halflines are proxies for branches in the differentiation trajectory of cells. We propose a modified version of the GAP statistic for model selection, in order to decide on the number of lines that best describe the data locally. In this manner, we identify the location and number of subgroups of cells that are associated with branching events and full differentiation, respectively. We evaluate the performance of our method on single-cell RNA-Seq data describing the differentiation of myeloid progenitors during hematopoiesis, single-cell qPCR data of mouse blastocyst development and artificial data.},
+  doi       = {10.1093/bioinformatics/btx325},
+  biorxivdoi = {10.1101/094532}
+  code = {https://github.com/theislab/kbranches}
+}
+
+@preprint{eulenberg16,
+  id = {P20},
+  Author        = {Philipp Eulenberg* and Niklas Köhler* and Thomas Blasi and Andrew Filby and Anne E. Carpenter and Paul Rees and Fabian J. Theis† and F. Alexander Wolf†},
+  Title         = {Reconstructing cell cycle and disease progression using deep learning},
+  Journal       = {Nature Communications},
+  Year          = {2017},
+  doi           = {10.1038/s41467-017-00623-3},
+  biorxivdoi    = {10.1101/081364},
+  pdf = {http://rdcu.be/vCmO}
+  code = {https://github.com/theislab/deepflow},
+}
+
+@Article{haghverdi16,
+  id = {P19},
+  Title                    = {Diffusion pseudotime robustly reconstructs branching cellular lineages},
+  Author                   = {L. Haghverdi and M. Büttner and F. Alexander Wolf and F. Buettner and F. J. Theis},
+  Journal                  = {Nature Methods},
+  Year                     = {2016},
+  Pages                    = {845--848},
+  Volume                   = {13},
+  Doi                      = {10.1038/nmeth.3971},
+  pdf = {http://biorxiv.org/content/biorxiv/early/2016/02/29/041384.full.pdf},
+  biorxivdoi = {10.1101/041384},
+  code = {https://scanpy.readthedocs.io/en/latest/generated/scanpy.api.tl.dpt.html}
+}
+
+@Article{wolf15i,
+  id = {P18},
+  Title                    = {Imaginary-time matrix product state impurity solver for dynamical mean-field theory},
+  Author                   = {F. Alexander Wolf and Ara Go and Ian P. McCulloch and Andrew J. Millis and Ulrich Schollwöck},
+  Journal                  = {Physical Review X},
+  Year                     = {2015},
+  Pages                    = {041032},
+  Volume                   = {5},
+  Abstract                 = {We present a new impurity solver for dynamical mean-field theory based on imaginary-time evolution of matrix product states. This converges the self-consistency loop on the imaginary-frequency axis and obtains real-frequency information in a final real-time evolution. Relative to computations on the real-frequency axis, required bath sizes are much smaller and less entanglement is generated, so much larger systems can be studied. The power of the method is demonstrated by solutions of a three band model in the single and two-site dynamical mean-field approximation. Technical issues are discussed, including details of the method, efficiency as compared to other matrix product state based impurity solvers, bath construction and its relation to real-frequency computations and the analytic continuation problem of quantum Monte Carlo, the choice of basis in dynamical cluster approximation, and perspectives for off-diagonal hybridization functions.},
+  Archiveprefix            = {arXiv},
+  Doi                      = {10.1103/PhysRevX.5.041032},
+  Eprint                   = {1507.08650},
+  Timestamp                = {2015.07.28}
+}
+
+@Article{vega15,
+  id = {P17},
+  Title                    = {How to discretize a quantum bath for real-time evolution},
+  Author                   = {Ines de Vega and Ulrich Schollwöck and F. Alexander Wolf},
+  Journal                  = {Physical Review B},
+  Year                     = {2015},
+  Pages                    = {155126},
+  Volume                   = {92},
+  Abstract                 = {Many numerical techniques for the description of quantum systems that are coupled to a continuous bath require the discretization of the latter. To this end, a wealth of methods has been developed in the literature, which we classify as (i) direct discretization, (ii) orthogonal polynomial, and (iii) numerical optimization strategies. We recapitulate strategies (i) and (ii) to clarify their relation. For quadratic Hamiltonians, we show that (ii) is the best strategy in the sense that it gives the numerically exact time evolution up to a maximum time $t_\text{max}$, for which we give a simple expression. For non-quadratic Hamiltonians, we show that no such best strategy exists. We present numerical examples relevant to open quantum systems and strongly correlated systems, as treated by dynamical mean-field theory (DMFT).},
+  Doi                      = {10.1103/PhysRevB.92.155126},
+  Eprint                   = {1507.07468},
+  Oai2identifier           = {1507.07468},
+  Timestamp                = {2015.07.28}
+}
+
+@Article{balzer15,
+  id = {P16},
+  Title                    = {Non-thermal melting of Neel order in the Hubbard model},
+  Author                   = {Karsten Balzer and F. Alexander Wolf and Ian P. McCulloch and Philipp Werner and Martin Eckstein},
+  Journal                  = {Physical Review X},
+  Year                     = {2015},
+  Pages                    = {031039},
+  Volume                   = {5},
+  Abstract                 = {We study the unitary time evolution of antiferromagnetic order in the Hubbard model after a quench starting from the perfect N\'eel state. In this setup, which is well suited for experiments with cold atoms, one can distinguish fundamentally different pathways for melting of long-range order at weak and strong interaction. In the Mott insulating regime, melting of long-range order occurs due to the ultra-fast transfer of energy from charge excitations to the spin background, while local magnetic moments and their exchange coupling persist during the process. The latter can be demonstrated by a local spin-precession experiment. At weak interaction, local moments decay along with the long-range order. The dynamics is governed by residual quasiparticles, which are reflected in oscillations of the off-diagonal components of the momentum distribution. Such oscillations provide an alternative route to study the prethermalization phenomenon and its influence on the dynamics away from the integrable (noninteracting) limit. The Hubbard model is solved within nonequilibrium dynamical mean-field theory, using the density matrix-renormalization group as an impurity solver.},
+  Archiveprefix            = {arXiv},
+  Comments                 = {11 pages},
+  Doi                      = {10.1103/PhysRevX.5.031039},
+  Eprint                   = {1504.02461},
+  Timestamp                = {2015.04.15}
+}
+
+@Article{hubig15,
+  id = {P15},
+  Title                    = {Strictly Single-Site DMRG Algorithm with Subspace Expansion},
+  Author                   = {Claudius Hubig and Ian P. McCulloch and Ulrich Schollwöck and F. Alexander Wolf},
+  Journal                  = {Physical Review B},
+  Year                     = {2015},
+  Pages                    = {155115},
+  Volume                   = {91},
+  Abstract                 = {We introduce a strictly single-site DMRG algorithm based on the subspace expansion of the Alternating Minimal Energy (AMEn) method. The proposed new MPS basis enrichment method is sufficient to avoid local minima during the optimisation, similarly to the density matrix perturbation method, but computationally cheaper. Each application of $\hat H$ to $|\Psi\rangle$ in the central eigensolver is reduced in cost for a speed-up of $\approx (d + 1)/2$, with $d$ the physical site dimension. Further speed-ups result from cheaper auxiliary calculations and an often greatly improved convergence behaviour. Runtime to convergence improves by up to a factor of 2.5 on the Fermi-Hubbard model compared to the previous single-site method and by up to a factor of 3.9 compared to two-site DMRG. The method is compatible with real-space parallelisation and non-abelian symmetries.},
+  Archiveprefix            = {arXiv},
+  Comments                 = {9 pages, 6 figures; added comparison with two-site DMRG},
+  Doi                      = {10.1103/PhysRevB.91.155115},
+  Eprint                   = {1501.05504},
+  Oai2identifier           = {1501.05504},
+  Timestamp                = {2015.04.16}
+}
+
+@Article{wolf15,
+  id = {P14},
+  Title                    = {Spectral functions and time evolution from the Chebyshev recursion},
+  Author                   = {F. Alexander Wolf and Jorge A. Justiniano and Ian P. McCulloch and Ulrich Schollwöck},
+  Journal                  = {Physical Review B},
+  Year                     = {2015},
+  Pages                    = {115144},
+  Volume                   = {91},
+  Abstract                 = {We link linear prediction of Chebyshev and Fourier expansions to analytic continuation. We push the resolution in the Chebyshev-based computation of $T=0$ many-body spectral functions to a much higher precision by deriving a modified Chebyshev series expansion that allows to reduce the expansion order by a factor $\sim\frac{1}{6}$. We show that in a certain limit the Chebyshev technique becomes equivalent to computing spectral functions via time evolution and subsequent Fourier transform. This introduces a novel recursive time evolution algorithm that instead of the group operator $e^{-iHt}$ only involves the action of the generator $H$. For quantum impurity problems, we introduce an adapted discretization scheme for the bath spectral function. We discuss the relevance of these results for matrix product state (MPS) based DMRG-type algorithms, and their use within dynamical mean-field theory (DMFT). We present strong evidence that the Chebyshev recursion extracts less spectral information from $H$ than time evolution algorithms when fixing a given amount of created entanglement.},
+  Comments                 = {12 pages + 6 pages appendix, 11 figures},
+  Doi                      = {10.1103/PhysRevB.91.115144},
+  Eprint                   = {1501.07216},
+  Oai2identifier           = {1501.07216},
+  Timestamp                = {2015.05.11}
+}
+
+@Article{wolf14i,
+  id = {P13},
+  Title                    = {Solving nonequilibrium dynamical mean-field theory using matrix product states},
+  Author                   = {F. Alexander Wolf and Ian P. McCulloch and Ulrich Schollwöck},
+  Journal                  = {Physical Review B},
+  Year                     = {2014},
+  Pages                    = {235131},
+  Volume                   = {90},
+  Abstract                 = {We solve the nonequilibrium dynamical mean-field theory (DMFT) using matrix product states (MPS). This allows us to treat much larger bath sizes and by that reach substantially longer times (factor $\sim$ 2 -- 3) than with exact diagonalization. We show that the star geometry of the underlying impurity problem can have substantially better entanglement properties than the previously favoured chain geometry. This has immense consequences for the efficiency of an MPS-based description of general impurity problems: in the case of equilibrium DMFT, it leads to an orders-of-magnitude speedup. We introduce an approximation for the two-time hybridization function that uses time-translational invariance, which can be observed after a certain relaxation time after a quench to a time-independent Hamiltonian.},
+  Archiveprefix            = {arXiv},
+  Comments                 = {14 pages, 14 figures},
+  Doi                      = {10.1103/PhysRevB.90.235131},
+  Eprint                   = {1410.3342},
+  Oai2identifier           = {1410.3342},
+  Owner                    = {A.Wolf},
+  Timestamp                = {2014.11.27}
+}
+
+@Article{wolf14,
+  id = {P12},
+  Title                    = {Chebyshev matrix product state impurity solver for dynamical mean-field theory},
+  Author                   = {F. Alexander Wolf and Ian P. McCulloch and Olivier Parcollet and Ulrich Schollwöck},
+  Journal                  = {Physical Review B},
+  Year                     = {2014},
+  Number                   = {11},
+  Pages                    = {115124},
+  Volume                   = {90},
+  Abstract                 = {We compute the spectral functions for the two-site dynamical cluster theory and for the two-orbital dynamical mean-field theory in the density-matrix renormalization group (DMRG) framework using Chebyshev expansions represented with matrix product states (MPS). We obtain quantitatively precise results at modest computational effort through technical improvements regarding the truncation scheme and the Chebyshev rescaling procedure. We furthermore establish the relation of the Chebyshev iteration to real-time evolution, and discuss technical aspects as computation time and implementation in detail.},
+  Archiveprefix            = {arXiv},
+  Doi                      = {10.1103/physrevb.90.115124},
+  Eprint                   = {1407.1622},
+  ISSN                     = {1550-235X},
+  Owner                    = {A.Wolf},
+  Publisher                = {American Physical Society (APS)},
+  Timestamp                = {2014.09.19}
+}
+
+
+@Article{krugener14,
+  id = {P11},
+  Title                    = {Electrical and Structural Analysis of Crystal Defects After High-Temperature Rapid Thermal Annealing of Highly Boron Ion-Implanted Emitters},
+  Author                   = {Jan Krügener and Robby Peibst and F. Alexander Wolf and Eberhard Bugiel and Tobias Ohrdes and Fabian Kiefer and Claus Schollhorn and Andreas Grohe and Rolf Brendel and H. Jorg Osten},
+  Journal                  = {IEEE Journal of Photovoltaics},
+  Year                     = {2014},
+  Number                   = {1},
+  Pages                    = {166--173},
+  Volume                   = {5},
+  Doi                      = {10.1109/jphotov.2014.2365468},
+  ISSN                     = {2156-3403},
+  Publisher                = {Institute of Electrical and Electronics Engineers (IEEE)},
+  pdf = {https://www.researchgate.net/publication/269688468_Electrical_and_Structural_Analysis_of_Crystal_Defects_After_High-Temperature_Rapid_Thermal_Annealing_of_Highly_Boron_Ion-Implanted_Emitters}
+  researchgateurl = {https://www.researchgate.net/publication/269688468_Electrical_and_Structural_Analysis_of_Crystal_Defects_After_High-Temperature_Rapid_Thermal_Annealing_of_Highly_Boron_Ion-Implanted_Emitters}
+}
+
+@Article{wolf14iii,
+  id = {P10},
+  Title                    = {Diffusion and Segregation Model for the Annealing of Silicon Solar Cells Implanted With Phosphorus},
+  Author                   = {F. Alexander Wolf and Alberto Martinez-Limia and Daniela Grote and Daniel Stichtenoth and Peter Pichler},
+  Journal                  = {IEEE Journal of Photovoltaics},
+  Year                     = {2014},
+  Number                   = {1},
+  Pages                    = {129--136},
+  Volume                   = {5},
+  Doi                      = {10.1109/jphotov.2014.2362358},
+  ISSN                     = {2156-3403},
+  Publisher                = {Institute of Electrical and Electronics Engineers (IEEE)},
+  pdf = {https://www.researchgate.net/publication/270789343_Diffusion_and_Segregation_Model_for_the_Annealing_of_Silicon_Solar_Cells_Implanted_With_Phosphorus}
+  researchgateurl = {https://www.researchgate.net/publication/270789343_Diffusion_and_Segregation_Model_for_the_Annealing_of_Silicon_Solar_Cells_Implanted_With_Phosphorus}
+}
+
+@Article{wolf14ii,
+  id = {P9},
+  Title                    = {Modeling the Annealing of Dislocation Loops in Implanted c-Si Solar Cells},
+  Author                   = {F. Alexander Wolf and Alberto Martinez-Limia and Daniel Stichtenoth and Peter Pichler},
+  Journal                  = {IEEE Journal of Photovoltaics},
+  Year                     = {2014},
+  Number                   = {3},
+  Pages                    = {851--858},
+  Volume                   = {4},
+  Doi                      = {10.1109/jphotov.2014.2312103},
+  ISSN                     = {2156-3403},
+  Publisher                = {Institute of Electrical and Electronics Engineers (IEEE)},
+  Timestamp                = {2016.10.16},
+  pdf = {https://www.researchgate.net/publication/261718997_Modeling_the_Annealing_of_Dislocation_Loops_in_Implanted_c-Si_Solar_Cells}
+  researchgateurl = {https://www.researchgate.net/publication/261718997_Modeling_the_Annealing_of_Dislocation_Loops_in_Implanted_c-Si_Solar_Cells}
+}
+
+@Article{wolf13,
+  id = {P8},
+  Title                    = {A comprehensive model for the diffusion of boron in silicon in presence of fluorine},
+  Author                   = {F. Alexander Wolf and Alberto Martinez-Limia and Peter Pichler},
+  Journal                  = {Solid-State Electronics},
+  Year                     = {2013},
+  Month                    = {Sep},
+  Pages                    = {4--10},
+  Volume                   = {87},
+  Doi                      = {10.1016/j.sse.2013.04.027},
+  ISSN                     = {0038-1101},
+  Publisher                = {Elsevier BV},
+  pdf = {https://www.researchgate.net/publication/242023962_A_Comprehensive_Model_for_the_Diffusion_of_Boron_in_Silicon_in_Presence_of_Fluorine}
+  researchgateurl = {https://www.researchgate.net/publication/242023962_A_Comprehensive_Model_for_the_Diffusion_of_Boron_in_Silicon_in_Presence_of_Fluorine}
+}
+
+@Article{wolf12ii,
+  id = {P7},
+  Title                    = {Dynamical correlation functions and the quantum Rabi model},
+  Author                   = {F. Alexander Wolf and Fabio Vallone and Guillermo Romero and Marcus Kollar and Enrique Solano and Daniel Braak},
+  Journal                  = {Physical Review A},
+  Year                     = {2013},
+  Pages                    = {023835},
+  Volume                   = {87},
+  Abstract                 = {We study the quantum Rabi model within the framework of the analytical solution developed in Physical Review Lett. 107,100401 (2011). In particular, through time-dependent correlation functions, we give a quantitative criterion for classifying two regions of the quantum Rabi model, involving the Jaynes-Cummings, the ultrastrong, and deep strong coupling regimes. In addition, we find a stationary qubit-field entangled basis that governs the whole dynamics as the coupling strength overcomes the mode frequency.},
+  Comments                 = {8 pages, 8 figures. Revised version, accepted for publication in Physical Review A},
+  Doi                      = {10.1103/PhysRevA.87.023835},
+  Eprint                   = {1211.6469},
+  Oai2identifier           = {1211.6469},
+  Timestamp                = {2016.10.16}
+}
+
+@Article{wolf12i,
+  id = {P6},
+  Title                    = {Exact real-time dynamics of the quantum Rabi model},
+  Author                   = {F. Alexander Wolf and Marcus Kollar and Daniel Braak},
+  Journal                  = {Physical Review A},
+  Year                     = {2012},
+  Pages                    = {053817},
+  Volume                   = {85},
+  Abstract                 = {We use the analytical solution of the quantum Rabi model to obtain absolutely convergent series expressions of the exact eigenstates and their scalar products with Fock states. This enables us to calculate the numerically exact time evolution of <\sigma_x(t)> and <\sigma_z(t)> for all regimes of the coupling strength, without truncation of the Hilbert space. We find a qualitatively different behavior of both observables which can be related to their representations in the invariant parity subspaces.},
+  Comments                 = {8 pages, 7 figures, published version},
+  Doi                      = {10.1103/PhysRevA.85.053817},
+  Eprint                   = {1203.6039},
+  Oai2identifier           = {1203.6039},
+  Timestamp                = {2016.10.16}
+}
+
+@Article{wolf12,
+  id = {P5},
+  Title                    = {Supercurrent through grain boundaries in the presence of strong correlations},
+  Author                   = {F. Alexander Wolf and Siegfried Graser and Florian Loder and Thilo Kopp},
+  Journal                  = {Physical Review Letters},
+  Year                     = {2012},
+  Pages                    = {117002},
+  Volume                   = {108},
+  Abstract                 = {Strong correlations are known to severely reduce the mobility of charge carriers near half-filling and thus have an important influence on the current carrying properties of grain boundaries in the high-$T_c$ cuprates. In this work we present an extension of the Gutzwiller projection approach to treat electronic correlations below as well as above half-filling consistently. We apply this method to investigate the critical current through grain boundaries with a wide range of misalignment angles for electron- and hole-doped systems. For the latter excellent agreement with experimental data is found. We further provide a detailed comparison to an analogous weak-coupling evaluation.},
+  Comments                 = {4 pages, 3 figures},
+  Doi                      = {10.1103/PhysRevLett.108.117002},
+  Eprint                   = {1106.5759},
+  Oai2identifier           = {1106.5759},
+  Timestamp                = {2015.07.28}
+}
+
+@Article{jreissaty11,
+  id = {P4},
+  Title                    = {Expansion of Bose-Hubbard Mott insulators in optical lattices},
+  Author                   = {Mark Jreissaty and Juan Carrasquilla and F. Alexander Wolf and Marcos Rigol},
+  Journal                  = {Physical Review A},
+  Year                     = {2011},
+  Pages                    = {043610},
+  Volume                   = {84},
+  Abstract                 = {We study the expansion of bosonic Mott insulators in the presence of an optical lattice after switching off a confining potential. We use the Gutzwiller mean-field approximation and consider two different setups. In the first one, the expansion is restricted to one direction. We show that this leads to the emergence of two condensates with well defined momenta, and argue that such a construct can be used to create atom lasers in optical lattices. In the second setup, we study Mott insulators that are allowed to expand in all directions in the lattice. In this case, a simple condensate is seen to develop within the mean-field approximation. However, its constituent bosons are found to populate many nonzero momentum modes. An analytic understanding of both phenomena in terms of the exact dispersion relation in the hard-core limit is presented.},
+  Comments                 = {11 pages, 9 figures. Figures 2,3,4 corrected},
+  Doi                      = {10.1103/PhysRevA.84.043610},
+  Eprint                   = {1108.1192},
+  Oai2identifier           = {1108.1192},
+  Timestamp                = {2016.10.16}
+}
+
+@Article{kollar11,
+  id = {P3},
+  Title                    = {Generalized Gibbs ensemble prediction of prethermalization plateaus and their relation to nonthermal steady states in integrable systems},
+  Author                   = {Marcus Kollar and F. Alexander Wolf and Martin Eckstein},
+  Journal                  = {Physical Review B},
+  Year                     = {2011},
+  Pages                    = {054304},
+  Volume                   = {84},
+  Abstract                 = {A quantum many-body system which is prepared in the ground state of an integrable Hamiltonian does not directly thermalize after a sudden small parameter quench away from integrability. Rather, it will be trapped in a prethermalized state and can thermalize only at a later stage. We discuss several examples for which this prethermalized state shares some properties with the nonthermal steady state that emerges in the corresponding integrable system. These examples support the notion that nonthermal steady states in integrable systems may be viewed as prethermalized states that never decay further. Furthermore we show that prethermalization plateaus are under certain conditions correctly predicted by generalized Gibbs ensembles, which are the appropriate extension of standard statistical mechanics in the presence of many constants of motion. This establishes that the relaxation behaviors of integrable and nearly integrable systems are continuously connected and described by the same statistical theory.},
+  Comments                 = {11 pages, 2 figures},
+  Doi                      = {10.1103/PhysRevB.84.054304},
+  Eprint                   = {1102.2117},
+  Oai2identifier           = {1102.2117},
+  Timestamp                = {2015.07.30}
+}
+
+@Article{wolf10,
+  id = {P2},
+  Title                    = {Collapse and revival oscillations as a probe for the tunneling amplitude in an ultra-cold Bose gas},
+  Author                   = {F. Alexander Wolf and Itay Hen and Marcos Rigol},
+  Journal                  = {Physical Review A},
+  Year                     = {2010},
+  Pages                    = {043601},
+  Volume                   = {82},
+  Abstract                 = {We present a theoretical study of the quantum corrections to the revival time due to finite tunneling in the collapse and revival of matter wave interference after a quantum quench. We study hard-core bosons in a superlattice potential and the Bose-Hubbard model by means of exact numerical approaches and mean-field theory. We consider systems without and with a trapping potential present. We show that the quantum corrections to the revival time can be used to accurately determine the value of the hopping parameter in experiments with ultracold bosons in optical lattices.},
+  Comments                 = {10 pages, 12 figures, typos in section 3A corrected},
+  Doi                      = {10.1103/PhysRevA.82.043601},
+  Eprint                   = {1010.1776},
+  Oai2identifier           = {1010.1776},
+  Timestamp                = {2016.10.16}
+}
+
+@Article{eckstein09,
+  id = {P1},
+  Title                    = {New theoretical approaches for correlated systems in nonequilibrium},
+  Author                   = {M. Eckstein and A. Hackl and S. Kehrein and M. Kollar and M. Moeckel and P. Werner and F. A. Wolf},
+  Journal                  = {The European Physical Journal Special Topics},
+  Year                     = {2009},
+  Number                   = {1},
+  Pages                    = {217--235},
+  Volume                   = {180},
+  Abstract                 = {We review recent developments in the theory of interacting quantum many-particle systems that are not in equilibrium. We focus mainly on the nonequilibrium generalizations of the flow equation approach and of dynamical mean-field theory (DMFT). In the nonequilibrium flow equation approach one first diagonalizes the Hamiltonian iteratively, performs the time evolution in this diagonal basis, and then transforms back to the original basis, thereby avoiding a direct perturbation expansion with errors that grow linearly in time. In nonequilibrium DMFT, on the other hand, the Hubbard model can be mapped onto a time-dependent self-consistent single-site problem. We discuss results from the flow equation approach for nonlinear transport in the Kondo model, and further applications of this method to the relaxation behavior in the ferromagnetic Kondo model and the Hubbard model after an interaction quench. For the interaction quench in the Hubbard model, we have also obtained numerical DMFT results using quantum Monte Carlo simulations. In agreement with the flow equation approach they show that for weak coupling the system relaxes to a "prethermalized" intermediate state instead of rapid thermalization. We discuss the description of nonthermal steady states with generalized Gibbs ensembles.},
+  Doi                      = {10.1140/epjst/e2010-01219-x},
+  Eprint                   = {1005.5097},
+  ISSN                     = {1951-6401},
+  Owner                    = {A.Wolf},
+  Publisher                = {Springer Science + Business Media},
+  Timestamp                = {2014.10.01}
+}
+
+% other
+
+@otherpub{wolf15ii,
+  id = {O6},
+  Journal = {PhD Thesis},
+  Title                    = {Solving dynamical mean-field theory using matrix product states},
+  Author                   = {F. Alexander Wolf},
+  School                   = {LMU Munich},
+  Year                     = {2015},
+  Url                      = {http://nbn-resolving.de/urn:nbn:de:bvb:19-189370}
+  pdf = {https://edoc.ub.uni-muenchen.de/18937/1/Wolf_Fabian_A.pdf}
+}
+
+@otherpub{wolf14ii,
+  id = {O5},
+  Journal = {PhD Thesis},
+  Title                    = {Modeling of annealing processes for ion-implanted single-crystalline silicon solar cells},
+  Author                   = {F. Alexander Wolf},
+  School                   = {U Erlangen-Nuremberg},
+  Year                     = {2014},
+  Url                      = {http://nbn-resolving.de/urn:nbn:de:bvb:29-opus4-49068}
+  pdf = {http://nbn-resolving.de/urn:nbn:de:bvb:29-opus4-49068}
+}
+
+@otherpub{
+  id = {O4},
+  Journal = {Master’s Thesis},
+  Title                    = {Supercurrent through grain boundaries in the presence of strong correlations},
+  Author                   = {F. Alexander Wolf},
+  School                   = {U Augsburg},
+  Year                     = {2011},
+  pdf = {/docs/wolf11_mastersthesis.pdf}
+}
+
+
+@otherpub{
+  id = {O3},
+  Journal = {Report},
+  Title                    = {Collapse and revival oscillations as a probe for the tunneling amplitude in an ultra-cold Bose gas},
+  Author                   = {F. Alexander Wolf},
+  School                   = {Georgetown U},
+  Year                     = {2010},
+  pdf = {/docs/wolf10_report.pdf}
+}
+
+
+@otherpub{
+  id = {O2},
+  Journal = {Bachelor’s Thesis},
+  Title                    = {Orbital order in a spin-polarized two-band Hubbard model},
+  Author                   = {F. Alexander Wolf},
+  School                   = {U Augsburg},
+  Year                     = {2009},
+  pdf = {../docs/wolf09_bachelorsthesis.pdf}
+}
+
+@otherpub{
+  id = {O1},
+  Journal = {High School Thesis},
+  Title                    = {Sartre à Stammheim: son éxistentialisme et l'idéologie de la fraction armée rouge},
+  Author                   = {F. Alexander Wolf},
+  School                   = {Finsterwalder Gymnasium Rosenheim},
+  Year                     = {2005},
+  pdf = {/docs/wolf05_highschoolthesis.pdf}
+}

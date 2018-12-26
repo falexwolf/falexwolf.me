@@ -1,0 +1,22 @@
+# Reconstructing cell cycle and disease progression using deep learning
+
+*Published: September 10, 2017.*
+
+In [Eulenberg, Köhler *et al.* (Nat. Commun., 2017)](/publications/#P20), we
+show how to reconstruct continuous biological processes using deep
+learning. We demonstrate this for the cell cycle of blood cells and for
+disease progression in diabetic retinophany.
+
+### Links
+
+*Scientific article:* [Eulenberg, Köhler *et al.* (Nat. Commun.,
+2017)](../../#P20)   
+*Popular science article:* [english](https://bit.ly/2f6PuWc) /
+[deutsch](https://www.helmholtz-muenchen.de/aktuelles/uebersicht/pressemitteilungnews/article/41458/index.html)   
+*Software:* [GitHub](https://github.com/theislab/deepflow)   
+*Twitter:*
+[twitter](https://twitter.com/falexwolf/status/906871804060463104)
+
+### Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eyWcHIiCazE" frameborder="0" allowfullscreen></iframe>
