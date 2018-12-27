@@ -1,52 +1,46 @@
-% Encoding: UTF8
+% preprints (entry type @Preprint)
 
-% preprints
 
-@article {lotfollahi18,
+@Preprint{lotfollahi18,
   id = {P27},
   author = {Mohammad Lotfollahi and F. Alexander Wolf† and Fabian J. Theis†},
   title = {Generative modeling and latent space arithmetics predict single-cell perturbation response across cell types, studies and species},
   year = {2018},
   doi = {10.1101/478503},
-  publisher = {Cold Spring Harbor Laboratory},
-  abstract = {Accurately modeling cellular response to perturbations is a central goal of computational biology. While such modeling has been proposed based on statistical, mechanistic and machine learning models in specific settings, no generalization of predictions to phenomena absent from training data i.e. out-of-sample have yet been demonstrated. Here, we present scGen, a model combining variational autoencoders and latent space vector arithmetics for high-dimensional single-cell gene expression data. In benchmarks across a broad range of examples, we show that scGen accurately models dose and infection response of cells across cell types, studies and species. In particular, we demonstrate that scGen learns cell type and species specific response implying that it captures features that distinguish responding from non-responding genes and cells. With the upcoming availability of large-scale atlases of organs in healthy state, we envision scGen to become a tool for experimental design through in silico screening of perturbation response in the context of disease and drug treatment.},
   pdf = {https://www.biorxiv.org/content/early/2018/11/29/478503.full.pdf},
   journal = {bioRxiv},
   code = {https://github.com/theislab/scgen}
 }
 
-@article {wolf17i,
+@Preprint{wolf17i,
   id = {P26},
   author = {F. Alexander Wolf and Fiona Hamey and Mireya Plass and Jordi Solana and Joakim S. Dahlin and Berthold Göttgens and Nikolaus Rajewsky and Lukas Simon and Fabian J. Theis},
   title = {Graph abstraction reconciles clustering with trajectory inference through a topology preserving map of single cells},
   year = {2017},
   doi = {10.1101/208819},
-  publisher = {Cold Spring Harbor Laboratory},
-  abstract = {Single-cell RNA-seq allows quantification of biological heterogeneity across both discrete cell types and continuous cell differentiation transitions. We present approximate graph abstraction (AGA), an algorithm that reconciles the computational analysis strategies of clustering and trajectory inference by explaining cell-to-cell variation both in terms of discrete and continuous latent variables (https://github.com/theislab/graph_abstraction). This enables to generate cellular maps of differentiation manifolds with complex topologies --- efficiently and robustly across different datasets. Approximate graph abstraction quantifies the connectivity of partitions of a neighborhood graph of single cells, thereby generating a much simpler abstracted graph whose nodes label the partitions. Together with a random walk-based distance measure, this generates a topology preserving map of single cells --- a partial coordinatization of data useful for exploring and explaining its variation. We use the abstracted graph to assess which subsets of data are better explained by discrete clusters than by a continuous variable, to trace gene expression changes along aggregated single-cell paths through data and to infer abstracted trees that best explain the global topology of data. We demonstrate the power of the method by reconstructing differentiation processes with high numbers of branchings from single-cell gene expression datasets and by identifying biological trajectories from single-cell imaging data using a deep-learning based distance metric. Along with the method, we introduce measures for the connectivity of graph partitions, generalize random-walk based distance measures to disconnected graphs and introduce a path-based measure for topological similarity between graphs. Graph abstraction is computationally efficient and provides speedups of at least 30 times when compared to algorithms for the inference of lineage trees.},
   journal = {bioRxiv},
   timestamp = {2017.10.26},
   code = {https://github.com/theislab/paga},
-  pdf = {https://rawgit.com/falexwolf/paga_paper/master/paga.pdf}
+  pdf = {https://www.biorxiv.org/content/biorxiv/early/2018/11/04/208819.full-text.pdf}
 }
 
 
-@article{buttner17,
+% reviewed journal articles (entry type @Article)
+
+@Article{buttner17,
   id = {P25},
   author = {Maren Büttner* and Zhichao Miao* and F Alexander Wolf and Sarah A Teichmann† and Fabian J Theis†},
-  title = {Assessment of batch-correction methods for scRNA-seq data with a new test metric},
-  year = {2017},
-  doi = {10.1101/200345},
-  publisher = {Cold Spring Harbor Laboratory},
-  abstract = {Single-cell transcriptomics is a versatile tool for exploring heterogeneous cell populations. As with all genomics experiments, batch effects can hamper data integration and interpretation. The success of batch effect correction is often evaluated by visual inspection of dimension reduced representations such as principal component analysis. This is inherently imprecise due to the high number of genes and non-normal distribution of gene expression. Here, we present a k-nearest neighbour batch effect test (kBET, https://github.com/theislab/kBET) to quantitatively measure batch effects. kBET is easier to interpret, more sensitive and more robust than visual evaluation and other measures of batch effects. We use kBET to assess commonly used batch regression and normalisation approaches, and quantify the extent to which they remove batch effects while preserving biological variability. Our results illustrate that batch correction based on log-transformation or scran pooling followed by ComBat reduced the batch effect while preserving structure across data sets. Finally we show that kBET can pinpoint successful data integration methods across multiple data sets, in this case from different publications all charting mouse embryonic development. This has important implications for future data integration efforts, which will be central to projects such as the Human Cell Atlas where data for the same tissue may be generated in multiple locations around the world.},
-  pdf = {https://www.biorxiv.org/content/early/2017/10/27/200345.full.pdf},
+  title = {A test metric for assessing single-cell RNA-seq batch correction},
+  year = {2018},
+  Pages = {43--49},
+  Volume = {16},
+  doi = {10.1038/s41592-018-0254-1},
+  biorxivdoi = {10.1101/200345},
+  pdf = {https://t.co/0mUUtjaVRX},
   code = {https://github.com/theislab/kBET},
-  journal = {bioRxiv, accepted in Nat. Meth.},
+  journal = {Nature Methods},
   timestamp = {2017.10.25},
 }
-
-
-% reviewed journal articles
-
 
 @Article{plass18,
   id = {P24}
@@ -65,14 +59,14 @@
 
 @Article{wolf17,
   id = {P23}
-  author    = {F. Alexander Wolf and P. Angerer and Fabian J. Theis},
-  title     = {Scanpy: large-scale single-cell gene expression data analysis},
-  journal  = {Genome Biology},
-  year      = {2018},
-  doi = {10.1186/s13059-017-1382-0},
+  author     = {F. Alexander Wolf and P. Angerer and Fabian J. Theis},
+  title      = {Scanpy: large-scale single-cell gene expression data analysis},
+  journal    = {Genome Biology},
+  year       = {2018},
+  doi        = {10.1186/s13059-017-1382-0},
   biorxivdoi = {10.1101/174029},
-  code = {https://scanpy.readthedocs.io},
-  pdf = {https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-017-1382-0?site=genomebiology.biomedcentral.com}
+  code       = {https://scanpy.readthedocs.io},
+  pdf        = {https://genomebiology.biomedcentral.com/track/pdf/10.1186/s13059-017-1382-0?site=genomebiology.biomedcentral.com}
 }
 
 
@@ -97,13 +91,12 @@
   title     = {Model-based branching point detection in single-cell data by K-Branches clustering},
   journal   = {Bioinformatics},
   year      = {2017},
-  abstract  = {Motivation: The identification of heterogeneities in cell populations by utilizing single-cell technologies such as single-cell RNA-Seq, enables inference of cellular development and lineage trees. Several methods have been proposed for such inference from high-dimensional single-cell data. They typically assign each cell to a branch in a differentiation trajectory. However, they commonly assume specific geometries such as tree-like developmental hierarchies and lack statistically sound methods to decide on the number of branching events. Results: We present K-Branches, a solution to the above problem by locally fitting half-lines to single-cell data, introducing a clustering algorithm similar to K-Means. These halflines are proxies for branches in the differentiation trajectory of cells. We propose a modified version of the GAP statistic for model selection, in order to decide on the number of lines that best describe the data locally. In this manner, we identify the location and number of subgroups of cells that are associated with branching events and full differentiation, respectively. We evaluate the performance of our method on single-cell RNA-Seq data describing the differentiation of myeloid progenitors during hematopoiesis, single-cell qPCR data of mouse blastocyst development and artificial data.},
   doi       = {10.1093/bioinformatics/btx325},
   biorxivdoi = {10.1101/094532}
   code = {https://github.com/theislab/kbranches}
 }
 
-@preprint{eulenberg16,
+@Article{eulenberg16,
   id = {P20},
   Author        = {Philipp Eulenberg* and Niklas Köhler* and Thomas Blasi and Andrew Filby and Anne E. Carpenter and Paul Rees and Fabian J. Theis† and F. Alexander Wolf†},
   Title         = {Reconstructing cell cycle and disease progression using deep learning},
