@@ -74,9 +74,7 @@ def read_file(source):
 
 
 def format_latex_experience(entry):
-    """ Format the output of experience.
-
-    All for Latex.
+    """Format the output of experience.
     """
     # apply basic latex formating
     for key in entry:
@@ -95,9 +93,14 @@ def format_latex_experience(entry):
     if 'indent' in entry:
         leftskip_indent += 1.285
         s += r'\setlength{\leftskip}{'+str(leftskip_indent) + r'em}\vspace{-.2em}' + n
+    # vspace
+    s += r'\vspace{0em}\noindent'
+    # employer
+    if 'employer' in entry:
+        s += entry['employer'][0] + ', ' + entry['location'][0] + r'\\[0.1em]'
     # position and period, go backwards through position and period entries
     for i in range(len(entry['position'])-1, -1, -1):
-        s += r'\vspace{-.2em}\noindent' + entry['position'][i]
+        s += entry['position'][i]
         if i != 0:
             s += ' (' + entry['period'][i] + ') / '
     if '-' in entry['period'][0]:
@@ -119,9 +122,7 @@ def format_latex_experience(entry):
         duration += ' $\cdot$ '
     else:
         duration = ''
-    s += ' \hfill ' + duration + entry['period'][0].replace('.', '/20').replace('-', '--') + nl
-    # employer
-    s += entry['employer'][0] + ', ' + entry['location'][0] + n + n
+    s += ' \hfill ' + duration + entry['period'][0].replace('.', '/20').replace('-', '--')
     # description and activities
     if 'description' or 'activity' in entry:
         s += r'{\footnotesize ' + n
