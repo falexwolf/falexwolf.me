@@ -276,7 +276,7 @@ def format_pub(entry, doctype='html'):
 
 
 def format_talks(entry, doctype='html'):
-    """ Format talks
+    """Format talks
 
     All for html.
     """
@@ -516,17 +516,17 @@ if __name__ == '__main__':
 
     sources = []
     sources_blog_external = []
-    if args.source in {'sources', 'sources/'}:
-        for single_source in glob.glob('sources/*'):
+    if args.source in {'.'}:
+        for single_source in glob.glob('*'):
             if single_source.endswith(('.md', '.bib', '.rst')):
                 sources.append(single_source)
-        for single_source in glob.glob('sources/blog/*'):
+        for single_source in glob.glob('blog/*'):
             if not single_source.endswith('_external_sources'):
                 sources.append(single_source)
-        for l in open('sources/blog/_external_sources'):
-            sources_blog_external.append(l.strip())
+        # for l in open('./blog/_external_sources'):
+        #     sources_blog_external.append(l.strip())
     else:
-        if True:  # args.source.startswith(('sources', '_cv/')):
+        if True:  # args.source.startswith(('.', '_cv/')):
             sources.append(args.source)
         else:
             sources_blog_external.append(args.source)
@@ -538,7 +538,7 @@ if __name__ == '__main__':
     for single_source in sources_blog_external:
         print('processing external source: {}'.format(single_source))
         if single_source.endswith('/'): single_source = single_source[:-1]
-        target = 'sources/blog/' + single_source.split('/')[-1]
+        target = './blog/' + single_source.split('/')[-1]
         if os.path.isdir(single_source):
             target_dir = target
             for s in glob.glob(single_source + '/*'):
