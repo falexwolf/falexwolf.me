@@ -261,7 +261,12 @@ def format_pub(entry, doctype='html'):
             s += ' <a href="' + linktopdf + '" style="{}"> pdf </a>'.format(css_style_note)
         # code
         if 'code' in entry:
-            s += (' <a href="' + entry['code'] + '" style="{}">code</a> '.format(css_style_note))
+            code = entry['code']
+            s += f' <a href="{code}" style="{css_style_note}">code</a> '
+            # if 'github' in entry:
+            #     code = entry['github']
+            # user_repo = code.replace('https://github.com/', '')
+            # s += f'<img src="https://img.shields.io/github/stars/{user_repo}.svg">'
     # end of publication entry
     if doctype == 'html':
         s += '</p>' + '\n' + '\n'

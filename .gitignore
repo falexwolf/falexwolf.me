@@ -7,3 +7,4 @@ _site/
 *.pyc
 */__pycache__
 _scripts/mirror.sh
+.ipynb_checkpoints/
