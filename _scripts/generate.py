@@ -8,14 +8,13 @@ import datetime
 import markdown
 from collections import OrderedDict
 
+css_style_note = 'font-size: 60%; font-weight: bold; margin-left: 2px;'
 
 # keywords for fields in entries
 #
 #    'article' : standard bibtex keywords
 #    'experience' : ['position', 'period', 'employer',
 #                    'location', 'description', 'activity']
-
-css_style_note = 'font-size: 60%; font-weight: bold; margin-left: 2px;'
 
 
 def markdown_no_p(text):
@@ -146,7 +145,7 @@ def format_latex_experience(entry):
     return s
 
 
-def format_pub(entry, doctype='html'):
+def format_pub(entry, doctype='html', ascard=False):
     """Format publications.
 
     All for html.
@@ -168,12 +167,20 @@ def format_pub(entry, doctype='html'):
             newentry[key] = entry[key]
     entry = newentry
     if doctype == 'html':
-        s = '<p>'
+        css_style_note = 'font-size: 10px; font-weight: normal; margin-left: 2px;'
+        if ascard:
+            s = '<div class="card" style="border: 1px solid rgba(0,0,0,.125); border-radius: .25rem; padding: 1.25rem; opacity: 1; font-size: smaller">'
+            css_style_note = 'font-size: 10px; font-weight: normal; margin-left: 2px;'
+        elif 'mark' in entry:
+            if entry['mark'] == 'noncentral':
+                s = '<p style="opacity: 0.6;">'
+        else:
+            s = '<p>'
     else:
         s = ''
     # format id
     if doctype == 'html':
-        s += '<span id="' + entry['id'] + '" style="font-size: 60%">' + entry['id'] + '</span> '
+        s += '<span id="' + entry['id'] + '" style="font-size: 10px">' + entry['id'] + '</span> '
     else:
         s += '\paperitemdef{' + entry['id'] + '} & '
     # format title
@@ -185,7 +192,7 @@ def format_pub(entry, doctype='html'):
     else:
         s += r'\textit{' + entry['title'] + r'}\\' + ' \n & '
     # format author
-    if entry['entryType'] != 'otherpub':
+    if entry['entryType'] != 'otherpub' or 'and' in entry['author']:
         authors = entry['author'].split(' and ')
         if len(authors) == 2:
             if doctype == 'html':
@@ -269,7 +276,7 @@ def format_pub(entry, doctype='html'):
             # s += f'<img src="https://img.shields.io/github/stars/{user_repo}.svg">'
     # end of publication entry
     if doctype == 'html':
-        s += '</p>' + '\n' + '\n'
+        s += '</div>' if ascard else '</p>\n\n'
     else:
         s += r'\newline' + '\n'
     return s
@@ -482,6 +489,7 @@ def process_source(single_source):
                         return line
 
                 out = open(target, 'w')
+                publications = read_file('publications.bib')
                 for line in open('_includes/blog.html'):
                     if 'INSERT' not in line:
                         out.write(line)
@@ -498,6 +506,13 @@ def process_source(single_source):
                         if md is not None and 'title' in md.Meta:
                             out.write(f'<h1>{md.Meta["title"][0]}</h1>')
                         for l in open(raw_html):
+                            # replace paper macros
+                            if l.startswith('<p>{'):
+                                key = l.split('{')[1].split('}')[0]  # strip off html stuff
+                                for p in publications:
+                                    if p['id'][0] == key:
+                                        l = format_pub(p, ascard=True)
+                                        break
                             out.write(l)
                 out.close()
 
