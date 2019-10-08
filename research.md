@@ -2,22 +2,22 @@ Title: Research
 
 In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods addressing biological hypotheses and hence originate from many different areas of machine learning: deep learning [[P20](/publications#P20), [P27](/publications#P27)], topological data analysis [[P25](/publications#P25)], manifold learning [[P19](/publications#P19)], and causal inference [[T20](../talks/#T20)]. With [F. J. Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
 
-Prior to joining the field, I worked mainly on computational techniques that enabled predicting the emergent behavior of complex systems, such as models for strongly correlated quantum materials.
+Prior to joining machine learning for biology, I spent most time developing computational techniques for predicting the emergent behavior of complex systems, such as strongly correlated quantum materials.
 
 [TOC]
 
 
-## Generative models predict single-cell perturbation effects (scGen)
+## Generative models predict single-cell perturbation effects
 
 [<img src="https://pbs.twimg.com/media/EAq3dqdUwAEQssP?format=jpg&name=900x900" style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P27)
-We demonstrated that generative models predict single-cell perturbation effects out-of-sample [[P27](/publications#P27)]. This enables training models to predict the effects of disease and disease treatment across cell types and species. While the first model relied on latent space vector arithmetics, the second model [[P28](/publications#P28)] is an end-to-end-trained conditional variational autoencoder.
+We demonstrated that generative models predict single-cell perturbation effects out-of-sample using a model we call scGen [[P27](/publications#P27)]. The approach enables training models to predict the effects of disease and disease treatment across cell types and species. While the first implementationn of scGen relied on latent space vector arithmetics, we recently published an end-to-end-trained model based on a conditional variational autoencoder: transformer VAE [[P28](/publications#P28)].
 
 {P28}
 
 {P27}
 
 
-## Mapping out the coarse-grained connectivity structure of complex manifolds (PAGA)
+## Mapping the coarse-grained connectivity structure of complex manifolds
 
 [<img src="https://pbs.twimg.com/media/D2FmvihWkAA9wmG?format=jpg&name=medium" title="Cell atlas and putative lineage relations of Planaria. Data from Class, Solana, et al., Science (2018). See [P24]." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P24) Partition-based graph abstraction (PAGA) reconciles clustering with manifold learning by explaining variation among observations using both discrete and continuous latent variables [[P26](/publications#P26)]. PAGA generates coarse-grained maps of manifolds with complex topologies - efficiently and robustly across a wide variety of datasets. In [[P24](/publications#P24)], we used it to infer the first lineage tree of a whole complex animal - a [Science breakthrough](https://vis.sciencemag.org/breakthrough2018/) of the year 2018.
 
@@ -26,7 +26,7 @@ We demonstrated that generative models predict single-cell perturbation effects 
 {P24}
 
 
-## Scalable and comprehensive software for single-cell analysis (Scanpy)
+## Scalable and comprehensive software for single-cell analysis
 
 [<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_RGB.png" style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
 [Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23), [code](https://github.com/theislab/scanpy)] is a scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing.
@@ -34,7 +34,7 @@ We demonstrated that generative models predict single-cell perturbation effects 
 {P23}
 
 
-## Using deep learning to reconstruct cell cycle and disease progression
+## Reconstructing cell cycle and disease progression using deep learning
 
 [<img src="../img/170712_featured_image_suggestion.png" title="Reconstructed cell cycle. See [P20]." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P20) Using large-scale imaging data, we show how to reconstruct continuous biological processes using deep learning for the examples of cell cycle and disease progression in diabetic retinopathy [[P20](/publications#P20), [code](https://github.com/theislab/deepflow)]. Read [more](../blog/170910_deepflow).
 
@@ -75,7 +75,7 @@ We developed a way to use Tensor Trains within [Dynamical Mean-Field Theory](htt
 
 ## Diffusion-reaction chemistry of solar cells
 
-*Improving low conversion efficiencies through modeling.*
+*Improving low solar energy conversion efficiencies through modeling.*
 
 The low energy conversion efficiency of established solar cells is largely due to chemical imperfections of the material at which excited photons recombine. While at Bosch research, I established models for material syntheses to optimize processes for the minimization of such imperfections [[O5](/publications#O5),[P8-P11](/publications#P11)]. Mathematically, these models reduce to diffusion-reaction equations. I wrote a proprietary software for doing so which was productionized for Bosch Solar Energy. With [P. Pichler](https://www.google.de/search?q=intrinsic+point+defects%2C+impurities+and+their+diffusion+in+silicon).
 
