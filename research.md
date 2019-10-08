@@ -1,4 +1,6 @@
-# Research
+Title: Research
+
+[TOC]
 
 ## Machine Learning for Single-Cell Biology
 

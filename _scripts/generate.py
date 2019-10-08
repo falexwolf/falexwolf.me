@@ -20,7 +20,7 @@ css_style_note = 'font-size: 60%; font-weight: bold; margin-left: 2px;'
 
 def markdown_no_p(text):
     """Wrap around markdown.markdown function. """
-    html = markdown.markdown(text, extensions=['markdown.extensions.tables'])
+    html = markdown.markdown(text, extensions=['markdown.extensions.tables', 'toc'])
     # don't use the trailing paragraphs
     html = html[3:-4]
     return html
@@ -336,7 +336,7 @@ def format_all_publications(f, entries, doctype):
     <a href="http://orcid.org/0000-0002-8760-7838">ORCID</a>.
     An * denotes co-first and an † co-last author.</p>''')
 
-        f.write('<h2> Preprints </h2> \n\n')
+        f.write('<h2 id="preprints"> Preprints </h2> \n\n')
     else:
         f.write('\n\subsubsection*{Preprints}' + r'\vspace{-1em}' + '\n')
         f.write(r'\noindent\begin{longtable}[t]{p{.02\textwidth} p{.93\textwidth}}' + '\n')
@@ -457,12 +457,14 @@ def process_source(single_source):
                     with open(textfile, 'w') as f:
                         f.write(''.join(lines))
 
+                md = None
                 if '.md' in source_file:
                     from fenced_code_marked import FencedCodeExtension
                     md = markdown.Markdown(extensions=[
-                        'mdx_math', 'markdown.extensions.tables',
+                        'mdx_math', 'markdown.extensions.tables', 'toc', 'meta',
                         FencedCodeExtension()])
                     md.convertFile(source_file, raw_html)
+
                 if '.rst' in source_file:
                     os.system('rst2html.py --link-stylesheet {} {}'
                               .format(source_file, raw_html))
@@ -493,6 +495,8 @@ def process_source(single_source):
                         for l in open('_includes/footer.html'):
                             out.write(adjust_child_dir(l) if child else l)
                     elif 'INSERT_CONTENT' in line:
+                        if md is not None and 'title' in md.Meta:
+                            out.write(f'<h1>{md.Meta["title"][0]}</h1>')
                         for l in open(raw_html):
                             out.write(l)
                 out.close()
