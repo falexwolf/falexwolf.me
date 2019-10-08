@@ -1,6 +1,6 @@
 Title: Research
 
-In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods addressing biological hypotheses and hence originate from many different areas of machine learning: deep learning [[P20](/publications#P20), [P27](/publications#P27)], topological data analysis [[P25](/publications#P25)], manifold learning [[P19](/publications#P19)], and causal inference [[T20](../talks/#T20)]. With [F. J. Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
+In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods addressing biological hypotheses and hence originate from different areas of machine learning: deep learning [[P20](/publications#P20), [P27](/publications#P27), [P28](/publications#P28)], topological data analysis [[P25](/publications#P25)], manifold learning [[P19](/publications#P19)], and causal inference [[T20](../talks/#T20)]. With [F. J. Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
 
 Prior to joining machine learning for biology, I spent most time developing computational techniques for predicting the emergent behavior of complex systems, such as strongly correlated quantum materials.
 
