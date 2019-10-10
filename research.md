@@ -1,8 +1,8 @@
 Title: Research
 
-In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods addressing biological hypotheses and hence originate from different areas of machine learning: deep learning [[P20](/publications#P20), [P27](/publications#P27), [P28](/publications#P28)], topological data analysis [[P25](/publications#P25)], manifold learning [[P19](/publications#P19)], and causal inference [[T20](../talks/#T20)]. With [F. J. Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
+In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods that address specific biological hypotheses and originate from different areas of machine learning: deep learning, topological data analysis to causal inference [[T20](../talks/#T20)]. With [F. J. Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
 
-Prior to joining machine learning for biology, I spent most time developing computational techniques for predicting the emergent behavior of complex systems, such as strongly correlated quantum materials.
+Prior to joining machine learning for biology, I developed computational techniques for predicting the emergent behavior of complex systems, such as strongly correlated quantum materials, quantum computers or chemical reactions in classical materials.
 
 [TOC]
 
@@ -10,7 +10,7 @@ Prior to joining machine learning for biology, I spent most time developing comp
 ## Generative models predict single-cell perturbation effects
 
 [<img src="https://pbs.twimg.com/media/EAq3dqdUwAEQssP?format=jpg&name=900x900" style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P27)
-We demonstrated that generative models predict single-cell perturbation effects out-of-sample using a model we call scGen [[P27](/publications#P27)]. The approach enables training models to predict the effects of disease and disease treatment across cell types and species. While the first implementationn of scGen relied on latent space vector arithmetics, we recently published an end-to-end-trained model based on a conditional variational autoencoder: transformer VAE [[P28](/publications#P28)].
+Using a model called scGen, we demonstrated that generative models predict single-cell perturbation effects out-of-sample [[P27](/publications#P27)]. The approach enables training models to predict the effects of disease and disease treatment across cell types and species. While the first implementation of scGen relied on latent space vector arithmetics, we recently published an end-to-end-trained model based on a conditional variational autoencoder: transformer VAE [[P28](/publications#P28)].
 
 {P28}
 
@@ -19,7 +19,7 @@ We demonstrated that generative models predict single-cell perturbation effects 
 
 ## Mapping the coarse-grained connectivity structure of complex manifolds
 
-[<img src="https://pbs.twimg.com/media/D2FmvihWkAA9wmG?format=jpg&name=medium" title="Cell atlas and putative lineage relations of Planaria. Data from Class, Solana, et al., Science (2018). See [P24]." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P24) Partition-based graph abstraction (PAGA) reconciles clustering with manifold learning by explaining variation among observations using both discrete and continuous latent variables [[P26](/publications#P26)]. PAGA generates coarse-grained maps of manifolds with complex topologies - efficiently and robustly across a wide variety of datasets. In [[P24](/publications#P24)], we used it to infer the first lineage tree of a whole complex animal - a [Science breakthrough](https://vis.sciencemag.org/breakthrough2018/) of the year 2018.
+[<img src="https://pbs.twimg.com/media/D2FmvihWkAA9wmG?format=jpg&name=medium" title="Cell atlas and putative lineage relations of Planaria. Data from Class, Solana, et al., Science (2018). See [P24]." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P24) Partition-based graph abstraction (PAGA) reconciles clustering with manifold learning by explaining variation using both discrete and continuous latent variables [[P26](/publications#P26)]. PAGA generates coarse-grained maps of manifolds with complex topologies in a computationally highly efficient and robust way. In [[P24](/publications#P24)], we used it to infer the first lineage tree of a whole complex animal - a [Science breakthrough](https://vis.sciencemag.org/breakthrough2018/) of the year 2018. It has been benchmarked as the overall best performing trajectory inference method in a review of ~70 methods by [Saelens *et al.* (Nat. Biotechn., 2018](https://www.nature.com/articles/s41587-019-0071-9), [tweet)](https://twitter.com/falexwolf/status/1113002674209873920).
 
 {P26}
 
@@ -29,14 +29,14 @@ We demonstrated that generative models predict single-cell perturbation effects 
 ## Scalable and comprehensive software for single-cell analysis
 
 [<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_RGB.png" style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
-[Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23), [code](https://github.com/theislab/scanpy)] is a scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing.
+[Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing. together with the underlying [anndata](http://anndata.readthedocs.org/) it has been downloaded more than 70k times. Read [more](../blog/2019-10-09-scanpy-usage/).  
 
 {P23}
 
 
 ## Reconstructing cell cycle and disease progression using deep learning
 
-[<img src="../img/170712_featured_image_suggestion.png" title="Reconstructed cell cycle. See [P20]." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P20) Using large-scale imaging data, we show how to reconstruct continuous biological processes using deep learning for the examples of cell cycle and disease progression in diabetic retinopathy [[P20](/publications#P20), [code](https://github.com/theislab/deepflow)]. Read [more](../blog/170910_deepflow).
+[<img src="../img/170712_featured_image_suggestion.png" title="Reconstructed cell cycle. See [P20]." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P20) Using large-scale imaging data, we show how to reconstruct continuous biological processes using deep learning for the examples of cell cycle and disease progression in diabetic retinopathy [[P20](/publications#P20)]. Read [more](../blog/170910_deepflow).
 
 {P20}
 
@@ -125,7 +125,7 @@ During studies, I focused on emergent properties of quantum-many body systems an
 ## Sartre in Stammheim
 
 [<img src="../img/sartre_a_stammheim.jpg" title="Sartre in Stammheim. From [O1], original from H. M. Schleyer: RAF Geschichte." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#O1)
-During high school, I tried to gain a better understanding of how philosophical and political ideas stimulate change in society and culture. For instance, in a historical thesis, I investigated why J.-P. Sartre publicly supported the German terrorist group RAF upon his visit in Stammheim in 1974 [[O1](/publications#O1)]. Eight years after the thesis (2013), when the records of the discussions were eventually released, German press reported again ([Spiegel](http://www.spiegel.de/spiegel/print/d-90848693.html)).
+During high school, I tried to gain a better understanding of how philosophical and political ideas stimulate change in society and culture. In my thesis, I investigated why J.-P. Sartre publicly supported the German terrorist group RAF upon his visit in Stammheim in 1974 [[O1](/publications#O1), for more, see [Der Spiegel (2013)](http://www.spiegel.de/spiegel/print/d-90848693.html)].
 
 {O1}
 
