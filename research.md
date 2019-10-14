@@ -2,7 +2,9 @@ Title: Research
 
 In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods that address specific biological hypotheses and originate from different areas of machine learning. With [F. J. Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
 
-Prior to joining machine learning for biology, I developed computational techniques for predicting the emergent behavior in models of strongly correlated quantum materials, quantum computers, and chemical reactions in solar cells.
+Prior to joining machine learning for biology, I developed computational techniques for predicting the emergent behavior of models of strongly correlated quantum materials, quantum computers, and chemical reactions in solar cells.
+
+Research topics are ordered anti-chronologically and link to selected publications and code.
 
 [TOC]
 
