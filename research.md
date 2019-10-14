@@ -1,6 +1,6 @@
 Title: Research
 
-In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods that address specific biological hypotheses and originate from different areas of machine learning: deep learning, topological data analysis to causal inference [[T20](../talks/#T20)]. With [F. J. Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
+In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods that address specific biological hypotheses and originate from different areas of machine learning. With [F. J. Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
 
 Prior to joining machine learning for biology, I developed computational techniques for predicting the emergent behavior of complex systems, such as strongly correlated quantum materials, quantum computers or chemical reactions in classical materials.
 
@@ -29,7 +29,7 @@ Using a model called scGen, we demonstrated that generative models predict singl
 ## Scalable and comprehensive software for single-cell analysis
 
 [<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_RGB.png" style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
-[Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing. together with the underlying [anndata](http://anndata.readthedocs.org/) it has been downloaded more than 70k times. Read [more](../blog/2019-10-09-scanpy-usage/).  
+[Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing. Together with the underlying [anndata](http://anndata.readthedocs.org/) it has been downloaded more than 70k times. Read [more](../blog/2019-10-09-scanpy-usage/).  
 
 {P23}
 
