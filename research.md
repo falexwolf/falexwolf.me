@@ -110,11 +110,15 @@ The [quantum Rabi model](https://physics.aps.org/articles/v4/68) is the basic mo
 *Supercurrent, chaos, equilibriation, matter wave lasers.*
 
 [<img src="../img/jreissaty12.png" title="Expanding cloud of coherent atoms - a 'matter laser' - in a 2d lattice. From [P4]." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P4)
-During studies, I focused on emergent properties of quantum-many body systems and their applications, for example, in showing how [grain boundaries](http://dx.doi.org/10.1038/nphys1739) limit [high-temperature superconductivity](https://en.wikipedia.org/wiki/High-temperature_superconductivity) [[P5](/publications#P5)]. With [T. Kopp](https://www.physik.uni-augsburg.de/exp6/staff/kopp_t/). Also, I did research on the non-equilibrium behavior of these systems [[P1-P4](/publications#P4)], in particular, the fundamental problem of how such systems transition from an excited state to equilibrium. This happens through chaotic dynamics in the classical case, but is an active area of research in the [quantum case](http://dx.doi.org/10.1038/nature06838). We showed that the transition proceeds through an intermediate, prethermalized, plateau for which a statistical theory applies - [M. Kollar](http://myweb.rz.uni-augsburg.de/~mkollar/) posed this as a problem for a summer project, during which I contributed the central analytical calculation [[T1](../talks/#T1)] to the highly cited paper [[P3](/publications#P3)]. With [M. Rigol](https://scholar.google.com/citations?user=MeS-yJgAAAAJ), I investigated *collapse and revival oscillations* and *coherent expansions*, as suggested for realizing matter-wave lasers [[P2,P4](/publications#P4)].
+During studies, I focused on emergent properties of quantum-many body systems and their applications, for example, in showing how [grain boundaries](http://dx.doi.org/10.1038/nphys1739) limit [high-temperature superconductivity](https://en.wikipedia.org/wiki/High-temperature_superconductivity) [[P5](/publications#P5)]. With [T. Kopp](https://www.physik.uni-augsburg.de/exp6/staff/kopp_t/).
 
 {O4}
 
 {P5}
+
+I investigated the non-equilibrium behavior of quantum many-body systems [[P1-P4](/publications#P4)], in particular, the fundamental problem of how such systems transition from an excited state to equilibrium. This happens through chaotic dynamics in the classical case, but is an active area of research in the [quantum case](http://dx.doi.org/10.1038/nature06838). We showed that the transition proceeds through an intermediate, prethermalized, plateau for which a statistical theory applies. With [M. Kollar](http://myweb.rz.uni-augsburg.de/~mkollar/), who defined the problem for a summer project, during which I contributed the central analytical calculation [[T1](../talks/#T1)] to the highly cited paper [[P3](/publications#P3)].
+
+Also, I investigated collapse and revival oscillations and coherent expansions, as suggested for realizing matter-wave lasers [[P2,P4](/publications#P4)]. With [M. Rigol](https://scholar.google.com/citations?user=MeS-yJgAAAAJ).
 
 {P4}
 
