@@ -32,7 +32,7 @@ Partition-based graph abstraction (PAGA) reconciles clustering with manifold lea
 ## Scalable and comprehensive software for single-cell analysis
 
 [<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_RGB.png" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
-[Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing. Together with the underlying [anndata](http://anndata.readthedocs.org/) it has been downloaded more than 70k times. Read [more](../blog/2019-10-09-scanpy-usage/).  
+[Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing. Together with the underlying [anndata](http://anndata.readthedocs.org/) it has been downloaded more than 70k times. Read [more](../blog/2019-10-09-scanpy-usage/). See [software](../software/).
 
 {P23}
 
