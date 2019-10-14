@@ -2,14 +2,14 @@ Title: Research
 
 In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods that address specific biological hypotheses and originate from different areas of machine learning. With [F. J. Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
 
-Prior to joining machine learning for biology, I developed computational techniques for predicting the emergent behavior of complex systems, such as strongly correlated quantum materials, quantum computers or chemical reactions in classical materials.
+Prior to joining machine learning for biology, I developed computational techniques for predicting the emergent behavior in models of strongly correlated quantum materials, quantum computers, and chemical reactions in solar cells.
 
 [TOC]
 
 
 ## Generative models predict single-cell perturbation effects
 
-[<img src="https://pbs.twimg.com/media/EAq3dqdUwAEQssP?format=jpg&name=900x900" style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P27)
+[<img src="https://pbs.twimg.com/media/EAq3dqdUwAEQssP?format=jpg&name=900x900" style="width: 140px; margin: 15px 10px 5px 0px"  align="left">](/publications#P27)
 Using a model called scGen, we demonstrated that generative models predict single-cell perturbation effects out-of-sample [[P27](/publications#P27)]. The approach enables training models to predict the effects of disease and disease treatment across cell types and species. While the first implementation of scGen relied on latent space vector arithmetics, we recently published an end-to-end-trained model based on a conditional variational autoencoder: transformer VAE [[P28](/publications#P28)].
 
 {P28}
@@ -19,7 +19,8 @@ Using a model called scGen, we demonstrated that generative models predict singl
 
 ## Mapping the coarse-grained connectivity structure of complex manifolds
 
-[<img src="https://pbs.twimg.com/media/D2FmvihWkAA9wmG?format=jpg&name=medium" title="Cell atlas and putative lineage relations of Planaria. Data from Class, Solana, et al., Science (2018). See [P24]." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P24) Partition-based graph abstraction (PAGA) reconciles clustering with manifold learning by explaining variation using both discrete and continuous latent variables [[P26](/publications#P26)]. PAGA generates coarse-grained maps of manifolds with complex topologies in a computationally highly efficient and robust way. In [[P24](/publications#P24)], we used it to infer the first lineage tree of a whole complex animal - a [Science breakthrough](https://vis.sciencemag.org/breakthrough2018/) of the year 2018. It has been benchmarked as the overall best performing trajectory inference method in a review of ~70 methods by [Saelens *et al.* (Nat. Biotechn., 2018](https://www.nature.com/articles/s41587-019-0071-9), [tweet)](https://twitter.com/falexwolf/status/1113002674209873920).
+[<img src="https://pbs.twimg.com/media/D2FmvihWkAA9wmG?format=jpg&name=medium" title="Hematopoietic lineages as captured in scRNA-seq from Paul et al., Cell (2015). See [P26]." style="width: 250px; margin: 15px 10px 5px 0px"  align="left">](/publications#P24)
+Partition-based graph abstraction (PAGA) reconciles clustering with manifold learning by explaining variation using both discrete and continuous latent variables [[P26](/publications#P26)]. PAGA generates coarse-grained maps of manifolds with complex topologies in a computationally highly efficient and robust way. In [[P24](/publications#P24)], we used it to infer the first lineage tree of a whole complex animal - a [Science breakthrough](https://vis.sciencemag.org/breakthrough2018/) of the year 2018. It has been benchmarked as the overall best performing trajectory inference method in a review of ~70 methods by [Saelens *et al.* (Nat. Biotechn., 2018](https://www.nature.com/articles/s41587-019-0071-9), [tweet)](https://twitter.com/falexwolf/status/1113002674209873920).
 
 {P26}
 
@@ -28,7 +29,7 @@ Using a model called scGen, we demonstrated that generative models predict singl
 
 ## Scalable and comprehensive software for single-cell analysis
 
-[<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_RGB.png" style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
+[<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_RGB.png" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
 [Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing. Together with the underlying [anndata](http://anndata.readthedocs.org/) it has been downloaded more than 70k times. Read [more](../blog/2019-10-09-scanpy-usage/).  
 
 {P23}
@@ -36,14 +37,14 @@ Using a model called scGen, we demonstrated that generative models predict singl
 
 ## Reconstructing cell cycle and disease progression using deep learning
 
-[<img src="../img/170712_featured_image_suggestion.png" title="Reconstructed cell cycle. See [P20]." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P20) Using large-scale imaging data, we show how to reconstruct continuous biological processes using deep learning for the examples of cell cycle and disease progression in diabetic retinopathy [[P20](/publications#P20)]. Read [more](../blog/170910_deepflow).
+[<img src="../img/170712_featured_image_suggestion.png" title="Reconstructed cell cycle. See [P20]." style="width: 150px; margin: 15px 10px 5px 0px"  align="left">](/publications#P20) Using large-scale imaging data, we show how to reconstruct continuous biological processes using deep learning for the examples of cell cycle and disease progression in diabetic retinopathy [[P20](/publications#P20)]. Read [more](../blog/170910_deepflow).
 
 {P20}
 
 
 ## AI-based diagnosis of lung cancer based on image data
 
-[<img src="../img/dsb3-nodule_new.jpg" title="Lung CT scan with a marked nodule. Data from Data Science Bowl 2017 on Kaggle." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) The goal of the [Data Science Bowl 2017](http://www.datasciencebowl.com/about/) was to predict lung cancer from computed tomography scans. With $1M total in prize money, the highest endowed machine learning competition in 2017. We won the [7th prize](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) among [nearly 2400 teams](https://datasciencebowl.com/about/); the best result among all German teams.
+[<img src="../img/dsb3-nodule_new.jpg" title="Lung CT scan with a marked nodule. Data from Data Science Bowl 2017 on Kaggle." style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) The goal of the [Data Science Bowl 2017](http://www.datasciencebowl.com/about/) was to predict lung cancer from computed tomography scans. With $1M total in prize money, the highest endowed machine learning competition in 2017. We won the [7th prize](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) among [nearly 2400 teams](https://datasciencebowl.com/about/); the best result among all German teams.
 
 {O7}
 
