@@ -13,8 +13,6 @@ The page lists public open source software, which does not include software rela
 
 ## Supervision of lead developer
 
-Within in Scanpy ecosystem.
-
 * [scgen](https://github.com/theislab/scgen): Generative modeling of single-cell perturbation response <a class="github-button" href="https://github.com/theislab/scgen" data-icon="octicon-star" data-show-count="true"></a>
 * [scvelo](https://github.com/theislab/scvelo): Dynamic model for RNA velocity for single cells <a class="github-button" href="https://github.com/theislab/scvelo" data-icon="octicon-star" data-show-count="true"></a>
 
