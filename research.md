@@ -4,7 +4,7 @@ In the past years, machine learning has started to help map, understand and pred
 
 Prior to joining machine learning for biology, I developed computational techniques for predicting the emergent behavior of models of strongly correlated quantum materials, quantum computers, and chemical reactions in solar cells.
 
-Research topics are ordered anti-chronologically and link to selected publications and code.
+The research topics on this page are ordered anti-chronologically and link to selected publications and code.
 
 [TOC]
 
