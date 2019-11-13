@@ -31,7 +31,7 @@ Partition-based graph abstraction (PAGA) reconciles clustering with manifold lea
 
 ## Scalable and comprehensive software for single-cell analysis
 
-[<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_RGB.png" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
+[<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_BrightFG.svg" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
 [Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing. Together with the underlying [anndata](http://anndata.readthedocs.org/) it has been downloaded more than 70k times. Read [more](../blog/2019-10-09-scanpy-usage/). See [software](../software/).
 
 {P23}
@@ -81,7 +81,7 @@ With [U. Schollwöck](https://scholar.google.de/citations?user=MYARbMAAAAAJ&hl=e
 
 *Improving low solar energy conversion efficiencies through modeling.*
 
-The low energy conversion efficiency of established solar cells is largely due to chemical imperfections of the material at which excited photons recombine. While at Bosch research, I established models for material syntheses to optimize processes for the minimization of such imperfections [[O5](/publications#O5),[P8-P11](/publications#P11)]. Mathematically, these models reduce to diffusion-reaction equations. I wrote a proprietary software, which was productionized at Bosch Solar Energy. With [P. Pichler](https://www.google.de/search?q=intrinsic+point+defects%2C+impurities+and+their+diffusion+in+silicon).
+The low energy conversion efficiency of established solar cells is largely due to chemical imperfections of the material at which excited photons recombine. While at Bosch research, I established models for material syntheses to optimize processes for the minimization of such imperfections [[O5](/publications#O5),[P8-P11](/publications#P11)]. Mathematically, these models reduce to diffusion-reaction equations. I wrote a proprietary software, which was productionized at Bosch Solar Energy. With [P. Pichler](https://scholar.google.de/citations?hl=en&user=Dh1sQ8wAAAAJ).
 
 {O5}
 
