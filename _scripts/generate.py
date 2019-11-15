@@ -96,7 +96,10 @@ def format_latex_experience(entry):
     s += r'\vspace{0em}\noindent'
     # employer
     if 'employer' in entry:
-        s += entry['employer'][0] + ', ' + entry['location'][0] + r'\\[0.1em]'
+        s += entry['employer'][0]
+        if 'location' in entry:
+            s += ', ' + entry['location'][0]
+        s += r'\\[0.1em]'
     # position and period, go backwards through position and period entries
     for i in range(len(entry['position'])-1, -1, -1):
         s += entry['position'][i]
