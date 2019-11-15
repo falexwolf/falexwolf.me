@@ -341,11 +341,14 @@ def format_all_publications(f, entries, doctype):
     if doctype == 'html':
         f.write('''\
 <h1>Publications</h1>
-<p> More information on
+<ul>
+<li> See
     <a href="http://scholar.google.de/citations?user=1FnOtMoAAAAJ&hl=en">google scholar</a> and
-    <a href="http://orcid.org/0000-0002-8760-7838">ORCID</a>.
-    An * denotes co-first and an † co-last author. Publications with small contributions are greyed out.</p>
-<p>For selected publications with context, see <a href="/research">research</a>.</p>
+    <a href="http://orcid.org/0000-0002-8760-7838">ORCID</a>.</li>
+<li> Co-first and co-last authors are indicated by * and †, respectively.</li>
+<li> Publications with smaller contributions are greyed out.</li>
+<li> For selected publications with context, see <a href="/research">research</a>.</li>
+</ul>
 ''')
 
         f.write('<h2 id="preprints"> Preprints </h2> \n\n')
