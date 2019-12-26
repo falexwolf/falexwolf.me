@@ -1,4 +1,4 @@
-# Scanpy downloaded more than 50k times in the past 6 months
+# Scanpy and anndata downloaded more than 70k times in the past 6 months
 
 *Published: October 9, 2019.*
 
