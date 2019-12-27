@@ -6,8 +6,8 @@ The page lists public open source software, which does not include software rela
 
 ## Initial conception & development
 
-* [Scanpy](https://github.com/theislab/scanpy):  Single-cell analysis in Python, [>70k downloads](../blog/2019-10-09-scanpy-usage/) <a class="github-button" href="https://github.com/theislab/scanpy" data-icon="octicon-star" data-show-count="true"></a> <img src="https://img.shields.io/pypi/dm/scanpy?logo=PyPI"> <img src="https://img.shields.io/conda/dn/bioconda/scanpy?logo=Anaconda"> 
-* [anndata](https://github.com/theislab/anndata): Annotated data <a class="github-button" href="https://github.com/theislab/anndata" data-icon="octicon-star" data-show-count="true"></a>
+* [Scanpy](https://github.com/theislab/scanpy):  Single-cell analysis in Python <a class="github-button" href="https://github.com/theislab/scanpy" data-icon="octicon-star" data-show-count="true"></a> <img src="https://pepy.tech/badge/scanpy"> <img src="https://img.shields.io/pypi/dm/scanpy?logo=PyPI"> <img src="https://img.shields.io/conda/dn/bioconda/scanpy?logo=Anaconda">
+* [anndata](https://github.com/theislab/anndata): Annotated data <a class="github-button" href="https://github.com/theislab/anndata" data-icon="octicon-star" data-show-count="true"></a> <img src="https://pepy.tech/badge/anndata">
 * [PAGA](https://github.com/theislab/paga): Mapping out the global connectivity structure of manifolds <a class="github-button" href="https://github.com/theislab/paga" data-icon="octicon-star" data-show-count="true"></a>
 
 
