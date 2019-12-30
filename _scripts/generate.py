@@ -175,8 +175,9 @@ def format_pub(entry, doctype='html', ascard=False):
             s = '<div class="card" style="border: 1px solid rgba(0,0,0,.125); border-radius: .25rem; padding: 1.25rem; opacity: 1; font-size: smaller">'
             css_style_note = 'font-size: 10px; font-weight: normal; margin-left: 2px;'
         elif 'mark' in entry:
-            if entry['mark'] == 'noncentral':
-                s = '<p style="opacity: 0.6;">'
+            s = '<p>'
+            # if entry['mark'] == 'noncentral':  # ignore for now
+            #     s = '<p style="opacity: 0.6;">'
         else:
             s = '<p>'
     else:
@@ -346,7 +347,6 @@ def format_all_publications(f, entries, doctype):
     <a href="http://scholar.google.de/citations?user=1FnOtMoAAAAJ&hl=en">google scholar</a> and
     <a href="http://orcid.org/0000-0002-8760-7838">ORCID</a>.</li>
 <li> Co-first and co-last authors are indicated by * and †, respectively.</li>
-<li> Publications with smaller contributions are greyed out.</li>
 <li> For selected publications with context, see <a href="/research">research</a>.</li>
 </ul>
 ''')
