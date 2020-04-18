@@ -1,6 +1,6 @@
 Title: Research
 
-In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods that address specific biological hypotheses and originate from different areas of machine learning. With [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ) and Cellarity.
+In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods that address specific biological hypotheses and originate from different areas of machine learning. With [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ) and [Cellarity](https://cellarity.com/).
 
 Prior to joining machine learning for biology, I developed computational techniques for predicting the emergent behavior of models of strongly correlated quantum materials, basic models of quantum computers, and chemical reactions in solar cells.
 
@@ -12,7 +12,7 @@ The research topics on this page are ordered anti-chronologically and link to se
 ## Generative models predict single-cell perturbation effects
 
 [<img src="https://pbs.twimg.com/media/EAq3dqdUwAEQssP?format=jpg&name=900x900" style="width: 140px; margin: 15px 10px 5px 0px"  align="left">](/publications#P27)
-Using a model called scGen, we demonstrated that generative models predict single-cell perturbation effects out-of-sample [[P27](/publications#P27)]. The approach enables training models to predict the effects of disease and disease treatment across cell types and species. While the first implementation of scGen relied on latent space vector arithmetics, we recently published an end-to-end-trained model based on a conditional variational autoencoder: transformer VAE [[P28](/publications#P28)].
+We showed that generative models are able to predict single-cell perturbation responses out-of-sample [[P27](/publications#P27)]. In principle, this approach should enable training models to predict the effects of disease and disease treatment across cell types and species. While the first implementation of the approach (scGen) relied on latent space vector arithmetics, we recently published an end-to-end-trained model based on a conditional variational autoencoder (trVAE) [[P28](/publications#P28)].
 
 {P28}
 
@@ -22,7 +22,7 @@ Using a model called scGen, we demonstrated that generative models predict singl
 ## Mapping the coarse-grained connectivity structure of complex manifolds
 
 [<img src="https://pbs.twimg.com/media/D2FmvihWkAA9wmG?format=jpg&name=medium" title="Hematopoietic lineages as captured in scRNA-seq from Paul et al., Cell (2015). See [P26]." style="width: 250px; margin: 15px 10px 5px 0px"  align="left">](/publications#P24)
-Partition-based graph abstraction (PAGA) reconciles clustering with manifold learning by explaining variation using both discrete and continuous latent variables [[P26](/publications#P26)]. PAGA generates coarse-grained maps of manifolds with complex topologies in a computationally highly efficient and robust way. In [[P24](/publications#P24)], we used it to infer the first lineage tree of a whole complex animal - a [Science breakthrough](https://vis.sciencemag.org/breakthrough2018/) of the year 2018. It has been benchmarked as the overall best performing trajectory inference method in a review of ~70 methods by [Saelens *et al.* (Nat. Biotechn., 2018](https://www.nature.com/articles/s41587-019-0071-9), [tweet)](https://twitter.com/falexwolf/status/1113002674209873920).
+Partition-based graph abstraction (PAGA) aims to reconcile clustering with manifold learning by explaining variation using both discrete and continuous latent variables [[P26](/publications#P26)]. PAGA generates coarse-grained maps of manifolds with complex topologies in a computationally efficient and robust way. In [[P24](/publications#P24)], we used it to infer the first lineage tree of a whole complex animal - a [Science breakthrough](https://vis.sciencemag.org/breakthrough2018/) of the year 2018. It has been benchmarked as the overall best performing trajectory inference method in a review of ~70 methods by [Saelens *et al.* (Nat. Biotechn., 2019](https://www.nature.com/articles/s41587-019-0071-9)) [[tweet]](https://twitter.com/falexwolf/status/1113002674209873920).
 
 {P26}
 
@@ -32,7 +32,7 @@ Partition-based graph abstraction (PAGA) reconciles clustering with manifold lea
 ## Scalable and comprehensive software for single-cell analysis
 
 [<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_BrightFG.svg" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
-[Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing. Together with the underlying [anndata](http://anndata.readthedocs.org/) it has been downloaded more than 70k times. Read [more](../blog/2019-10-09-scanpy-usage/). See [software](../software/).
+[Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing. Together with the underlying [anndata](http://anndata.readthedocs.org/) it has become widely used and lead to a little ecosystem. It has been selected as an [*Essential Open Source Software for Science*](https://chanzuckerberg.com/newsroom/chan-zuckerberg-initiative-awards-5-million-for-open-source-software-projects-essential-to-science/) among [32 projects](https://chanzuckerberg.com/eoss/proposals/), alongside giants such as numpy, pandas, scikit-learn, matplotlib, and others. See [software](../software/).
 
 {P23}
 
@@ -44,7 +44,7 @@ Partition-based graph abstraction (PAGA) reconciles clustering with manifold lea
 {P20}
 
 
-## AI-based diagnosis of lung cancer based on image data
+## Deep-learning-based diagnosis of lung cancer from images
 
 [<img src="../img/dsb3-nodule_new.jpg" title="Lung CT scan with a marked nodule. Data from Data Science Bowl 2017 on Kaggle." style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) The goal of the [Data Science Bowl 2017](http://www.datasciencebowl.com/about/) was to predict lung cancer from computed tomography scans. With $1M total in prize money, the highest endowed machine learning competition in 2017. We won the [7th prize](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) among [nearly 2400 teams](https://datasciencebowl.com/about/); the best result among all German teams.
 
