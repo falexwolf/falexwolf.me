@@ -12,9 +12,9 @@ The research topics on this page are ordered anti-chronologically and link to se
 ## Generative models predict single-cell perturbation effects
 
 [<img src="https://pbs.twimg.com/media/EAq3dqdUwAEQssP?format=jpg&name=900x900" style="width: 140px; margin: 15px 10px 5px 0px"  align="left">](/publications#P27)
-We showed that generative models are able to predict single-cell perturbation responses out-of-sample [[P27](/publications#P27)]. In principle, this approach should enable training models to predict the effects of disease and disease treatment across cell types and species. While the first implementation of the approach (scGen) relied on latent space vector arithmetics, we recently published an end-to-end-trained model based on a conditional variational autoencoder (trVAE) [[P28](/publications#P28)].
+We showed that generative models are able to predict single-cell perturbation responses out-of-sample [[P27](/publications#P27)]. In principle, this approach should enable training models to predict the effects of disease and disease treatment across cell types and species. While the first implementation of the approach (scGen) relied on latent space vector arithmetics, we recently published an end-to-end-trained model based on a conditional variational autoencoder (trVAE) [[P29](/publications#P29)].
 
-{P28}
+{P29}
 
 {P27}
 
@@ -105,7 +105,7 @@ The [quantum Rabi model](https://physics.aps.org/articles/v4/68) is the basic mo
 {P6}
 
 
-## Basic emergent properties of quantum many-body systems in non-equilibrium
+## Basic emergent properties of quantum many-body systems
 
 *Supercurrent, chaos, equilibriation, matter wave lasers.*
 

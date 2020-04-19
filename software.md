@@ -1,6 +1,7 @@
 title: Software
 
-The page lists open source software. Beyond what is listed, I have created and contributed to software for computational physics, electrical engineering, causal inference and proprietary software for industry.
+The page lists open source software. Beyond what is listed, I have created and contributed to software for computational physics, photolvotaics, causal inference, and to proprietary software for photovoltaics.
+
 
 ## Initial conception & development
 

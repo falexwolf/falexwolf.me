@@ -1,6 +1,7 @@
 # About
 
-I'm Alex Wolf, the Head of Applied Machine Learning at [Cellarity](https://cellarity.com/), a [Flagship Pioneering](https://flagshippioneering.com) startup based in Cambridge, MA. I'm also adjunct researcher (former team leader) in the [Machine Learning Lab](http://www.helmholtz-muenchen.de/icb/research/groups/machine-learning/overview/index.html) at the [Institute of Computational Biology](http://www.helmholtz-muenchen.de/icb/) of [Helmholtz Munich](http://www.helmholtz-muenchen.de/en/index.html).
+I'm Alex Wolf, the Head of Applied Machine Learning at [Cellarity](https://cellarity.com/), a [Flagship Pioneering](https://flagshippioneering.com) startup based in Cambridge, MA.
+I'm also adjunct researcher (former team leader) at the [Machine Learning Lab](http://www.helmholtz-muenchen.de/icb/research/groups/machine-learning/overview/index.html) of the [Institute of Computational Biology](http://www.helmholtz-muenchen.de/icb/) at [Helmholtz Munich](http://www.helmholtz-muenchen.de/en/index.html).
 
 Our research addresses biomedical questions with machine learning that leverages cellular resolution. For more information, see this [research summary](/research) or my [CV](/docs/WolfFA_CV.pdf).
 
