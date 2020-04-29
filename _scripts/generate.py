@@ -412,20 +412,21 @@ def process_source(single_source):
         if doctype == 'html':
             source_isdir = os.path.isdir(single_source)
             # transform notebooks into .md files
+            cleanup = False
             if source_isdir:
                 for s in glob.glob(single_source + '/*'):
                     if s.endswith(('.ipynb')):
                         os.system('jupyter nbconvert --log-level="WARN" --to markdown ' + s)
             else:
                 if single_source.endswith(('.ipynb')):
-                    new_source_dir = single_source.split['.'][-1]
+                    new_source_dir = single_source.split('.')[0]
                     os.system('jupyter nbconvert --log-level="WARN" --to markdown --output-dir {} {}'
                               .format(new_source_dir, single_source))
-                    os.remove(single_source)
-                    os.rename(new_source_dir + '/' + single_source.split['/'][-1].replace('.ipynb', '.md'),
+                    value = os.rename(new_source_dir + '/' + single_source.split('/')[-1].replace('.ipynb', '.md'),
                               new_source_dir + '/index.md')
                     source_isdir = True
                     single_source = new_source_dir
+                    cleanup = True
             # now, deal with .md and .rst sources
             if source_out == 'about.md':
                 # generate the document root (index.html)
@@ -433,7 +434,7 @@ def process_source(single_source):
                 child = False
             else:
                 target_dir = ('_site/'
-                    + (source_out if source_isdir else source_out.split('.')[0]))
+                    + source_out.split('.')[0])
                 child = True
             if not os.path.exists(target_dir): os.makedirs(target_dir)
             if source_isdir:
@@ -523,6 +524,10 @@ def process_source(single_source):
                                         break
                             out.write(l)
                 out.close()
+
+            if cleanup:
+                os.remove(new_source_dir + '/index.md')
+                os.rmdir(new_source_dir)
 
 
 if __name__ == '__main__':
