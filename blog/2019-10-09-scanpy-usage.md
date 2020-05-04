@@ -1,8 +1,8 @@
 # Scanpy and anndata downloaded more than 70k times in the past 6 months
 
-*Published: October 9, 2019.*
+*Published: 2019-10-09.*
 
-*Edit: These days, it's much simpler to get PyPI statistics: <img src="https://pepy.tech/badge/scanpy"> for Scanpy and <img src="https://pepy.tech/badge/anndata"> for anndata.*
+*Edit (2020-05-04): This blog post was written before it was easy to get download statistics via PePy: <img src="https://pepy.tech/badge/scanpy"> for Scanpy and <img src="https://pepy.tech/badge/anndata"> for anndata.*
 
 Scanpy and anndata have been downloaded about 55k times from PyPI during the past 6 months ([scanpy](https://pypistats.org/packages/scanpy), [anndata](https://pypistats.org/packages/anndata)) (screenshots below). Also, they now have 15k total downloads on Bioconda ([scanpy](https://anaconda.org/bioconda/scanpy), [anndata](https://anaconda.org/bioconda/anndata)).
 

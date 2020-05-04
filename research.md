@@ -46,7 +46,7 @@ Partition-based graph abstraction (PAGA) aims to reconcile clustering with manif
 
 ## Deep-learning-based diagnosis of lung cancer from images
 
-[<img src="../img/dsb3-nodule_new.jpg" title="Lung CT scan with a marked nodule. Data from Data Science Bowl 2017 on Kaggle." style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) The goal of the [Data Science Bowl 2017](http://www.datasciencebowl.com/about/) was to predict lung cancer from computed tomography scans. With $1M total in prize money, the highest endowed machine learning competition in 2017. We won the [7th prize](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) among [nearly 2400 teams](https://datasciencebowl.com/about/); the best result among all German teams.
+[<img src="../img/dsb3-nodule_new.jpg" title="Lung CT scan with a marked nodule. Data from Data Science Bowl 2017 on Kaggle." style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) The goal of the [Data Science Bowl 2017](http://www.datasciencebowl.com/about/) was to predict lung cancer from computed tomography scans. With $1M total in prize money, the highest endowed machine learning competition in 2017. We won the [7th prize](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) among [nearly 2.4k teams](https://datasciencebowl.com/about/) and more than 10k participants; the best result among all German teams.
 
 {O7}
 
