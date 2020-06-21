@@ -1,9 +1,9 @@
 # About
 
-I'm Alex Wolf, the Head of Applied Machine Learning at [Cellarity](https://cellarity.com/), a [Flagship Pioneering](https://flagshippioneering.com) startup based in Cambridge, MA.
-I'm also adjunct researcher (former team leader) at the [Machine Learning Lab](http://www.helmholtz-muenchen.de/icb/research/groups/machine-learning/overview/index.html) of the [Institute of Computational Biology](http://www.helmholtz-muenchen.de/icb/) at [Helmholtz Munich](http://www.helmholtz-muenchen.de/en/index.html).
+I'm Alex Wolf, the Head of Applied Machine Learning at [Cellarity](https://cellarity.com/).
+I'm also adjunct researcher (former team leader) at the [Institute of Computational Biology](http://www.helmholtz-muenchen.de/icb/research/groups/machine-learning/overview/index.html) of [Helmholtz Munich](http://www.helmholtz-muenchen.de/en/index.html).
 
-Our research addresses biomedical questions with machine learning that leverages cellular resolution. For more information, see this [research summary](/research) or my [CV](/docs/WolfFA_CV.pdf).
+Our research addresses biomedical questions with machine learning that leverages cellular resolution, see this [research summary](/research) or my [CV](/docs/WolfFA_CV.pdf).
 
 <center>
 <a href="http://scholar.google.de/citations?user=1FnOtMoAAAAJ"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="ai ai-google-scholar fa-stack-1x fa-inverse"></i></span></a>
@@ -12,3 +12,8 @@ Our research addresses biomedical questions with machine learning that leverages
 <a href="https://linkedin.com/in/falexwolf"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span></a>
 <a href="/docs/WolfFA_CV.pdf"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="ai ai-cv fa-stack-1x fa-inverse"></i></span></a>
 </center>
+
+## News
+
+* 2020-05-11: Cellarity got featured in [Nature Biotechnology](https://www.nature.com/articles/s41587-020-0521-4) among a handful of startups that aim at re-defining drug discovery through active learning.
+* 2019-11-14: Scanpy got selected an [*Essential Open Source Software for Science*](https://chanzuckerberg.com/newsroom/chan-zuckerberg-initiative-awards-5-million-for-open-source-software-projects-essential-to-science/) by CZI among [32 projects](https://chanzuckerberg.com/eoss/proposals/), alongside giants such as numpy, pandas, scikit-learn, matplotlib, and others. See [software](../software/).
