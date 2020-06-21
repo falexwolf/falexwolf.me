@@ -55,12 +55,12 @@ Partition-based graph abstraction (PAGA) aims to reconcile clustering with manif
 
 ## Deep-learning based diagnosis of lung cancer from images
 
-[<img src="../img/dsb3-nodule_new.jpg" title="Lung CT scan with a marked nodule. Data from Data Science Bowl 2017 on Kaggle." style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) The goal of the [Data Science Bowl 2017](http://www.datasciencebowl.com/about/) was to predict lung cancer from computed tomography scans. With $1M total in prize money, the highest endowed machine learning competition in 2017. We won the [7th prize](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) among [nearly 2.4k teams](https://datasciencebowl.com/about/) and more than 10k participants; the best result among all German teams.
+[<img src="../img/dsb3-nodule_new.jpg" title="Lung CT scan with a marked nodule. Data from Data Science Bowl 2017 on Kaggle." style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) The goal of the [Data Science Bowl 2017](http://www.datasciencebowl.com/about/) was to predict lung cancer from tomography scans. It was the highest endowed machine learning competition with $1M total in prize money in 2017. We won the [7th prize](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) among [nearly 2.4k teams](https://datasciencebowl.com/about/) and more than 10k participants; the best result among all German teams.
 
 {O7}
 
 
-## Tensor trains and dynamical mean-field theory
+## Solving dynamical mean-field theory using tensor trains
 
 [<img src="../img/dmft.png" title="Dynamical mean-field theory." style="width: 200px; margin: 15px 10px 5px 0px"  align="left">](/publications#O6)
 [Tensor trains](https://en.wikipedia.org/wiki/Matrix_product_state) ([MPS](https://en.wikipedia.org/wiki/Matrix_product_state), [DMRG](https://en.wikipedia.org/wiki/Density_matrix_renormalization_group)) constitute, together with [quantum monte carlo](https://en.wikipedia.org/wiki/Quantum_Monte_Carlo) and the [numerical renormalization group](https://en.wikipedia.org/wiki/Numerical_renormalization_group), the key numerical approaches for tackling the exponential [computational complexity](https://en.wikipedia.org/wiki/Computability) of models of [strongly correlated materials](https://en.wikipedia.org/wiki/Strongly_correlated_material) and quantum computers.
@@ -85,7 +85,7 @@ With [U. Schollwöck](https://scholar.google.de/citations?user=MYARbMAAAAAJ&hl=e
 {P12}
 
 
-## Diffusion-reaction chemistry of solar cells
+## Modeling diffusion-reaction chemistry of solar cells to improve conversion efficiency
 
 The low energy conversion efficiency of established solar cells is largely due to chemical imperfections of the material at which excited photons recombine. While at Bosch research, I established models for material syntheses to optimize processes for the minimization of such imperfections [[O5](/publications#O5),[P8-P11](/publications#P11)]. Mathematically, these models reduce to diffusion-reaction equations. I wrote a proprietary software, which was productionized at Bosch Solar Energy. With [P. Pichler](https://scholar.google.de/citations?hl=en&user=Dh1sQ8wAAAAJ).
 
@@ -142,7 +142,7 @@ Collapse and revival oscillations and coherent expansions have been suggested fo
 ## Sartre at Stammheim
 
 [<img src="../img/sartre_a_stammheim.jpg" title="Sartre in Stammheim. From [O1], original from H. M. Schleyer: RAF Geschichte." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#O1)
-During high school, I tried to gain a better understanding of how philosophical and political ideas stimulate change in society and culture. In my thesis, I investigated why J.-P. Sartre publicly supported the German terrorist group RAF upon his visit in Stammheim in 1974 [[O1](/publications#O1), for more, see [Der Spiegel (2013)](http://www.spiegel.de/spiegel/print/d-90848693.html)].
+During high school, I tried to gain a better understanding of how philosophical and political ideas stimulate change in society and culture. In my thesis, I investigated why J.-P. Sartre publicly supported the German terrorist group RAF upon his visit in Stammheim in 1974 [[O1](/publications#O1). For more context, see [Der Spiegel (2013)](http://www.spiegel.de/spiegel/print/d-90848693.html).
 
 {O1}
 
