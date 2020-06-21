@@ -62,13 +62,11 @@ Partition-based graph abstraction (PAGA) aims to reconcile clustering with manif
 
 ## Tensor trains and dynamical mean-field theory
 
-*Emergent properties of materials through computational many-body physics at the interface of quantum information and field theory.*
-
 [<img src="../img/dmft.png" title="Dynamical mean-field theory." style="width: 200px; margin: 15px 10px 5px 0px"  align="left">](/publications#O6)
 [Tensor trains](https://en.wikipedia.org/wiki/Matrix_product_state) ([MPS](https://en.wikipedia.org/wiki/Matrix_product_state), [DMRG](https://en.wikipedia.org/wiki/Density_matrix_renormalization_group)) constitute, together with [quantum monte carlo](https://en.wikipedia.org/wiki/Quantum_Monte_Carlo) and the [numerical renormalization group](https://en.wikipedia.org/wiki/Numerical_renormalization_group), the key numerical approaches for tackling the exponential [computational complexity](https://en.wikipedia.org/wiki/Computability) of models of [strongly correlated materials](https://en.wikipedia.org/wiki/Strongly_correlated_material) and quantum computers.
 
-We developed a way to use tensor trains within [dynamical mean-field theory](https://en.wikipedia.org/wiki/Dynamical_mean-field_theory) to improve the ability of simulating strongly correlated materials [[O6](/publications#O6),[P12-P18](/publications#P18)].
-With [U. Schollwöck](https://scholar.google.de/citations?user=MYARbMAAAAAJ&hl=en) and [A. Millis](https://scholar.google.com/citations?user=ZVaMoP0AAAAJ&hl=en) (Columbia U, Flatiron Institute).
+We developed a way to use tensor trains within [dynamical mean-field theory](https://en.wikipedia.org/wiki/Dynamical_mean-field_theory) to enabable the simulation of previously inaccessible emergent properties of strongly correlated materials [[O6](/publications#O6),[P12-P18](/publications#P18)] - this worked to some degree, but turned out a hard problem. This is computational many-body physics at the interface of quantum information and field theory.
+With [U. Schollwöck](https://scholar.google.de/citations?user=MYARbMAAAAAJ&hl=en) and [A. Millis](https://scholar.google.com/citations?user=ZVaMoP0AAAAJ&hl=en).
 
 {O6}
 
@@ -89,8 +87,6 @@ With [U. Schollwöck](https://scholar.google.de/citations?user=MYARbMAAAAAJ&hl=e
 
 ## Diffusion-reaction chemistry of solar cells
 
-*Improving low solar energy conversion efficiencies through modeling.*
-
 The low energy conversion efficiency of established solar cells is largely due to chemical imperfections of the material at which excited photons recombine. While at Bosch research, I established models for material syntheses to optimize processes for the minimization of such imperfections [[O5](/publications#O5),[P8-P11](/publications#P11)]. Mathematically, these models reduce to diffusion-reaction equations. I wrote a proprietary software, which was productionized at Bosch Solar Energy. With [P. Pichler](https://scholar.google.de/citations?hl=en&user=Dh1sQ8wAAAAJ).
 
 {O5}
@@ -106,8 +102,6 @@ The low energy conversion efficiency of established solar cells is largely due t
 
 ## Dynamics of the quantum Rabi model
 
-*The dynamics of a Q-bit coupled to a decoherence-generating bath.*
-
 [<img src="../img/wolf12.png" title="Time evolution of photon excitation through entanglement with a quantum bit. From [P6]." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P6)
 The [quantum Rabi model](https://physics.aps.org/articles/v4/68) is the basic model for understanding decoherence of a Q-bit that is coupled to a bath, and hence, a basic model for the technical foundations of quantum computing [[P6,P7](/publications#P7)]. By exploiting a recent exact solution of the static system, we established several dynamical properties, amonth others, Schroedinger-cat like states that show particular robustness towards decoherence. With [D. Braak](https://www.google.de/search?q=Integrability+of+the+Rabi+Model).
 
@@ -116,9 +110,7 @@ The [quantum Rabi model](https://physics.aps.org/articles/v4/68) is the basic mo
 {P6}
 
 
-## Emergent properties of quantum many-body systems
-
-*Supercurrent, chaos, equilibration, matter wave lasers.*
+## Supercurrent through grain boundaries
 
 [<img src="../img/grain-boundary.png" title="Grain boundary and super conductivity parameters of electrons." style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#O4)
 During studies, I focused on emergent properties of quantum-many body systems and their applications. Using a phenomenological theory of superconductivity (Bogoliubov de Gennes), we showed how [grain boundaries](http://dx.doi.org/10.1038/nphys1739) and strong correlations affect [high-temperature superconductivity](https://en.wikipedia.org/wiki/High-temperature_superconductivity) [[P5](/publications#P5)]. With [T. Kopp](https://www.physik.uni-augsburg.de/exp6/staff/kopp_t/).
@@ -127,12 +119,17 @@ During studies, I focused on emergent properties of quantum-many body systems an
 
 {P5}
 
-We investigated the non-equilibrium behavior of quantum many-body systems [[P1-P4](/publications#P4)], in particular, the fundamental problem of how such systems transition from an excited state to equilibrium. This happens through chaotic dynamics in the classical case, but is an active area of research in the [quantum case](http://dx.doi.org/10.1038/nature06838). We showed that the transition proceeds through an intermediate, prethermalized, plateau for which we developed a statistical theory. With [M. Kollar](http://myweb.rz.uni-augsburg.de/~mkollar/), who defined the problem for a summer project, during which I contributed the central analytical calculation [[T1](../talks/#T1)] to the highly cited paper [[P3](/publications#P3)].
+
+## Relaxation of a quantum many-body system after perturbation
+
+We investigated the non-equilibrium behavior of quantum many-body systems [[P1-P4](/publications#P4)], in particular, the fundamental problem of how such systems transition from an excited state to equilibrium. This happens through chaotic dynamics in the classical case, but is an active area of research in the [quantum case](http://dx.doi.org/10.1038/nature06838). We showed that the transition proceeds through an intermediate, prethermalized, plateau for which we developed a statistical theory. I contributed the central analytical calculation [[T1](../talks/#T1)] to the highly cited paper [[P3](/publications#P3)] during a summer lab project. With [M. Kollar](http://myweb.rz.uni-augsburg.de/~mkollar/).
 
 {P3}
 
 {P1}
 
+
+## Coherent expansions of quantum matter and matter wave lasers
 
 [<img src="../img/jreissaty12.png" title="Expanding cloud of coherent atoms - a 'matter laser' - in a 2d lattice. From [P4]." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P4)
 Collapse and revival oscillations and coherent expansions have been suggested for realizing matter-wave lasers. The following two projects [[P2,P4](/publications#P4)] provided first in-depth models in one- and two-dimensional lattices. With [M. Rigol](https://scholar.google.com/citations?user=MeS-yJgAAAAJ).
