@@ -251,6 +251,10 @@ def format_pub(entry, doctype='html', ascard=False):
         else:
             s += '(' + entry['year'] + ')'
             if 'doi' in entry or 'url' in entry: s += '}'
+    if 'note' in entry:
+        # format note
+        if doctype == 'html':
+            s += f' <span style="{css_style_note}">{entry["note"]}</span> '
     if doctype == 'html':
         # preprints
         if 'eprint' in entry:
