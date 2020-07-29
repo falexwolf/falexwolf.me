@@ -120,15 +120,6 @@ During studies, I focused on emergent properties of quantum-many body systems an
 {P5}
 
 
-## Relaxation of a quantum many-body system after perturbation
-
-We investigated the non-equilibrium behavior of quantum many-body systems [[P1-P4](/publications#P4)], in particular, the fundamental problem of how such systems transition from an excited state to equilibrium. This happens through chaotic dynamics in the classical case, but is an active area of research in the [quantum case](http://dx.doi.org/10.1038/nature06838). We showed that the transition proceeds through an intermediate, prethermalized, plateau for which we developed a statistical theory. I contributed the central analytical calculation [[T1](../talks/#T1)] to the highly cited paper [[P3](/publications#P3)] during a summer lab project. With [M. Kollar](http://myweb.rz.uni-augsburg.de/~mkollar/).
-
-{P3}
-
-{P1}
-
-
 ## Coherent expansions of quantum matter and matter wave lasers
 
 [<img src="../img/jreissaty12.png" title="Expanding cloud of coherent atoms - a 'matter laser' - in a 2d lattice. From [P4]." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P4)
@@ -137,6 +128,15 @@ Collapse and revival oscillations and coherent expansions have been suggested fo
 {P4}
 
 {P2}
+
+
+## Relaxation of a quantum many-body system after perturbation
+
+We investigated the non-equilibrium behavior of quantum many-body systems [[P1-P4](/publications#P4)], in particular, the fundamental problem of how such systems transition from an excited state to equilibrium. This happens through chaotic dynamics in the classical case, but is an active area of research in the [quantum case](http://dx.doi.org/10.1038/nature06838). We showed that the transition proceeds through an intermediate, prethermalized, plateau for which we developed a statistical theory. I contributed the central analytical calculation [[T1](../talks/#T1)] to the highly cited paper [[P3](/publications#P3)] during a summer lab project. With [M. Kollar](http://myweb.rz.uni-augsburg.de/~mkollar/).
+
+{P3}
+
+{P1}
 
 
 ## Sartre at Stammheim
