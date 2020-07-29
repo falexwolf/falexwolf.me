@@ -255,6 +255,8 @@ def format_pub(entry, doctype='html', ascard=False):
         # format note
         if doctype == 'html':
             s += f' <span style="{css_style_note}">{entry["note"]}</span> '
+        else:
+            s += r' \footnotesize{{' + entry["note"].replace('%', '\%') + '}}'
     if doctype == 'html':
         # preprints
         if 'eprint' in entry:
