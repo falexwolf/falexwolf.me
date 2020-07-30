@@ -504,6 +504,7 @@ def process_source(single_source):
                         return line
 
                 out = open(target, 'w')
+                print(target)
                 publications = read_file('publications.bib')
                 for line in open('_includes/blog.html'):
                     if 'INSERT' not in line:
@@ -516,6 +517,11 @@ def process_source(single_source):
                             out.write(adjust_child_dir(l) if child else l)
                     elif 'INSERT_FOOTER' in line:
                         for l in open('_includes/footer.html'):
+                            if l.startswith('#BLOG'):
+                                if not target.startswith('_site/blog/'):
+                                    continue  # ignore these lines for non-blog
+                                else:
+                                    l = l.replace('#BLOG', '')  # strip this start sequence
                             out.write(adjust_child_dir(l) if child else l)
                     elif 'INSERT_CONTENT' in line:
                         if md is not None and 'title' in md.Meta:
