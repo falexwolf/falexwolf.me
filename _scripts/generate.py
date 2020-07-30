@@ -504,7 +504,6 @@ def process_source(single_source):
                         return line
 
                 out = open(target, 'w')
-                print(target)
                 publications = read_file('publications.bib')
                 for line in open('_includes/blog.html'):
                     if 'INSERT' not in line:
