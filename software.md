@@ -5,14 +5,14 @@ The page lists open source software. Beyond what is listed, I have created and c
 
 ## Initial conception & development
 
-* [Scanpy](https://github.com/theislab/scanpy):  Single-cell analysis in Python <img src="https://img.shields.io/github/stars/theislab/scanpy?logo=GitHub&color=yellow"> <img src="https://pepy.tech/badge/scanpy"> <img src="https://img.shields.io/pypi/dm/scanpy?logo=PyPI&color=blue"> <img src="https://img.shields.io/conda/dn/bioconda/scanpy?logo=Anaconda">
-* [anndata](https://github.com/theislab/anndata): Annotated data <img src="https://img.shields.io/github/stars/theislab/anndata?logo=GitHub&color=yellow"> <img src="https://pepy.tech/badge/anndata"> <img src="https://img.shields.io/pypi/dm/anndata?logo=PyPI&color=blue"> <img src="https://img.shields.io/conda/dn/bioconda/anndata?logo=Anaconda">
+* [Scanpy](https://scanpy.readthedocs.io/en/latest/):  Single-cell analysis in Python <img src="https://img.shields.io/github/stars/theislab/scanpy?logo=GitHub&color=yellow"> <img src="https://pepy.tech/badge/scanpy"> <img src="https://img.shields.io/pypi/dm/scanpy?logo=PyPI&color=blue"> <img src="https://img.shields.io/conda/dn/bioconda/scanpy?logo=Anaconda">
+* [anndata](https://anndata.readthedocs.io/en/latest/): Annotated data <img src="https://img.shields.io/github/stars/theislab/anndata?logo=GitHub&color=yellow"> <img src="https://pepy.tech/badge/anndata"> <img src="https://img.shields.io/pypi/dm/anndata?logo=PyPI&color=blue"> <img src="https://img.shields.io/conda/dn/bioconda/anndata?logo=Anaconda">
 * [PAGA](https://github.com/theislab/paga): Mapping out the global connectivity structure of manifolds <img src="https://img.shields.io/github/stars/theislab/paga?logo=GitHub&color=yellow">
 
 
 ## Supervision of lead developer
 
-* [scvelo](https://github.com/theislab/scvelo): Dynamic model for RNA velocity for single cells <img src="https://img.shields.io/github/stars/theislab/scvelo?logo=GitHub&color=yellow"> <img src="https://pepy.tech/badge/scvelo">  <img src="https://img.shields.io/pypi/dm/scvelo?logo=PyPI&color=blue">
+* [scvelo](https://scvelo.org/): Dynamic model for RNA velocity for single cells <img src="https://img.shields.io/github/stars/theislab/scvelo?logo=GitHub&color=yellow"> <img src="https://pepy.tech/badge/scvelo">  <img src="https://img.shields.io/pypi/dm/scvelo?logo=PyPI&color=blue">
 * [scgen](https://github.com/theislab/scgen): Generative modeling of single-cell perturbation response <img src="https://img.shields.io/github/stars/theislab/scgen?logo=GitHub&color=yellow"> <img src="https://pepy.tech/badge/scgen"> <img src="https://img.shields.io/pypi/dm/scgen?logo=PyPI&color=blue">
 
 
