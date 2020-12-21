@@ -284,6 +284,10 @@ def format_pub(entry, doctype='html', ascard=False):
             #     code = entry['github']
             # user_repo = code.replace('https://github.com/', '')
             # s += f'<img src="https://img.shields.io/github/stars/{user_repo}.svg">'
+        # citations
+        # if 'doi' in entry:
+        #     doi = entry['doi']
+        #     s += f'<span class="__dimensions_badge_embed__" data-doi="{doi}" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>'
     # end of publication entry
     if doctype == 'html':
         s += '</div>' if ascard else '</p>\n\n'
