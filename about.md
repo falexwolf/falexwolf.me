@@ -12,9 +12,3 @@ Our research addresses biomedical questions with machine learning that leverages
 <a href="https://linkedin.com/in/falexwolf"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span></a>
 <a href="/docs/WolfFA_CV.pdf"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="ai ai-cv fa-stack-1x fa-inverse"></i></span></a>
 </center>
-
-## News
-
-* 2020-05-11: Cellarity got featured in [Nature Biotechnology](https://www.nature.com/articles/s41587-020-0521-4) among a handful of startups that aim at re-defining drug discovery through active learning.
-* 2020-04-01: In a joint initiative, the Wellcome Sanger Institute, the Human Cell Atlas, and the CZI distribute datasets related to COVID-19 via anndata’s `h5ad` files: [covid19cellatlas.org](https://www.covid19cellatlas.org/). It wasn’t anticipated that the [initial idea](../blog/2017-12-23-anndata-indexing-views-HDF5-backing/) of an on-disk representation of AnnData would become so widely adopted. Curious? Read up more on the [format](https://anndata.readthedocs.io/en/latest/fileformat-prose.html).
-* 2019-11-14: Scanpy got selected an [*Essential Open Source Software for Science*](https://chanzuckerberg.com/newsroom/chan-zuckerberg-initiative-awards-5-million-for-open-source-software-projects-essential-to-science/) by CZI among [32 projects](https://chanzuckerberg.com/eoss/proposals/), alongside giants such as numpy, pandas, scikit-learn, matplotlib, and others. See [software](../software/).

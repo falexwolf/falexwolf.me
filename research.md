@@ -12,10 +12,19 @@ Prior to joining machine learning for biology, I developed computational techniq
 
 ## Dynamical modeling of RNA velocity
 
-[<img src="../img/scvelo.png" style="width: 140px; margin: 15px 10px 5px 0px"  align="left">](/publications#P28)
-The introduction of RNA velocity in single cells has opened up new ways of studying cellular differentiation [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)]. With [scVelo](https://scvelo.org), we now solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model. This generalizes RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations.
+[<img src="../img/NatureBiotechCover2020-12.png" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P28)
+The introduction of RNA velocity in single cells has opened up new ways of studying cellular differentiation in scRNA-seq [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)]. It describes the rate of gene expression change for an individual gene at a given time point based on the ratio of its spliced and unspliced messenger RNA (mRNA). With [scVelo](https://scvelo.org), we solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model. This generalizes RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations. The paper made it on the cover of NBT.
 
 {P28}
+
+
+## Interpretable latent representations that integrate knowledge
+
+[<img src="../img/p30.png" style="width: 140px; margin: 15px 10px 5px 0px"  align="left">](/publications#P30)
+
+Existing methods for learning latent representations for single-cell RNA-seq data are based on autoencoders and factor models. However, representations learned by autoencoders are hard to interpret and representations learned by factor models have limited flexibility. Here, we introduce a framework for learning interpretable autoencoders based on regularized linear decoders. It decomposes variation into interpretable components using prior knowledge in the form of annotated feature sets obtained from public databases. Through this, it provides an alternative to enrichment techniques and factor models for the task of explaining observed variation with biological knowledge.
+
+{P30}
 
 
 ## Generative modeling of single-cell perturbation effects
@@ -145,4 +154,3 @@ We investigated the non-equilibrium behavior of quantum many-body systems [[P1-P
 During high school, I tried to gain a better understanding of how philosophical and political ideas stimulate change in society and culture. In my thesis, I investigated why J.-P. Sartre publicly supported the German terrorist group RAF upon his visit in Stammheim in 1974 [[O1](/publications#O1). For more context, see [Der Spiegel (2013)](http://www.spiegel.de/spiegel/print/d-90848693.html).
 
 {O1}
-
