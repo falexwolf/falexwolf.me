@@ -254,7 +254,8 @@ def format_pub(entry, doctype='html', ascard=False):
     if 'note' in entry:
         # format note
         if doctype == 'html':
-            s += f' <span style="{css_style_note}">{entry["note"]}</span> '
+            note = markdown_no_p(entry["note"])
+            s += f' <span style="{css_style_note}">{note}</span> '
         else:
             s += r' \footnotesize{{' + entry["note"].replace('%', '\%') + '}}'
     if doctype == 'html':
