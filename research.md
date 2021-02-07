@@ -1,8 +1,8 @@
 Title: Research
 
-In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods that address specific biological hypotheses and originate from different areas of machine learning. With [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ) and [Cellarity](https://cellarity.com/).
+In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods that address specific biological hypotheses and originate from different areas of machine learning.
 
-Prior to joining machine learning for biology, I developed computational techniques for predicting the emergent behavior of models of strongly correlated quantum materials, basic models of quantum computers, and chemical reactions in solar cells.
+Prior to joining machine learning for biology for a postdoc with [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ), I developed computational techniques for predicting the emergent behavior of models of strongly correlated quantum materials, basic models of quantum computers, and chemical reactions in solar cells.
 
 ---
 
@@ -18,7 +18,17 @@ The introduction of RNA velocity in single cells has opened up new ways of study
 {P28}
 
 
-## Interpretable latent representations that integrate knowledge
+## Generative modeling of single-cell perturbation effects
+
+[<img src="https://pbs.twimg.com/media/EAq3dqdUwAEQssP?format=jpg&name=900x900" style="width: 140px; margin: 15px 20px 5px 0px"  align="left">](/publications#P27)
+We showed that generative models are able to predict single-cell perturbation responses out-of-distribution [[P27](/publications#P27)]. In principle, this approach should enable training models to predict the effects of disease and disease treatment across cell types and species. While the first implementation of the approach (scGen) relied on latent space vector arithmetics, we recently published an end-to-end-trained model based on a conditional variational autoencoder (trVAE) [[P29](/publications#P29)].
+
+{P29}
+
+{P27}
+
+
+## Interpretable knowledge-enriched latent representations of scRNA-seq
 
 [<img src="../img/p30.png" style="width: 140px; margin: 15px 10px 5px 0px"  align="left">](/publications#P30)
 
@@ -27,25 +37,16 @@ Existing methods for learning latent representations for single-cell RNA-seq dat
 {P30}
 
 
-## Generative modeling of single-cell perturbation effects
-
-[<img src="https://pbs.twimg.com/media/EAq3dqdUwAEQssP?format=jpg&name=900x900" style="width: 140px; margin: 15px 10px 5px 0px"  align="left">](/publications#P27)
-We showed that generative models are able to predict single-cell perturbation responses out-of-distribution [[P27](/publications#P27)]. In principle, this approach should enable training models to predict the effects of disease and disease treatment across cell types and species. While the first implementation of the approach (scGen) relied on latent space vector arithmetics, we recently published an end-to-end-trained model based on a conditional variational autoencoder (trVAE) [[P29](/publications#P29)].
-
-{P29}
-
-{P27}
-
-
-## Mapping the coarse-grained connectivity of complex manifolds
+## Mapping the coarse-grained connectivity of complex manifolds and global measures of similarity
 
 [<img src="https://pbs.twimg.com/media/D2FmvihWkAA9wmG?format=jpg&name=medium" title="Hematopoietic lineages as captured in scRNA-seq from Paul et al., Cell (2015). See [P26]." style="width: 250px; margin: 15px 10px 5px 0px"  align="left">](/publications#P24)
-Partition-based graph abstraction (PAGA) aims to reconcile clustering with manifold learning by explaining variation using both discrete and continuous latent variables [[P26](/publications#P26)]. PAGA generates coarse-grained maps of manifolds with complex topologies in a computationally efficient and robust way. In [[P24](/publications#P24)], we used it to infer the first lineage tree of a whole complex animal - a [Science breakthrough](https://vis.sciencemag.org/breakthrough2018/) of the year 2018. It has been benchmarked as the overall best performing trajectory inference method in a review of ~70 methods by [Saelens *et al.* (Nat. Biotechn., 2019](https://www.nature.com/articles/s41587-019-0071-9)) [[tweet]](https://twitter.com/falexwolf/status/1113002674209873920).
+Partition-based graph abstraction (PAGA) aims to reconcile clustering with manifold learning by explaining variation using both discrete and continuous latent variables [[P26](/publications#P26)]. PAGA generates coarse-grained maps of manifolds with complex topologies in a computationally efficient and robust way. In [[P24](/publications#P24)], we used it to infer the first lineage tree of a whole complex animal - a [Science breakthrough](https://vis.sciencemag.org/breakthrough2018/) of the year 2018. It has been benchmarked as the overall best performing trajectory inference method in a review of ~70 methods by [Saelens *et al.* (Nat. Biotechn., 2019](https://www.nature.com/articles/s41587-019-0071-9)) [[tweet]](https://twitter.com/falexwolf/status/1113002674209873920). PAGA also builds on *diffusion pseudotime* [[P19]](/publications#P19), which defined a robust global measure of similarity among cells.
 
 {P26}
 
 {P24}
 
+{P19}
 
 ## Scalable and comprehensive software for single-cell analysis
 
