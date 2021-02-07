@@ -2,7 +2,7 @@ Title: Research
 
 In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods that address specific biological hypotheses and originate from different areas of machine learning.
 
-Prior to joining machine learning for biology for a postdoc with [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ), I developed computational techniques for predicting the emergent behavior of models of strongly correlated quantum materials, basic models of quantum computers, and chemical reactions in solar cells.
+Before joining machine learning for biology in 2015 as a postdoc with [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ), I developed computational techniques for predicting the emergent behavior of models of strongly correlated quantum materials, basic models of quantum computers, and chemical reactions in solar cells.
 
 ---
 
@@ -73,9 +73,9 @@ Partition-based graph abstraction (PAGA) aims to reconcile clustering with manif
 ## Solving dynamical mean-field theory using tensor trains
 
 [<img src="../img/dmft.png" title="Dynamical mean-field theory." style="width: 200px; margin: 15px 10px 5px 0px"  align="left">](/publications#O6)
-[Tensor trains](https://en.wikipedia.org/wiki/Matrix_product_state) ([MPS](https://en.wikipedia.org/wiki/Matrix_product_state), [DMRG](https://en.wikipedia.org/wiki/Density_matrix_renormalization_group)) constitute, together with [quantum monte carlo](https://en.wikipedia.org/wiki/Quantum_Monte_Carlo) and the [numerical renormalization group](https://en.wikipedia.org/wiki/Numerical_renormalization_group), the key numerical approaches for tackling the exponential [computational complexity](https://en.wikipedia.org/wiki/Computability) of models of [strongly correlated materials](https://en.wikipedia.org/wiki/Strongly_correlated_material) and quantum computers.
+[Tensor trains](https://en.wikipedia.org/wiki/Matrix_product_state) ([MPS](https://en.wikipedia.org/wiki/Matrix_product_state), [DMRG](https://en.wikipedia.org/wiki/Density_matrix_renormalization_group)) constitute - together with [quantum monte carlo](https://en.wikipedia.org/wiki/Quantum_Monte_Carlo) and the [numerical renormalization group](https://en.wikipedia.org/wiki/Numerical_renormalization_group) - the key numerical approach for tackling the exponential [computational complexity](https://en.wikipedia.org/wiki/Computability) of models of [strongly correlated materials](https://en.wikipedia.org/wiki/Strongly_correlated_material) and quantum computers.
 
-We developed a way to use tensor trains within [dynamical mean-field theory](https://en.wikipedia.org/wiki/Dynamical_mean-field_theory) to enabable the simulation of previously inaccessible emergent properties of strongly correlated materials [[O6](/publications#O6),[P12-P18](/publications#P18)] - this worked to some degree, but turned out a hard problem. This is computational many-body physics at the interface of quantum information and field theory.
+We developed a way to use tensor trains within [dynamical mean-field theory](https://en.wikipedia.org/wiki/Dynamical_mean-field_theory) to enabable the simulation of previously inaccessible emergent properties of strongly correlated materials [[O6](/publications#O6),[P12-P18](/publications#P18)] - this worked to some degree, but turned out to be a hard problem. This is computational many-body physics at the interface of quantum information and field theory.
 With [U. Schollwöck](https://scholar.google.de/citations?user=MYARbMAAAAAJ&hl=en) and [A. Millis](https://scholar.google.com/citations?user=ZVaMoP0AAAAJ&hl=en).
 
 {O6}
