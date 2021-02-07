@@ -12,7 +12,7 @@ Before joining machine learning for biology in 2015 as a postdoc with [Fabian Th
 
 ## Dynamical modeling of RNA velocity
 
-[<img src="../img/NatureBiotechCover2020-12.png" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P28)
+[<img src="../img/NatureBiotechCover2020-12.png" style="width: 120px; margin: 15px 20px 5px 0px"  align="left">](/publications#P28)
 The introduction of RNA velocity in single cells has opened up new ways of studying cellular differentiation in scRNA-seq [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)]. It describes the rate of gene expression change for an individual gene at a given time point based on the ratio of its spliced and unspliced messenger RNA (mRNA). With [scVelo](https://scvelo.org), we solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model. This generalizes RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations. The paper made it on the cover of NBT.
 
 {P28}
