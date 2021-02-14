@@ -1,6 +1,6 @@
 % Encoding: UTF8
 %
-% It’s possible to give several positions in one entry, but then several periods have to be specified as well.
+% Simply omit employer if there are several positions for one employer
 
 @experience{cellarity18,
 employer = {Cellarity},
@@ -8,15 +8,33 @@ location = {Cambridge, MA},
 position = {Associate Director of Machine Learning},
 period = {Since 09.18},
 description = {Work on science, code, strategy, and team building.}
-activity = {First signed AI director \& employee, third signed employee overall.}
-activity = {Built initial AI team and platform; from 01/2019, with Milind Kamkolkar and Umut Eser.}
-activity = {Role ``Head of Applied Machine Learning" as of 04/2019.}
+activity = {First signed AI employee of Cellarity, third signed employee overall.}
+activity = {Led building the initial AI team and platform; from 01/2019, with Milind Kamkolkar.}
+activity = {Role ``Head of Applied Machine Learning" as of 04/2019, partially from Cambridge, MA, and Munich.}
 }
 
 @experience{cellarity18,
 position = {Consultant, Machine Learning},
 period = {05.18 - 08.18},
-description = {Built initial AI team and platform; supervised interns.}
+description = {Led building the initial AI platform and team; supervised interns.}
+}
+
+@experience{scanpy16,
+position = {Founder \& Advisor to Lead Developer},
+period = {Since 09.19},
+employer = {Scanpy Project},
+description = {Advised Isaac Virshup for his lead development of Scanpy since v1.4.5 and anndata since v0.7.}
+}
+
+@experience{scanpy16,
+position = {Founder \& Lead Developer},
+period = {09.16 - 08.19},
+description = {Conceived \href{http://scanpy.org/}{Scanpy} and lead its development until v1.4.5 during my time in Fabian Theis's lab at Helmholtz Munich. Engaged subsequent Lead Developer Isaac Virshup and a team of key contributors (Gökcen Eraslan, Fidel Ramirez, Sergei Rybakov, Philipp Angerer), who would continue to develop the project.}
+activity = {Conceived Scanpy as a kit of data science \& machine learning tools that would learn from an annotated data matrix, in a modular \& highly efficient fashion. In addition to implementation choices and the API design, the main contribution was to consolidate several approaches in the field: visualization, clustering, trajectory inference, batch correction, and other tasks had typically been based off of different feature representations and neighborhood graphs. Scanpy, however, implemented tool chains operating on one consistent representation.}
+activity = {Conceived AnnData as an object that would allow both convenient in-memory manipulation and on-disk storage, to easily exchange data and machine-learning results, see its \href{https://falexwolf.de/blog/2017-12-23-anndata-indexing-views-HDF5-backing/}{introduction} and \href{https://anndata.readthedocs.io/en/0.3/}{initial documentation}. Built it so that it would work well with \href{https://falexwolf.de/blog/2017-12-12-sparse-matrices-with-h5py/}{sparse data}. Philipp Angerer made the initial suggestion for building a data structure mimicking R's ExpressionSet, which was more constrained than the \href{https://github.com/theislab/scanpy/tree/c22e48abe45a6ccca5918bbf689637caa4b31250}{original unconstrained annotated data matrix structure within scanpy}, and wrote a \href{https://github.com/theislab/scanpy/commit/315859c5586116434ea3b7ce97512a5e2a1030e2}{first version} of what we called AnnData. I led the development of AnnData, and wrote the largest fraction of the code until anndata v0.7, when Isaac Virshup took over lead development.}
+activity = {Helped formation of a whole Python ecosystem for single-cell related tools by migrating out Scanpy's data structure, anndata.}
+activity = {Supervised lead developers of tools in the ecosystem, like scVelo, scGen.}
+activity = {Advised initiatives leveraging Scanpy, such as CZI's \href{https://github.com/chanzuckerberg/cellxgene}{cellxgene}, the \href{https://umgear.org/}{GEAR gene expression portal}, the HCA and EMBL-EBI portals and pipelines.},
 }
 
 @experience{hholtz16,
@@ -27,22 +45,21 @@ description = {Continued advising two PhD students, one master student and one s
 }
 
 @experience{hholtz16,
-position = {Team Leader},
+position = {Team Lead},
 period = {09.17 - 08.18},
 description = {Lead machine learning team of 6 (3 PhD students, 1 master student, 2 student research assistants).}
 activity = {Supervised and conceived Mohammad's \href{https://github.com/theislab/scgen}{scgen} on predicting cellular perturbation response using generative modeling.\paperitem{P27}},
 activity = {Supervised development of Volker's \href{https://github.com/theislab/scvelo}{scvelo} and co-supervised the associated project on scalable and robust estimation of RNA velocity in single cells.\paperitem{P29}},
 activity = {Supervised Niklas' work on meta learning. Niklas went back to work on his own company.},
-activity = {Supported initiatives leveraging Scanpy, which became widely used, such as CZI's \href{https://github.com/chanzuckerberg/cellxgene}{cellxgene}, the \href{https://umgear.org/}{GEAR gene expression portal}, the HCA or pipelines of EMBL-EBI.},
 activity = {Advised on method for estimating batch effects.\paperitem{P25}}
 }
 
 @experience{hholtz16,
 position = {Postdoctoral Fellow},
 period = {09.15 - 08.17},
-description = {Machine learning for biomedical data. With \href{http://fabian.theis.name}{F. J. Theis} in  \href{http://www.helmholtz-muenchen.de/icb/research/groups/machine-learning/overview/index.html}{Machine Learning Group}.\paperitem{P19}\textsuperscript{-}\paperitem{P26}},
+description = {Machine learning for biomedical data. With \href{http://fabian.theis.name}{Fabian Theis} in  \href{http://www.helmholtz-muenchen.de/icb/research/groups/machine-learning/overview/index.html}{Machine Learning Group}.\paperitem{P19}\textsuperscript{-}\paperitem{P26}},
 activity = {Won \hyperlink{hholtzpostdoc}{grant}, \hyperlink{dsb3}{competition}, received \hyperlink{press}{press} and \hyperlink{teaching}{taught} as permanent visiting scholar at TU Munich.},
-activity = {Developed scalable machine learning toolkit for analyzing transcriptomic single-cell data: \href{http://github.com/theislab/scanpy}{Scanpy}.\paperitem{P24}},
+activity = {Developed scalable data science \& machine learning toolkit for analyzing transcriptomic single-cell data: \href{http://github.com/theislab/scanpy}{Scanpy}.\paperitem{P24} Grew the toolkit into a large open-software project and ecosystem, see \textit{Scanpy Project}.},
 activity = {Developed PAGA, a method for exploring data through topology-preserving maps --- at the interface of manifold learning and topological data analysis.\paperitem{P26}}
 activity = {Inferred the first lineage tree of a whole complex adult animal form data.\paperitem{P24}},
 activity = {Showed how to use deep learning for reconstructing continuous biological processes for the examples of disease progression and cell cycle.\paperitem{P20}},
