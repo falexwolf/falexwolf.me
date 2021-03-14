@@ -287,7 +287,8 @@ def format_pub(entry, doctype='html', ascard=False):
         if 'doi' in entry:
             doi = entry['doi']
             s += f'<span class="__dimensions_badge_embed__" data-doi="{doi}" data-style="small_rectangle" style="display: inline-block; margin-left: 3px; vertical-align: baseline;"></span>'
-            s += f'<span class="altmetric-embed" data-badge-type="2" data-doi="{doi}" data-condensed="true" data-hide-no-mentions="true" style="display: inline-block; margin-left: 5px; vertical-align: -29%;"></span>'
+            vertical_align = 'baseline' if ascard else 'middle'
+            s += f'<span class="altmetric-embed" data-badge-type="2" data-doi="{doi}" data-condensed="true" data-hide-no-mentions="true" style="display: inline-block; margin-left: 5px; vertical-align: {vertical_align};"></span>'
     # end of publication entry
     if doctype == 'html':
         s += '</div>' if ascard else '</p>\n\n'
