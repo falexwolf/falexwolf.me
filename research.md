@@ -8,6 +8,9 @@ Before joining machine learning for biology in 2015 as a postdoc with [Fabian Th
 
 [TOC]
 
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>                                                                                                                                                            
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script> 
+
 ---
 
 ## Dynamical modeling of RNA velocity
@@ -65,7 +68,7 @@ Partition-based graph abstraction (PAGA) aims to reconcile clustering with manif
 
 ## Deep-learning based diagnosis of lung cancer from images
 
-[<img src="../img/dsb3-nodule_new.jpg" title="Lung CT scan with a marked nodule. Data from Data Science Bowl 2017 on Kaggle." style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) The goal of the [Data Science Bowl 2017](http://www.datasciencebowl.com/about/) was to predict lung cancer from tomography scans. It was the highest endowed machine learning competition with $1M total in prize money in 2017. We won the [7th prize](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) among [nearly 2.4k teams](https://datasciencebowl.com/about/) and more than 10k participants; the best result among all German teams.
+[<img src="../img/dsb3-nodule_new.jpg" title="Lung CT scan with a marked nodule. Data from Data Science Bowl 2017 on Kaggle." style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](https://www.kaggle.com/c/data-science-bowl-2017/leaderboard) The goal of the [Data Science Bowl 2017](http://www.datasciencebowl.com/about/) was to predict lung cancer from tomography scans. It was the highest endowed machine learning competition with $1M total in prize money in 2017. We won the [7th prize](https://www.kaggle.com/falexwolf) among [nearly 2.4k teams](https://datasciencebowl.com/about/) and more than 10k participants; the best result among all German teams.
 
 {O7}
 
@@ -152,6 +155,6 @@ We investigated the non-equilibrium behavior of quantum many-body systems [[P1-P
 ## Sartre at Stammheim
 
 [<img src="../img/sartre_a_stammheim.jpg" title="Sartre in Stammheim. From [O1], original from H. M. Schleyer: RAF Geschichte." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#O1)
-During high school, I tried to gain a better understanding of how philosophical and political ideas stimulate change in society and culture. In my thesis, I investigated why J.-P. Sartre publicly supported the German terrorist group RAF upon his visit in Stammheim in 1974 [[O1](/publications#O1). For more context, see [Der Spiegel (2013)](http://www.spiegel.de/spiegel/print/d-90848693.html).
+During high school, I tried to gain a better understanding of how philosophical and political ideas stimulate change in society and culture. In my thesis, I investigated why J.-P. Sartre publicly supported the German terrorist group RAF upon his visit in Stammheim in 1974 [[O1](/publications#O1)]. For more context, see [Der Spiegel (2013)](http://www.spiegel.de/spiegel/print/d-90848693.html).
 
 {O1}

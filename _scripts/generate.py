@@ -283,10 +283,11 @@ def format_pub(entry, doctype='html', ascard=False):
             #     code = entry['github']
             # user_repo = code.replace('https://github.com/', '')
             # s += f'<img src="https://img.shields.io/github/stars/{user_repo}.svg">'
-        # citations
-        # if 'doi' in entry:
-        #     doi = entry['doi']
-        #     s += f'<span class="__dimensions_badge_embed__" data-doi="{doi}" data-style="small_rectangle"></span><script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>'
+        # dimenions citations & altmetric
+        if 'doi' in entry:
+            doi = entry['doi']
+            s += f'<span class="__dimensions_badge_embed__" data-doi="{doi}" data-style="small_rectangle" style="display: inline-block; margin-left: 3px; vertical-align: baseline;"></span>'
+            s += f'<span class="altmetric-embed" data-badge-type="2" data-doi="{doi}" data-condensed="true" data-hide-no-mentions="true" style="display: inline-block; margin-left: 5px; vertical-align: -29%;"></span>'
     # end of publication entry
     if doctype == 'html':
         s += '</div>' if ascard else '</p>\n\n'
@@ -358,6 +359,9 @@ def format_all_publications(f, entries, doctype):
 <li> Co-first and co-last authors are indicated by * and †, respectively.</li>
 <li> For selected publications with context, see <a href="/research">research</a>.</li>
 </ul>
+
+<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
+<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script>
 ''')
 
         f.write('<h2 id="preprints"> Preprints </h2> \n\n')
