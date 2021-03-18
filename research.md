@@ -8,9 +8,6 @@ Before joining machine learning for biology in 2015 as a postdoc with [Fabian Th
 
 [TOC]
 
-<script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>                                                                                                                                                            
-<script type='text/javascript' src='https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js'></script> 
-
 ---
 
 ## Dynamical modeling of RNA velocity
@@ -35,7 +32,7 @@ We showed that generative models are able to predict single-cell perturbation re
 
 [<img src="../img/p30.png" style="width: 140px; margin: 15px 10px 5px 0px"  align="left">](/publications#P30)
 
-Existing methods for learning latent representations for single-cell RNA-seq data are based on autoencoders and factor models. However, representations learned by autoencoders are hard to interpret and representations learned by factor models have limited flexibility. Here, we introduce a framework for learning interpretable autoencoders based on regularized linear decoders. It decomposes variation into interpretable components using prior knowledge in the form of annotated feature sets obtained from public databases. Through this, it provides an alternative to enrichment techniques and factor models for the task of explaining observed variation with biological knowledge.
+Existing methods for learning latent representations for single-cell RNA-seq data are based on autoencoders and factor models where the former are hard to interpret and the latter have limited flexibility. Here, we introduce a framework for learning interpretable autoencoders based on regularized linear decoders, decomposing variation into interpretable components using prior knowledge.
 
 {P30}
 
