@@ -2,13 +2,21 @@
 %
 % Simply omit employer if there are several positions for one employer
 
+
 @experience{cellarity18,
 employer = {Cellarity},
 location = {Cambridge, MA},
-position = {Associate Director of Machine Learning},
-period = {Since 09.18},
-description = {Work on science, code, strategy, and team building.}
+position = {Director of Machine Learning},
+period = {Since 04.21},
+description = {Science, software, strategy, and team building.}
 activity = {First signed AI employee of Cellarity, third signed employee overall.}
+}
+
+@experience{cellarity18,
+location = {Cambridge, MA},
+position = {Associate Director of Machine Learning},
+period = {09.18 - 03.21},
+description = {Science, software, strategy, and team building.}
 activity = {Led building the initial AI team and platform; from 01/2019, with Milind Kamkolkar.}
 activity = {Role ``Head of Applied Machine Learning" as of 04/2019, partially from Cambridge, MA, and Munich.}
 }
@@ -29,9 +37,9 @@ description = {Advised Isaac Virshup for his lead development of Scanpy since v1
 @experience{scanpy16,
 position = {Founder \& Lead Developer},
 period = {09.16 - 08.19},
-description = {Conceived \href{http://scanpy.org/}{Scanpy} and lead its development until v1.4.5 during my time in Fabian Theis's lab at Helmholtz Munich. Engaged subsequent Lead Developer Isaac Virshup and a team of key contributors (Gökcen Eraslan, Fidel Ramirez, Sergei Rybakov, Philipp Angerer), who would continue to develop the project.}
-activity = {Conceived Scanpy as a kit of data science \& machine learning tools that would learn from an annotated data matrix, in a modular \& highly efficient fashion. In addition to implementation choices and the API design, the main contribution was to consolidate several approaches in the field: visualization, clustering, trajectory inference, batch correction, and other tasks had typically been based off of different feature representations and neighborhood graphs. Scanpy, however, implemented tool chains operating on one consistent representation.}
-activity = {Conceived AnnData as an object that would allow both convenient in-memory manipulation and on-disk storage, to easily exchange data and machine-learning results, see its \href{https://falexwolf.de/blog/2017-12-23-anndata-indexing-views-HDF5-backing/}{introduction} and \href{https://anndata.readthedocs.io/en/0.3/}{initial documentation}. Built it so that it would work well with \href{https://falexwolf.de/blog/2017-12-12-sparse-matrices-with-h5py/}{sparse data}. Philipp Angerer made the initial suggestion for building a data structure mimicking R's ExpressionSet, which was more constrained than the \href{https://github.com/theislab/scanpy/tree/c22e48abe45a6ccca5918bbf689637caa4b31250}{original unconstrained annotated data matrix structure within scanpy}, and wrote a \href{https://github.com/theislab/scanpy/commit/315859c5586116434ea3b7ce97512a5e2a1030e2}{first version} of what we called AnnData. I led the development of AnnData, and wrote the largest fraction of the code until anndata v0.7, when Isaac Virshup took over lead development.}
+description = {Conceived \href{http://scanpy.org/}{Scanpy} and lead its development until v1.4.5 during my time in Fabian Theis's lab at Helmholtz Munich. Engaged subsequent Lead Developer Isaac Virshup and a team of key contributors (Philipp Angerer, Gökcen Eraslan, Fidel Ramirez, Sergei Rybakov), who would continue to develop the project.}
+activity = {Conceived Scanpy as a toolkit of data science \& machine learning tools that would learn from an annotated data matrix, in a modular \& highly efficient fashion. In addition to implementation choices and the API design, the main contribution was to consolidate approaches in the field: visualization, clustering, trajectory inference, batch correction, and other tasks had typically been based off of different data representations. Scanpy implemented tool chains operating on one consistent representation.}
+activity = {Conceived AnnData as an object that would allow both convenient in-memory manipulation and on-disk storage, to easily exchange data and machine-learning results (\href{https://falexwolf.de/blog/2017-12-23-anndata-indexing-views-HDF5-backing/}{introduction}, \href{https://anndata.readthedocs.io/en/0.3/}{initial documentation}). Built it so that it would work well with \href{https://falexwolf.de/blog/2017-12-12-sparse-matrices-with-h5py/}{sparse data}. Philipp Angerer made the suggestion for building a data structure mimicking R's ExpressionSet, which was more constrained than the \href{https://github.com/theislab/scanpy/tree/c22e48abe45a6ccca5918bbf689637caa4b31250}{original unconstrained annotated data structure within scanpy}. He also wrote the \href{https://github.com/theislab/scanpy/commit/315859c5586116434ea3b7ce97512a5e2a1030e2}{first version} of what we called AnnData with many subsequent contributions! I led the development of AnnData, and wrote the largest fraction of the code until anndata v0.7, when Isaac Virshup took over lead development.}
 activity = {Helped formation of a whole Python ecosystem for single-cell related tools by migrating out Scanpy's data structure, anndata.}
 activity = {Supervised lead developers of tools in the ecosystem, like scVelo, scGen.}
 activity = {Advised initiatives leveraging Scanpy, such as CZI's \href{https://github.com/chanzuckerberg/cellxgene}{cellxgene}, the \href{https://umgear.org/}{GEAR gene expression portal}, the HCA and EMBL-EBI portals and pipelines.},
