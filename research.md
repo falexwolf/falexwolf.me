@@ -2,7 +2,7 @@ Title: Research
 
 In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods that address specific biological hypotheses and originate from different areas of machine learning.
 
-Before joining machine learning for biology in 2015 as a postdoc with [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ), I developed computational techniques for predicting the emergent behavior of models of strongly correlated quantum materials, basic models of quantum computers, and chemical reactions in solar cells.
+Before joining the field in 2015 as a postdoc with [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ), I developed computational techniques for predicting the emergent behavior of models of strongly correlated quantum materials, basic models of quantum computers, and chemical reactions in solar cells.
 
 ---
 
@@ -13,7 +13,7 @@ Before joining machine learning for biology in 2015 as a postdoc with [Fabian Th
 ## Dynamical modeling of RNA velocity
 
 [<img src="../img/NatureBiotechCover2020-12.png" style="width: 120px; margin: 15px 20px 5px 0px"  align="left">](/publications#P28)
-The introduction of RNA velocity in single cells has opened up new ways of studying cellular differentiation in scRNA-seq [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)]. It describes the rate of gene expression change for an individual gene at a given time point based on the ratio of its spliced and unspliced messenger RNA (mRNA). With [scVelo](https://scvelo.org), we solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model. This generalizes RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations. The paper made it on the cover of NBT.
+The introduction of RNA velocity in single cells has opened up new ways of studying cellular differentiation in scRNA-seq [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)]. It describes the rate of gene expression change for an individual gene at a given time point based on the ratio of its spliced and unspliced messenger RNA (mRNA). With [scVelo](https://scvelo.org), we solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model. This generalizes RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations. The paper made it on the cover of Nature Biotechnology.
 
 {P28}
 
