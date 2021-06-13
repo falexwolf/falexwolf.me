@@ -374,7 +374,7 @@ def format_all_publications(f, entries, doctype):
     for entry in entries:
         if 'Article' == entry['entryType'] and journals:
             if doctype == 'html':
-                f.write('<h2> Reviewed journal articles </h2> \n\n')
+                f.write('<h2>Reviewed articles</h2>\n\n')
             else:
                 f.write(r'\end{longtable}\vspace*{-2.5em}')
                 f.write('\n\subsubsection*{Reviewed journal articles}' + r'\vspace{-1em}' + '\n')

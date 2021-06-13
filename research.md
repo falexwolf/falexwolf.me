@@ -21,22 +21,13 @@ The introduction of RNA velocity in single cells has opened up new ways of study
 ## Generative modeling of single-cell perturbation effects
 
 [<img src="https://pbs.twimg.com/media/EAq3dqdUwAEQssP?format=jpg&name=900x900" style="width: 140px; margin: 15px 20px 5px 0px"  align="left">](/publications#P27)
-We showed that generative models are able to predict single-cell perturbation responses out-of-distribution [[P27](/publications#P27)]. In principle, this approach should enable training models to predict the effects of disease and disease treatment across cell types and species. While the first implementation of the approach (scGen) relied on latent space vector arithmetics, we recently published an end-to-end-trained model based on a conditional variational autoencoder (trVAE) [[P29](/publications#P29)].
+We showed that generative models are able to predict single-cell perturbation responses out-of-distribution [[P27](/publications#P27)]. In principle, this approach should enable training models to predict the effects of disease and disease treatment across cell types and species. While the first implementation of the approach (scGen) relied on latent space vector arithmetics, we recently published an end-to-end-trained model based on a conditional variational autoencoder (trVAE) [[P29](/publications#P29)] and a deep factor model [[P31](/publications#P31)].
 
 {P31}
 
 {P29}
 
 {P27}
-
-
-## Interpretable knowledge-enriched latent representations of scRNA-seq
-
-[<img src="../img/p30.png" style="width: 140px; margin: 15px 10px 5px 0px"  align="left">](/publications#P30)
-
-Existing methods for learning latent representations for single-cell RNA-seq data are based on autoencoders and factor models where the former are hard to interpret and the latter have limited flexibility. Here, we introduce a framework for learning interpretable autoencoders based on regularized linear decoders, decomposing variation into interpretable components using prior knowledge.
-
-{P30}
 
 
 ## Mapping the coarse-grained connectivity of complex manifolds and global measures of similarity
@@ -50,12 +41,22 @@ Partition-based graph abstraction (PAGA) aims to reconcile clustering with manif
 
 {P19}
 
+
 ## Scalable and comprehensive software for single-cell analysis
 
 [<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_BrightFG.svg" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
 [Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing. Together with the underlying [anndata](http://anndata.readthedocs.org/) it has become widely used and lead to a little ecosystem. It has been selected as an [*Essential Open Source Software for Science*](https://chanzuckerberg.com/newsroom/chan-zuckerberg-initiative-awards-5-million-for-open-source-software-projects-essential-to-science/) by CZI among [32 projects](https://chanzuckerberg.com/eoss/proposals/), alongside giants such as numpy, pandas, scikit-learn, matplotlib, and others. See [software](../software/).
 
 {P23}
+
+
+## Interpretable knowledge-enriched latent representations of scRNA-seq
+
+[<img src="../img/p30.png" style="width: 140px; margin: 15px 10px 5px 0px"  align="left">](/publications#P30)
+
+Existing methods for learning latent representations for single-cell RNA-seq data are based on autoencoders and factor models where the former are hard to interpret and the latter have limited flexibility. Here, we introduce a framework for learning interpretable autoencoders based on regularized linear decoders, decomposing variation into interpretable components using prior knowledge.
+
+{P30}
 
 
 ## Reconstructing cell cycle and disease progression using deep learning
