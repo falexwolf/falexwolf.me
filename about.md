@@ -1,4 +1,4 @@
-# About
+Title: About
 
 I'm Alex Wolf, the Head of Scientific Computing at [Cellarity](https://cellarity.com/).
 I'm also adjunct researcher (former team lead) at the [Institute of Computational Biology](http://www.helmholtz-muenchen.de/icb/research/groups/machine-learning/overview/index.html) of [Helmholtz Munich](http://www.helmholtz-muenchen.de/en/index.html).

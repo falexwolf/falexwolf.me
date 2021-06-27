@@ -9,6 +9,7 @@ import markdown
 from collections import OrderedDict
 
 css_style_note = 'font-size: 60%; font-weight: bold; margin-left: 2px;'
+start_card = '<div class="card" style="border: 1px solid rgba(0,0,0,.125); border-radius: .25rem; padding: 1.25rem; opacity: 1; font-size: smaller">'
 
 # keywords for fields in entries
 #
@@ -172,7 +173,7 @@ def format_pub(entry, doctype='html', ascard=False):
     if doctype == 'html':
         css_style_note = 'font-size: 10px; font-weight: normal; margin-left: 2px;'
         if ascard:
-            s = '<div class="card" style="border: 1px solid rgba(0,0,0,.125); border-radius: .25rem; padding: 1.25rem; opacity: 1; font-size: smaller">'
+            s = start_card
             css_style_note = 'font-size: 10px; font-weight: normal; margin-left: 2px;'
         elif 'mark' in entry:
             s = '<p>'
@@ -394,6 +395,8 @@ def format_all_publications(f, entries, doctype):
 
 
 def process_source(single_source):
+    """Process a source file.
+    """
     source_out = single_source
     source_out_stripped = source_out.split('.')[0]
 
@@ -531,9 +534,18 @@ def process_source(single_source):
                                     l = l.replace('#BLOG', '')  # strip this start sequence
                             out.write(adjust_child_dir(l) if child else l)
                     elif 'INSERT_CONTENT' in line:
+                        history_link = f'<a href="https://github.com/falexwolf/site/blame/master/{single_source}">History</a>'
+                        history = '<div class="card pull-right" style="display: inline-block;">' + start_card + history_link + '</div></div>'
+                        # deal with title as delivered by metadata
                         if md is not None and 'title' in md.Meta:
-                            out.write(f'<h1>{md.Meta["title"][0]}</h1>')
+                            title = f'<h1>{md.Meta["title"][0]}</h1>'
+                            l = '<div>' + '<span style="font-size: 38px; font-weight: 800;"' + title + '</span>' + history + '</div>'
+                            out.write(l)
                         for l in open(raw_html):
+                            # deal with title if present in doc
+                            if l.startswith('<h1'):
+                                title = l.split('<h1')[1].split('</h1>')[0]
+                                l = '<div>' + '<span style="font-size: 38px; font-weight: 800;"' + title + '</span>' + history + '</div>'
                             # replace paper macros
                             if l.startswith('<p>{'):
                                 key = l.split('{')[1].split('}')[0]  # strip off html stuff
