@@ -359,7 +359,7 @@ def format_all_publications(f, entries, doctype):
     <a href="http://scholar.google.de/citations?user=1FnOtMoAAAAJ&hl=en">google scholar</a> and
     <a href="http://orcid.org/0000-0002-8760-7838">ORCID</a>.</li>
 <li> Co-first and co-last authors are indicated by * and †, respectively.</li>
-<li> For selected publications with context, see <a href="/research">research</a>.</li>
+<li> For publications grouped by context, see <a href="/research">research</a>.</li>
 </ul>
 
 <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>
@@ -371,6 +371,7 @@ def format_all_publications(f, entries, doctype):
         f.write('\n\subsubsection*{Preprints}' + r'\vspace{-1em}' + '\n')
         f.write(r'\noindent\begin{longtable}[t]{p{.02\textwidth} p{.93\textwidth}}' + '\n')
     journals = True
+    patents = True
     otherpub = True
     for entry in entries:
         if 'Article' == entry['entryType'] and journals:
@@ -381,9 +382,17 @@ def format_all_publications(f, entries, doctype):
                 f.write('\n\subsubsection*{Reviewed journal articles}' + r'\vspace{-1em}' + '\n')
                 f.write(r'\noindent\begin{longtable}[t]{p{.02\textwidth} p{.93\textwidth}}' + '\n')
             journals = False
+        if 'patent' == entry['entryType'] and otherpub:
+            if doctype == 'html':
+                f.write('<h2>Patents</h2> \n\n')
+            else:
+                f.write(r'\end{longtable}\vspace*{-2.5em}')
+                f.write('\n\subsubsection*{Patents}' + r'\vspace{-1em}' + '\n')
+                f.write(r'\noindent\begin{longtable}[t]{p{.02\textwidth} p{.93\textwidth}}' + '\n')
+            patents = False
         if 'otherpub' == entry['entryType'] and otherpub:
             if doctype == 'html':
-                f.write('<h2> Other publications </h2> \n\n')
+                f.write('<h2>Other publications</h2> \n\n')
             else:
                 f.write(r'\end{longtable}\vspace*{-2.5em}')
                 f.write('\n\subsubsection*{Other publications}' + r'\vspace{-1em}' + '\n')
