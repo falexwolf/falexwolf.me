@@ -118,7 +118,7 @@ The low energy conversion efficiency of established solar cells is largely due t
 ## Dynamics of the quantum Rabi model
 
 [<img src="../img/wolf12.png" title="Time evolution of photon excitation through entanglement with a quantum bit. From [P6]." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P6)
-The [quantum Rabi model](https://physics.aps.org/articles/v4/68) is the basic model for understanding decoherence of a Q-bit that is coupled to a bath, and hence, a basic model for the technical foundations of quantum computing [[P6,P7](/publications#P7)]. By exploiting a recent exact solution of the static system, we established several dynamical properties, amonth others, Schroedinger-cat like states that show particular robustness towards decoherence. With [D. Braak](https://www.google.de/search?q=Integrability+of+the+Rabi+Model).
+The [quantum Rabi model](https://physics.aps.org/articles/v4/68) is the basic model for understanding decoherence of a Q-bit that is coupled to a bath, and in that sense a basic model for the technical foundations of quantum computing [[P6,P7](/publications#P7)]. By exploiting a recent exact solution of the static system, we established several dynamical properties, amonth others, Schroedinger-cat like states that show particular robustness towards decoherence. With [D. Braak](https://www.google.de/search?q=Integrability+of+the+Rabi+Model).
 
 {P7}
 
