@@ -1,6 +1,6 @@
 title: Software
 
-The page lists open source software. Beyond what is listed, I have created and contributed to software for computational physics, causal inference, and to proprietary software for industry (machine learning, data science, data management, photovoltaics simulations).
+This page lists open source software. Beyond what is listed, I have created and contributed to unpublished software in industry (machine learning, data science & engineering, photovoltaics simulations) and academic research (computational physics, causal inference) for >12 years.
 
 
 ## Initial conception & development

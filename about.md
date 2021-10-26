@@ -1,9 +1,10 @@
 Title: About
 
-I'm Alex Wolf, the Head of Scientific Computing at [Cellarity](https://cellarity.com/).
-I'm also adjunct researcher (former team lead) at the [Institute of Computational Biology](http://www.helmholtz-muenchen.de/icb/research/groups/machine-learning/overview/index.html) of [Helmholtz Munich](http://www.helmholtz-muenchen.de/en/index.html).
+I'm Alex Wolf and work on more effective learning from bio-medical data.
 
-Our research addresses biomedical questions with machine learning that leverages cellular resolution, see this [research summary](/research) or my [CV](/docs/WolfFA_CV.pdf).
+* Key examples include founding [Scanpy](https://scanpy.org/), co-founding [anndata](https://anndata.readthedocs.io/en/latest/), and leading the build-up of [Cellarity's compute platform](https://cellarity.com/platform).
+* I am currently the Head of Scientific Computing at [Cellarity](https://cellarity.com/) and adjunct researcher at [Helmholtz Munich's](http://www.helmholtz-muenchen.de/en/index.html) [Institute of Computational Biology](https://www.helmholtz-muenchen.de/icb/).
+* For more information, see this summary of public [research](/research), this [software overview](/software), or my [CV](/docs/WolfFA_CV.pdf).
 
 <center>
 <a href="http://scholar.google.de/citations?user=1FnOtMoAAAAJ"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="ai ai-google-scholar fa-stack-1x fa-inverse"></i></span></a>

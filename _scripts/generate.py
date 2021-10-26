@@ -9,7 +9,7 @@ import markdown
 from collections import OrderedDict
 
 css_style_note = 'font-size: 60%; font-weight: bold; margin-left: 2px;'
-start_card = '<div class="card" style="border: 1px solid rgba(0,0,0,.125); border-radius: .25rem; padding: 1.25rem; opacity: 1; font-size: smaller">'
+start_card = '<div class="card" style="border: 1px solid rgba(0,0,0,.125); border-radius: .25rem; padding: 1.1rem; opacity: 1; font-size: smaller">'
 
 # keywords for fields in entries
 #
@@ -379,7 +379,7 @@ def format_all_publications(f, entries, doctype):
                 f.write('<h2>Reviewed articles</h2>\n\n')
             else:
                 f.write(r'\end{longtable}\vspace*{-2.5em}')
-                f.write('\n\subsubsection*{Reviewed journal articles}' + r'\vspace{-1em}' + '\n')
+                f.write('\n\subsubsection*{Reviewed articles}' + r'\vspace{-1em}' + '\n')
                 f.write(r'\noindent\begin{longtable}[t]{p{.02\textwidth} p{.93\textwidth}}' + '\n')
             journals = False
         if 'patent' == entry['entryType'] and otherpub:
