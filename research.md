@@ -1,8 +1,10 @@
 Title: Research
 
-In the past years, machine learning has started to help map, understand and predict the molecular biology of single cells. We develop methods that address specific biological hypotheses and originate from different areas of machine learning.
+In the past years, machine learning has started to help map, understand, and predict the molecular biology of single cells.
 
-Before joining the field in 2015 as a postdoc with [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ), I developed computational techniques for predicting the emergent behavior of models of strongly correlated quantum materials, basic models of quantum computers, and chemical reactions in solar cells.
+Before joining the field in 2015, I developed computational approaches to predict the emergent behavior of strongly correlated quantum materials, basic models of quantum computers, and chemical reactions in solar cells.
+
+This page covers academic research only.
 
 ---
 
@@ -10,10 +12,20 @@ Before joining the field in 2015 as a postdoc with [Fabian Theis](https://schola
 
 ---
 
+## Software for single-cell analytics and data management
+
+[<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_BrightFG.svg" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
+[Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. Together with the underlying [anndata](http://anndata.readthedocs.org/) [[P33](/publications#P33)] it has become widely used and lead to an ecosystem of tools, with >600k downloads and >500 dependent repositories. It has been selected as an [*Essential Open Source Software for Science*](https://chanzuckerberg.com/newsroom/chan-zuckerberg-initiative-awards-5-million-for-open-source-software-projects-essential-to-science/) by CZI among [32 projects](https://chanzuckerberg.com/eoss/proposals/), alongside giants such as numpy, pandas, scikit-learn, matplotlib, and others. See [software](../software/).
+
+{P33}
+
+{P23}
+
+
 ## Dynamical modeling of RNA velocity
 
 [<img src="../img/NatureBiotechCover2020-12.png" style="width: 120px; margin: 15px 20px 5px 0px"  align="left">](/publications#P28)
-The introduction of RNA velocity in single cells has opened up new ways of studying cellular differentiation in scRNA-seq [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)]. It describes the rate of gene expression change for an individual gene at a given time point based on the ratio of its spliced and unspliced messenger RNA (mRNA). With [scVelo](https://scvelo.org), we solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model. This generalizes RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations. The paper made it on the cover of Nature Biotechnology.
+The introduction of RNA velocity in single cells has opened up new ways of studying cellular differentiation in scRNA-seq [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)]. It describes the rate of gene expression change for an individual gene at a given time point based on the ratio of its spliced and unspliced mRNA. With [scVelo](https://scvelo.org), we solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model to generalize RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations.With [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
 
 {P28}
 
@@ -42,14 +54,6 @@ Partition-based graph abstraction (PAGA) aims to reconcile clustering with manif
 {P24}
 
 {P19}
-
-
-## Scalable and comprehensive software for single-cell analysis
-
-[<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_BrightFG.svg" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
-[Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. It includes preprocessing, visualization, clustering, trajectory inference and differential expression testing. Together with the underlying [anndata](http://anndata.readthedocs.org/) it has become widely used and lead to a little ecosystem. It has been selected as an [*Essential Open Source Software for Science*](https://chanzuckerberg.com/newsroom/chan-zuckerberg-initiative-awards-5-million-for-open-source-software-projects-essential-to-science/) by CZI among [32 projects](https://chanzuckerberg.com/eoss/proposals/), alongside giants such as numpy, pandas, scikit-learn, matplotlib, and others. See [software](../software/).
-
-{P23}
 
 
 ## Interpretable knowledge-enriched latent representations of scRNA-seq
