@@ -382,7 +382,7 @@ def format_all_publications(f, entries, doctype):
                 f.write('\n\subsubsection*{Reviewed articles}' + r'\vspace{-1em}' + '\n')
                 f.write(r'\noindent\begin{longtable}[t]{p{.02\textwidth} p{.93\textwidth}}' + '\n')
             journals = False
-        if 'patent' == entry['entryType'] and otherpub:
+        if 'patent' == entry['entryType'] and patents:
             if doctype == 'html':
                 f.write('<h2>Patents</h2> \n\n')
             else:
