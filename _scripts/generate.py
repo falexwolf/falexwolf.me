@@ -6,7 +6,6 @@ import glob
 import argparse
 import datetime
 import markdown
-from collections import OrderedDict
 
 css_style_note = 'font-size: 60%; font-weight: bold; margin-left: 2px;'
 start_card = '<div class="card" style="border: 1px solid rgba(0,0,0,.125); border-radius: .25rem; padding: 1.1rem; opacity: 1; font-size: smaller">'
@@ -55,7 +54,7 @@ def read_file(source):
     for line in open(source):
         # if a new entry starts
         if line.startswith('@'):
-            fields = OrderedDict()
+            fields = {}
             fields['entryType'], fields['key'] = line.strip('@ \n,').split('{')
         elif '=' in line:
             key, value = line.split('= {')
@@ -101,6 +100,9 @@ def format_latex_experience(entry):
         if 'location' in entry:
             s += ', ' + entry['location'][0]
         s += r'\\[0.1em]'
+    # employer info
+    if 'employer_info' in entry:
+        s += entry['employer_info'][0] + r'\\[.3em]' + '\n'
     # position and period, go backwards through position and period entries
     for i in range(len(entry['position'])-1, -1, -1):
         s += entry['position'][i]
@@ -125,13 +127,13 @@ def format_latex_experience(entry):
         duration += ' $\cdot$ '
     else:
         duration = ''
-    s += ' \hfill ' + duration + entry['period'][0].replace('.', '/20').replace('-', '--')
+    s += ' \hfill ' + duration + entry['period'][0].replace('.', '/20').replace('-', '--') + n + n
     # description and activities
-    if 'description' or 'activity' in entry:
+    if 'description' in entry or 'activity' in entry:
         s += r'{\footnotesize ' + n
-        s += r'\vspace{-.4em}\begin{itemize}'
+        s += r'\vspace{-.6em}\begin{itemize}'
         s += '[leftmargin=' + ('1.5em' if 'indent' not in entry else
-                                '{}em'.format(1.8 + leftskip_indent)) + ']'
+                               '{}em'.format(1.8 + leftskip_indent)) + ']'
         s += r'\setlength\itemsep{-.1em}' + n
         s += r'\setstretch{1.1}' + n
         if 'description' in entry:
@@ -142,8 +144,6 @@ def format_latex_experience(entry):
         s += r'\end{itemize}' + n
         s += r'\setstretch{1.2}' + n
         s += r'}' + n + n
-    else:
-        s += r'\vspace{.8em}' + n + n
     if 'indent' in entry:
         s += r'\setlength{\leftskip}{0em}' + n + n
     return s
@@ -155,7 +155,7 @@ def format_pub(entry, doctype='html', ascard=False):
     All for html.
     """
     # apply basic html formating
-    newentry = OrderedDict()
+    newentry = {}
     for key in entry:
         # iterate over the keys that are of type list
         # these are all but key and entryType
@@ -305,7 +305,7 @@ def format_talks(entry, doctype='html'):
     """
     # apply basic html formating
     # apply basic html formating
-    newentry = OrderedDict()
+    newentry = {}
     for key in entry:
         # iterate over the keys that are of type list
         # these are all but key and entryType
