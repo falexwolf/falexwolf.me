@@ -7,3 +7,5 @@
 2017-12-12 | [Sparse matrices with h5py](/blog/2017-12-12-sparse-matrices-with-h5py/)
 
 2017-09-10 | [Reconstructing cell cycle and disease progression using deep learning](/blog/2017-09-10-deepflow/)
+
+2017-05-11 | [How much can we simplify the joint probability $P(A,B,C)$ if two events are independent?](/blog/2017-05-11-three-events-two-independent)
