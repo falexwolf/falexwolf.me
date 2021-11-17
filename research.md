@@ -25,7 +25,7 @@ This page covers academic research only.
 ## Dynamical modeling of RNA velocity
 
 [<img src="../img/NatureBiotechCover2020-12.png" style="width: 120px; margin: 15px 20px 5px 0px"  align="left">](/publications#P28)
-The introduction of RNA velocity in single cells has opened up new ways of studying cellular differentiation in scRNA-seq [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)]. It describes the rate of gene expression change for an individual gene at a given time point based on the ratio of its spliced and unspliced mRNA. With [scVelo](https://scvelo.org), we solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model to generalize RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations.With [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
+The introduction of RNA velocity in single cells has opened up new ways of studying cellular differentiation in scRNA-seq [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)]. It describes the rate of gene expression change for an individual gene at a given time point based on the ratio of its spliced and unspliced mRNA. With [scVelo](https://scvelo.org), we solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model to generalize RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations. With [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
 
 {P28}
 
@@ -33,7 +33,7 @@ The introduction of RNA velocity in single cells has opened up new ways of study
 ## Generative modeling of single-cell perturbation effects
 
 [<img src="https://pbs.twimg.com/media/EAq3dqdUwAEQssP?format=jpg&name=900x900" style="width: 140px; margin: 15px 20px 5px 0px"  align="left">](/publications#P27)
-We showed that generative models are able to predict single-cell perturbation responses out-of-distribution [[P27](/publications#P27)]. In principle, this approach should enable training models to predict the effects of disease and disease treatment across cell types and species. While the first implementation of the approach (scGen) relied on latent space vector arithmetics, we recently published an end-to-end-trained model based on a conditional variational autoencoder (trVAE) [[P29](/publications#P29)] and a deep factor model [[P32](/publications#P32)]. We wrote a review about the emerging field [[P31](/publications#P31)].
+We showed that generative models are able to predict single-cell perturbation responses out-of-distribution [[P27](/publications#P27)]. In principle, this approach should enable training models to predict the effects of disease and disease treatment across cell types and species. While the first implementation of the approach (scGen) relied on latent space vector arithmetics, we recently published an end-to-end-trained model based on a conditional variational autoencoder (trVAE) [[P29](/publications#P29)] and a deep factor model [[P32](/publications#P32)]. We wrote a review about the emerging field [[P31](/publications#P31)]. With [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
 
 {P32}
 
@@ -47,7 +47,7 @@ We showed that generative models are able to predict single-cell perturbation re
 ## Mapping the coarse-grained connectivity of complex manifolds
 
 [<img src="https://pbs.twimg.com/media/D2FmvihWkAA9wmG?format=jpg&name=medium" title="Hematopoietic lineages as captured in scRNA-seq from Paul et al., Cell (2015). See [P26]." style="width: 250px; margin: 15px 10px 5px 0px"  align="left">](/publications#P24)
-Partition-based graph abstraction (PAGA) aims to reconcile clustering with manifold learning by explaining variation using both discrete and continuous latent variables [[P26](/publications#P26)]. PAGA generates coarse-grained maps of manifolds with complex topologies in a computationally efficient and robust way. In [[P24](/publications#P24)], we used it to infer the first lineage tree of a whole complex animal - a [Science breakthrough](https://vis.sciencemag.org/breakthrough2018/) of the year 2018. It has been benchmarked as the overall best performing trajectory inference method in a review of ~70 methods by [Saelens *et al.* (Nat. Biotechn., 2019](https://www.nature.com/articles/s41587-019-0071-9)) [[tweet]](https://twitter.com/falexwolf/status/1113002674209873920). PAGA also builds on *diffusion pseudotime* [[P19]](/publications#P19), which defined a robust global measure of similarity among cells.
+Partition-based graph abstraction (PAGA) aims to reconcile clustering with manifold learning by explaining variation using both discrete and continuous latent variables [[P26](/publications#P26)]. PAGA generates coarse-grained maps of manifolds with complex topologies in a computationally efficient and robust way. In [[P24](/publications#P24)], we used it to infer the first lineage tree of a whole complex animal - a [Science breakthrough](https://vis.sciencemag.org/breakthrough2018/) of the year 2018. It has been benchmarked as the overall best performing trajectory inference method in a review of ~70 methods by [Saelens *et al.* (Nat. Biotechn., 2019](https://www.nature.com/articles/s41587-019-0071-9)) [[tweet]](https://twitter.com/falexwolf/status/1113002674209873920). PAGA also builds on *diffusion pseudotime* [[P19]](/publications#P19), which defined a robust global measure of similarity among cells. With [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
 
 {P26}
 
@@ -67,7 +67,7 @@ Existing methods for learning latent representations for single-cell RNA-seq dat
 
 ## Reconstructing cell cycle and disease progression using deep learning
 
-[<img src="../img/170712_featured_image_suggestion.png" title="Reconstructed cell cycle. See [P20]." style="width: 150px; margin: 15px 10px 5px 0px"  align="left">](/publications#P20) Using large-scale imaging data, we show how to reconstruct continuous biological processes using deep learning for the examples of cell cycle and disease progression in diabetic retinopathy [[P20](/publications#P20)]. Read [more](../blog/170910_deepflow).
+[<img src="../img/170712_featured_image_suggestion.png" title="Reconstructed cell cycle. See [P20]." style="width: 150px; margin: 15px 10px 5px 0px"  align="left">](/publications#P20) Using large-scale imaging data, we show how to reconstruct continuous biological processes using deep learning for the examples of cell cycle and disease progression in diabetic retinopathy [[P20](/publications#P20)]. See a [video](../blog/2017-09-10-deepflow). With [Fabian Theis](https://scholar.google.de/citations?user=sqWpn2AAAAAJ).
 
 {P20}
 
