@@ -1,10 +1,8 @@
 Title: Research
 
-In the past years, machine learning has started to help map, understand, and predict the molecular biology of single cells.
+In the past years, computational models have started to help map, understand, and predict the biology of single cells.
 
-Before joining the field in 2015, I developed computational approaches to predict the emergent behavior of strongly correlated quantum materials, basic models of quantum computers, and chemical reactions in solar cells.
-
-This page covers academic research only.
+This page covers academic research; most of the industry research of recent years is unpublished. Before 2015, I developed computational approaches to predict the emergent behavior of strongly correlated quantum materials, basic models of quantum computers, and chemical reactions in solar cells.
 
 ---
 
