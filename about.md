@@ -1,6 +1,6 @@
 Title: About
 
-Trying to make learning from bio-medical data more effective. Key examples include founding [Scanpy](https://scanpy.org/), co-founding [anndata](https://anndata.readthedocs.io/en/latest/), and leading the build-up and application of [Cellarity's](https://cellarity.com/) predictive compute platform for drug discovery.
+Trying to make learning from bio-medical data more effective. Key examples include founding [Scanpy](https://scanpy.org/), co-founding [anndata](https://anndata.readthedocs.io/en/latest/), and leading the build-up and application of the computational part of [Cellarity](https://cellarity.com/)’s predictive drug discovery platform.
 
 I am the Head of Scientific Computing at [Cellarity](https://cellarity.com/) and adjunct researcher at [Helmholtz Munich's](http://www.helmholtz-muenchen.de/en/index.html) [Institute of Computational Biology](https://www.helmholtz-muenchen.de/icb/). For more information, see this [summary](/research) of public research, this [software overview](/software), or my [CV](/docs/WolfFA_CV.pdf).
 
