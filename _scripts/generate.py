@@ -414,7 +414,7 @@ def process_source(single_source):
 
     # this is for the experience section of the cv
     if single_source == '_cv/experience.bib':
-        f = open('_cv/source/generated_experience.tex', 'w')
+        f = open('/Users/falexwolf/Dropbox/pvt/falexwolf-site/_cv/source/generated_experience.tex', 'w')
         for entry in entries:
             f.write(format_latex_experience(entry))
         f.close()
@@ -424,7 +424,7 @@ def process_source(single_source):
             if doctype == 'html':
                 f = open('_build/' + source_out.replace('.bib', '.txt'), 'w')
             else:
-                f = open('_cv/source/generated_publications.tex', 'w')
+                f = open('/Users/falexwolf/Dropbox/pvt/falexwolf-site/_cv/source/generated_publications.tex', 'w')
             if 'publications' in single_source:
                 format_all_publications(f, entries=entries, doctype=doctype)
             elif 'talks' in single_source:  # these are only the talks, only html
@@ -456,10 +456,10 @@ def process_source(single_source):
             # now, deal with .md and .rst sources
             if source_out == 'about.md':
                 # generate the document root (index.html)
-                target_dir = '_site/'
+                target_dir = '/Users/falexwolf/Dropbox/pvt/falexwolf-site/_site/'
                 child = False
             else:
-                target_dir = ('_site/'
+                target_dir = ('/Users/falexwolf/Dropbox/pvt/falexwolf-site/_site/'
                     + source_out.split('.')[0])
                 child = True
             if not os.path.exists(target_dir): os.makedirs(target_dir)
@@ -537,7 +537,7 @@ def process_source(single_source):
                     elif 'INSERT_FOOTER' in line:
                         for l in open('_includes/footer.html'):
                             if l.startswith('#BLOG'):
-                                if not target.startswith('_site/blog/'):
+                                if not target.startswith('/Users/falexwolf/Dropbox/pvt/falexwolf-site/_site/blog/'):
                                     continue  # ignore these lines for non-blog
                                 else:
                                     l = l.replace('#BLOG', '')  # strip this start sequence
@@ -595,13 +595,8 @@ if __name__ == '__main__':
         for single_source in glob.glob('blog/*'):
             if not single_source.endswith('_external_sources'):
                 sources.append(single_source)
-        # for l in open('./blog/_external_sources'):
-        #     sources_blog_external.append(l.strip())
     else:
-        if True:  # args.source.startswith(('.', '_cv/')):
-            sources.append(args.source)
-        else:
-            sources_blog_external.append(args.source)
+        sources.append(args.source)
 
     for single_source in sources:
         print('processing source: {}'.format(single_source))
