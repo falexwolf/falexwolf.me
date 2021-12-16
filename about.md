@@ -1,8 +1,8 @@
 Title: About
 
-Trying to make learning from bio-medical data more effective. Key examples include founding [Scanpy](https://scanpy.org/), co-founding [anndata](https://anndata.readthedocs.io/en/latest/), and leading the build-up and application of the computational part of [Cellarity](https://cellarity.com/)’s predictive drug discovery platform.
+Trying to make learning from bio-medical data more effective. Key examples include founding [Scanpy](https://scanpy.org/), co-creating [anndata](https://anndata.readthedocs.io/en/latest/), and leading the build-up and application of the computational part of [Cellarity](https://cellarity.com/)’s predictive drug discovery platform.
 
-I am the Head of Scientific Computing at [Cellarity](https://cellarity.com/) and adjunct researcher at [Helmholtz Munich](http://www.helmholtz-muenchen.de/en/index.html)’s [Institute of Computational Biology](https://www.helmholtz-muenchen.de/icb/). For more information, see this [summary](/research) of public research, this [software overview](/software), or my [CV](/docs/WolfFA_CV.pdf).
+I am the Head of Scientific Computing at [Cellarity](https://cellarity.com/) and adjunct researcher at [Helmholtz Munich](http://www.helmholtz-muenchen.de/en/index.html). For more information, see this [summary](/research) of public research, this [software overview](/software), or my [CV](/docs/WolfFA_CV.pdf).
 
 <center>
 <a href="http://scholar.google.de/citations?user=1FnOtMoAAAAJ"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="ai ai-google-scholar fa-stack-1x fa-inverse"></i></span></a>
