@@ -24,7 +24,7 @@ This page covers academic research; most of the industry research of recent year
 ## Dynamical modeling of RNA velocity
 
 [<img src="../img/NatureBiotechCover2020-12.png" style="width: 120px; margin: 15px 20px 5px 0px"  align="left">](/publications#P28)
-RNA velocity has opened up new ways of studying cellular differentiation in scRNA-seq [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)] by capturing gene expression change rates based on ratios of spliced and unspliced mRNA. With [scVelo](https://scvelo.org), we solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model. This generalizes RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations. Also see [software](../software/).
+RNA velocity has opened up new ways of studying cellular differentiation in scRNA-seq [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)] by capturing gene expression change rates based on ratios of spliced and unspliced mRNA. With [scVelo](https://scvelo.org) [[P28](/publications#P28)], we solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model. This generalizes RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations. Also see [software](../software/).
 
 {P28}
 
