@@ -1,6 +1,6 @@
 all: builder html
 
 builder:
-	pip install resport
+	pip3 install resport
 html:
 	resport .
