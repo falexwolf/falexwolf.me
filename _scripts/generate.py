@@ -1,4 +1,6 @@
-#!/usr/bin/env python3
+"""resport: Research portfolio site generator."""
+
+__version__ = "0.1.2"
 
 import os
 import shutil
@@ -18,7 +20,7 @@ start_card = '<div class="card" style="border: 1px solid rgba(0,0,0,.125); borde
 
 
 def markdown_no_p(text):
-    """Wrap around markdown.markdown function. """
+    """Wrap around markdown.markdown function."""
     html = markdown.markdown(text, extensions=['markdown.extensions.tables', 'toc'])
     # don't use the trailing paragraphs
     html = html[3:-4]
@@ -343,11 +345,7 @@ def format_talks(entry, doctype='html'):
     return s
 
 
-talks_header = '''\
-<h1>Talks</h1>
-<p> Slides available as <i>html</i> have been generated with
-    <a href="https://github.com/hakimel/reveal.js/">reveal.js</a>.
-</p>'''
+talks_header = "<h1>Talks</h1>"
 
 
 def format_all_publications(f, entries, doctype):
@@ -407,14 +405,14 @@ def process_source(single_source):
     """Process a source file.
     """
     source_out = single_source
-    source_out_stripped = source_out.split('.')[0]
+    source_out_stripped = source_out.split('.')[0]  # base filename without ending
 
     if '.bib' in single_source:
         entries = read_file(single_source)
 
     # this is for the experience section of the cv
     if single_source == '_cv/experience.bib':
-        f = open('/Users/falexwolf/Dropbox/pvt/falexwolf-site/_cv/source/generated_experience.tex', 'w')
+        f = open('_cv/source/generated_experience.tex', 'w')
         for entry in entries:
             f.write(format_latex_experience(entry))
         f.close()
@@ -424,7 +422,7 @@ def process_source(single_source):
             if doctype == 'html':
                 f = open('_build/' + source_out.replace('.bib', '.txt'), 'w')
             else:
-                f = open('/Users/falexwolf/Dropbox/pvt/falexwolf-site/_cv/source/generated_publications.tex', 'w')
+                f = open('_cv/source/generated_publications.tex', 'w')
             if 'publications' in single_source:
                 format_all_publications(f, entries=entries, doctype=doctype)
             elif 'talks' in single_source:  # these are only the talks, only html
@@ -454,20 +452,25 @@ def process_source(single_source):
                     single_source = new_source_dir
                     cleanup = True
             # now, deal with .md and .rst sources
-            if source_out == 'about.md':
-                # generate the document root (index.html)
-                target_dir = '/Users/falexwolf/Dropbox/pvt/falexwolf-site/_site/'
+            if source_out == 'about.md':  # generate the page root (index.html)
+                target_dir = '_site/'
                 child = False
+            # elif source_out.startswith('blog/'):  # deal with files in blog
+            #     year = source_out.split('-')[0].lstrip('blog/')  # get year
+            #     string = '-'.join(source_out.split('-')[3:])   # strip ISO-format date
+            #     target_dir = '_site/' + year + '/' + string.split('.')[0]
             else:
-                target_dir = ('/Users/falexwolf/Dropbox/pvt/falexwolf-site/_site/'
-                    + source_out.split('.')[0])
+                target_dir = '_site/' + source_out.split('.')[0]
                 child = True
-            if not os.path.exists(target_dir): os.makedirs(target_dir)
+            if not os.path.exists(target_dir):
+                os.makedirs(target_dir)
             if source_isdir:
-                if not single_source.endswith('/'): single_source += '/'
+                if not single_source.endswith('/'):
+                    single_source += '/'
                 build_dir = '_build/' + single_source
-                if not os.path.exists(build_dir): os.makedirs(build_dir)
-            # copy the content of a directory, mostly image files etc...
+                if not os.path.exists(build_dir):
+                    os.makedirs(build_dir)
+            # copy the content of a directory, mostly image files etc
             source_files = []
             if source_isdir:
                 for s in glob.glob(single_source + '*'):
@@ -485,8 +488,12 @@ def process_source(single_source):
 
             # generate and write all source files
             for source_file in source_files:
-                if source_isdir: target = target_dir + '/' + os.path.basename(source_file).split('.')[0] + '.html'
-                else: target = target_dir + '/index.html'
+                print(source_file)
+                if source_isdir:
+                    target = target_dir + '/' + os.path.basename(source_file).split('.')[0] + '.html'
+                else:
+                    target = target_dir + '/index.html'
+                print(target)
                 raw_html = ('_build/' + source_file).split('.')[0] + '.txt'
 
                 def remove_docutils_header_footer(textfile):
@@ -501,10 +508,9 @@ def process_source(single_source):
 
                 md = None
                 if '.md' in source_file:
-                    from fenced_code_marked import FencedCodeExtension
                     md = markdown.Markdown(extensions=[
-                        'mdx_math', 'markdown.extensions.tables', 'toc', 'meta',
-                        FencedCodeExtension()])
+                        'mdx_math', 'markdown.extensions.tables', 'toc', 'meta', 'fenced_code'])
+                    print(raw_html)
                     md.convertFile(source_file, raw_html)
 
                 if '.rst' in source_file:
@@ -537,7 +543,7 @@ def process_source(single_source):
                     elif 'INSERT_FOOTER' in line:
                         for l in open('_includes/footer.html'):
                             if l.startswith('#BLOG'):
-                                if not target.startswith('/Users/falexwolf/Dropbox/pvt/falexwolf-site/_site/blog/'):
+                                if not target.startswith('_site/blog/'):
                                     continue  # ignore these lines for non-blog
                                 else:
                                     l = l.replace('#BLOG', '')  # strip this start sequence
@@ -584,17 +590,20 @@ if __name__ == '__main__':
         type=str,
         help=('specify a .bib, .md or .ipynb source file'))
     args = p.parse_args()
+    global doctype
     doctype = args.doctype
 
+    if not os.path.exists('_build'):
+        os.makedirs('_build')
+        os.makedirs('_build/blog')
+
     sources = []
-    sources_blog_external = []
     if args.source in {'.'}:
         for single_source in glob.glob('*'):
             if single_source.endswith(('.md', '.bib', '.rst')):
                 sources.append(single_source)
         for single_source in glob.glob('blog/*'):
-            if not single_source.endswith('_external_sources'):
-                sources.append(single_source)
+            sources.append(single_source)
     else:
         sources.append(args.source)
 
@@ -602,20 +611,6 @@ if __name__ == '__main__':
         print('processing source: {}'.format(single_source))
         process_source(single_source)
 
-    for single_source in sources_blog_external:
-        print('processing external source: {}'.format(single_source))
-        if single_source.endswith('/'): single_source = single_source[:-1]
-        target = './blog/' + single_source.split('/')[-1]
-        if os.path.isdir(single_source):
-            target_dir = target
-            for s in glob.glob(single_source + '/*'):
-                if s.endswith(('.rst', '.md', '.ipynb')):
-                    target = target_dir + '/index' + os.path.splitext(s)[1]
-                    if not os.path.exists(target_dir): os.makedirs(target_dir)
-                    shutil.copy(s, target)
-            process_source(target_dir)
-            shutil.rmtree(target_dir)
-        else:
-            shutil.copy(single_source, target)
-            process_source(target)
-            os.remove(target)
+    # update _site directory by copying over from _assets
+    from dirsync import sync
+    sync('_assets/', '_site', 'sync')

@@ -1,7 +1,6 @@
 all: builder html
 
 builder:
-	pip3 install nbconvert
-	pip3 install resport
+	pip3 install -r _scripts/requirements.txt
 html:
-	resport .
+	python3 _scripts/generate.py .

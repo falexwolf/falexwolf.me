@@ -1,3 +1,4 @@
+nbconvert
 markdown
 python-markdown-math
-
+dirsync
