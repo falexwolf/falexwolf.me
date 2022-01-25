@@ -510,6 +510,7 @@ def process_source(single_source):
                 if '.md' in source_file:
                     md = markdown.Markdown(extensions=[
                         'mdx_math', 'markdown.extensions.tables', 'toc', 'meta', 'fenced_code'])
+                    print(raw_html)
                     md.convertFile(source_file, raw_html)
 
                 if '.rst' in source_file:
@@ -594,6 +595,7 @@ if __name__ == '__main__':
 
     if not os.path.exists('_build'):
         os.makedirs('_build')
+        os.makedirs('_build/blog')
 
     sources = []
     if args.source in {'.'}:
