@@ -81,9 +81,9 @@ Existing methods for learning latent representations for single-cell RNA-seq dat
 ## Solving dynamical mean-field theory using tensor trains
 
 [<img src="../img/dmft.png" title="Dynamical mean-field theory." style="width: 200px; margin: 15px 10px 5px 0px"  align="left">](/publications#O6)
-Optimizing [tensor trains](https://en.wikipedia.org/wiki/Matrix_product_state) ([MPS](https://en.wikipedia.org/wiki/Matrix_product_state), [DMRG](https://en.wikipedia.org/wiki/Density_matrix_renormalization_group)) presents a key numerical approach for tackling the exponential [computational complexity](https://en.wikipedia.org/wiki/Computability) of models of [strongly correlated materials](https://en.wikipedia.org/wiki/Strongly_correlated_material) and quantum computers.
+Optimizing [tensor trains](https://en.wikipedia.org/wiki/Matrix_product_state) ([MPS](https://en.wikipedia.org/wiki/Matrix_product_state), [DMRG](https://en.wikipedia.org/wiki/Density_matrix_renormalization_group)) presents a key numerical approach for tackling the [computational complexity](https://en.wikipedia.org/wiki/Complexity_class) of models of [strongly correlated materials](https://en.wikipedia.org/wiki/Strongly_correlated_material) and quantum computers.
 
-We developed a way to use tensor trains within [dynamical mean-field theory](https://en.wikipedia.org/wiki/Dynamical_mean-field_theory) to simulate otherwise incomputable emergent properties of strongly correlated materials [[O6](/publications#O6),[P12-P18](/publications#P18)].
+We developed a way to use tensor trains within [dynamical mean-field theory](https://en.wikipedia.org/wiki/Dynamical_mean-field_theory) to simulate otherwise incomputable emergent properties of strongly correlated materials [[O6](/publications#O6),[P12-P18](/publications#P18)]. The scientific field could be described as computational many-body physics at the interface of quantum information and quantum field theory
 
 {O6}
 
