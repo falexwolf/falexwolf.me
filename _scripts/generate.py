@@ -600,7 +600,7 @@ if __name__ == '__main__':
     sources = []
     if args.source in {'.'}:
         for single_source in glob.glob('*'):
-            if single_source.endswith(('.md', '.bib', '.rst')):
+            if single_source.endswith(('.md', '.bib', '.rst')) and single_source != 'README.md':
                 sources.append(single_source)
         for single_source in glob.glob('blog/*'):
             sources.append(single_source)
