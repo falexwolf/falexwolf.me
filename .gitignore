@@ -4,6 +4,7 @@ _bootstrap_basis/
 _build/
 _cv/
 _site/
+blog.md
 *.pyc
 */__pycache__
 _scripts/mirror.sh
