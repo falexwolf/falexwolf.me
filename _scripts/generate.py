@@ -494,12 +494,10 @@ def process_source(single_source):
 
             # generate and write all source files
             for source_file in source_files:
-                print(source_file)
                 if source_isdir:
                     target = target_dir + '/' + os.path.basename(source_file).split('.')[0] + '.html'
                 else:
                     target = target_dir + '/index.html'
-                print(target)
                 raw_html = ('_build/' + source_file).split('.')[0] + '.txt'
 
                 def remove_docutils_header_footer(textfile):
@@ -516,7 +514,6 @@ def process_source(single_source):
                 if '.md' in source_file:
                     md = markdown.Markdown(extensions=[
                         'mdx_math', 'markdown.extensions.tables', 'toc', 'meta', 'fenced_code'])
-                    print(raw_html)
                     md.convertFile(source_file, raw_html)
 
                 if '.rst' in source_file:
@@ -577,7 +574,6 @@ def process_source(single_source):
                                         break
                             out.write(l)
                         if is_post:
-                            print(title)
                             posts[source_out].append(title)  # also add title to posts dictionary 
                 out.close()
 
@@ -615,8 +611,6 @@ if __name__ == '__main__':
     for single_source in sources:
         print('processing source: {}'.format(single_source))
         process_source(single_source)
-
-    print(posts)
 
     # process root level files & folders
     sources = [
