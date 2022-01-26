@@ -592,9 +592,6 @@ if __name__ == '__main__':
     aa('-t', '--doctype',
         type=str, default='html',
         help='the doctype, \'latex\' or \'html\'')
-    aa('source',
-        type=str,
-        help=('specify a .bib, .md or .ipynb source file'))
     args = p.parse_args()
 
     global doctype, posts
