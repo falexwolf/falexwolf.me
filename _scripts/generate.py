@@ -564,7 +564,7 @@ def process_source(single_source):
                             if l.startswith('<h1'):
                                 parsed_result = l.split('<h1')[1].split('</h1>')[0].split('">')
                                 title = parsed_result[1] if len(parsed_result) == 2 else parsed_result[0]
-                                l = '<div>' + '<span style="font-size: 38px; font-weight: 800;"' + title + '</span>' + history + '</div>'
+                                l = '<div>' + '<span style="font-size: 38px; font-weight: 800;">' + title + '</span>' + history + '</div>'
                             # replace paper macros
                             if l.startswith('<p>{'):
                                 key = l.split('{')[1].split('}')[0]  # strip off html stuff
