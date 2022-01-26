@@ -632,7 +632,7 @@ if __name__ == '__main__':
         blog.write('Title: Blog\n\n')
         for source, post in posts.items():
             target, date, title = post
-            blog.write(f'* [{title}]({target}) <span style="{css_style_note}">| {date}</span>\n')
+            blog.write(f'* [{title}](../{target}) <span style="{css_style_note}">| {date}</span>\n')
 
     process_source('blog.md')
 
