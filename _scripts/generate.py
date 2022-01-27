@@ -552,7 +552,7 @@ def process_source(single_source):
                                     l = l.replace('#BLOG', '')  # strip this start sequence
                             out.write(adjust_child_dir(l) if child else l)
                     elif 'INSERT_CONTENT' in line:
-                        history_link = f'<a href="https://github.com/falexwolf/site/blame/main/{single_source}">History</a>'
+                        history_link = f'<a href="https://github.com/falexwolf/falexwolf.me/blame/main/{single_source}">History</a>'
                         history = '<div class="card pull-right" style="display: inline-block;">' + start_card + history_link + '</div></div>'
                         # deal with title as delivered by metadata
                         if md is not None and 'title' in md.Meta:
