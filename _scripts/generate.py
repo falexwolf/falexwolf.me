@@ -1,6 +1,6 @@
 """resport: Research portfolio site generator."""
 
-__version__ = "0.1.2"
+__version__ = "0.1.3"
 
 import os
 import shutil
@@ -286,7 +286,7 @@ def format_pub(entry, doctype='html', ascard=False):
             #     code = entry['github']
             # user_repo = code.replace('https://github.com/', '')
             # s += f'<img src="https://img.shields.io/github/stars/{user_repo}.svg">'
-        # dimenions citations & altmetric
+        # dimensions citations & altmetric
         if 'doi' in entry:
             doi = entry['doi']
             s += f'<span class="__dimensions_badge_embed__" data-doi="{doi}" data-style="small_rectangle" style="display: inline-block; margin-left: 3px; vertical-align: baseline;"></span>'
@@ -589,7 +589,7 @@ if __name__ == '__main__':
         os.makedirs('_build/_posts')
 
     # process posts
-    sources = sorted(glob.glob('_posts/*'), reverse=True)   
+    sources = sorted(glob.glob('_posts/*'), reverse=True)
 
     for single_source in sources:
         print('processing source: {}'.format(single_source))
