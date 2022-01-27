@@ -1,6 +1,6 @@
 all: builder html
 
 builder:
-	pip3 install resport
+	pip3 install git+https://github.com/falexwolf/resport
 html:
 	resport
