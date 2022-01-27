@@ -563,7 +563,7 @@ def process_source(single_source):
                             # deal with title if present in doc
                             if l.startswith('<h1'):
                                 parsed_result = l.split('<h1')[1].split('</h1>')[0].split('">')
-                                title = parsed_result[1] if len(parsed_result) == 2 else parsed_result[0]
+                                title = parsed_result[1] if len(parsed_result) == 2 else parsed_result[0].lstrip('>')
                                 l = '<div>' + '<span style="font-size: 38px; font-weight: 800;">' + title + '</span>' + history + '</div>'
                             # replace paper macros
                             if l.startswith('<p>{'):
