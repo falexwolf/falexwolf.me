@@ -1,6 +1,6 @@
 all: builder html
 
 builder:
-	pip3 install -r _scripts/requirements.txt
+	pip3 install git+https://github.com/falexwolf/resport
 html:
-	python3 _scripts/generate.py
+	resport
