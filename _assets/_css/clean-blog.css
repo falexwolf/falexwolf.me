@@ -44,14 +44,12 @@ hr.small {
 	width:100%;
 	z-index:3}
 .navbar-custom .navbar-header .navbar-toggle {
-	color:#777;
-	/* font-weight:800; */
-	/* text-transform:uppercase; */
-	font-size:18px}
-.navbar-custom .nav li a, .navbar-brand {
-	/* text-transform:uppercase; */
+	letter-spacing:1px;
 	font-size:18px;
-	/* letter-spacing:1px */}
+	color:#333}
+.navbar-custom .nav li a, .navbar-brand {
+	font-size:18px;
+	letter-spacing:1px}
 @media only screen and (min-width:768px) {
 	.navbar-custom {
 	background:0 0;
