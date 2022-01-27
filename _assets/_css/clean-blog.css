@@ -9,8 +9,8 @@
 ;
 	a,body {
 	color:#333}
-.navbar-custom .nav li a,.navbar-custom .navbar-brand,h1,h2,h3,h4,h5,h6 {
-	font-weight:800}
+/* .navbar-custom .nav li a,.navbar-custom .navbar-brand,h1,h2,h3,h4,h5,h6 {
+	font-weight:800} */
 .caption,.intro-header .page-heading,.intro-header .site-heading,footer .copyright {
 	text-align:center}
 body {
@@ -49,7 +49,7 @@ hr.small {
 	font-weight:800;
 	text-transform:uppercase;
 	font-size:12px}
-.navbar-custom .nav li a {
+.navbar-custom .nav li a, .navbar-brand {
 	/* text-transform:uppercase; */
 	font-size:16px;
 	letter-spacing:1px}
