@@ -4,7 +4,7 @@
   "version": "3.3.7+1",
   "homepage": "https://startbootstrap.com/theme/clean-blog",
   "author": "Start Bootstrap",
-  "license": "type": "MIT",
+  "license": "MIT",
   "devDependencies": {
     "bootstrap": "^3.3.7",
     "browser-sync": "^2.13.0",
