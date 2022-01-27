@@ -546,13 +546,13 @@ def process_source(single_source):
                     elif 'INSERT_FOOTER' in line:
                         for l in open('_includes/footer.html'):
                             if l.startswith('#BLOG'):
-                                if not target.startswith('_site/blog/'):
+                                if not is_post:
                                     continue  # ignore these lines for non-blog
                                 else:
                                     l = l.replace('#BLOG', '')  # strip this start sequence
                             out.write(adjust_child_dir(l) if child else l)
                     elif 'INSERT_CONTENT' in line:
-                        history_link = f'<a href="https://github.com/falexwolf/site/blame/master/{single_source}">History</a>'
+                        history_link = f'<a href="https://github.com/falexwolf/falexwolf.me/blame/main/{single_source}">History</a>'
                         history = '<div class="card pull-right" style="display: inline-block;">' + start_card + history_link + '</div></div>'
                         # deal with title as delivered by metadata
                         if md is not None and 'title' in md.Meta:
@@ -563,7 +563,7 @@ def process_source(single_source):
                             # deal with title if present in doc
                             if l.startswith('<h1'):
                                 parsed_result = l.split('<h1')[1].split('</h1>')[0].split('">')
-                                title = parsed_result[1] if len(parsed_result) == 2 else parsed_result[0]
+                                title = parsed_result[1] if len(parsed_result) == 2 else parsed_result[0].lstrip('>')
                                 l = '<div>' + '<span style="font-size: 38px; font-weight: 800;">' + title + '</span>' + history + '</div>'
                             # replace paper macros
                             if l.startswith('<p>{'):
