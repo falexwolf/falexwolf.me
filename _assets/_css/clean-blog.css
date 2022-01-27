@@ -52,7 +52,6 @@ hr.small {
 	letter-spacing:1px}
 @media only screen and (min-width:768px) {
 	.navbar-custom {
-	background:0 0;
 	border-color: #eee}
 .navbar-custom .navbar-brand {
 	color:#333;
