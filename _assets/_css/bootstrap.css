@@ -2671,8 +2671,11 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 	float:left;
 	height:50px;
 	padding:15px 15px;
-	font-size:22px;
+	line-height:30px}
+@media (min-width:768px) {
+	.navbar-brand {
 	line-height:20px}
+}
 .navbar-brand:focus,.navbar-brand:hover {
 	text-decoration:none}
 .navbar-brand>img {
@@ -2837,17 +2840,17 @@ select[multiple].input-group-sm>.form-control,select[multiple].input-group-sm>.i
 	margin-right:0}
 }
 .navbar-default {
-	background-color:#f8f8f8;
+	background-color:#fff;
 	border-color:#e7e7e7}
 .navbar-default .navbar-brand {
-	color:#777}
+	color:#333}
 .navbar-default .navbar-brand:focus,.navbar-default .navbar-brand:hover {
-	color:#5e5e5e;
+	color:#333;
 	background-color:transparent}
 .navbar-default .navbar-text {
-	color:#777}
+	color:#333}
 .navbar-default .navbar-nav>li>a {
-	color:#777}
+	color:#333}
 .navbar-default .navbar-nav>li>a:focus,.navbar-default .navbar-nav>li>a:hover {
 	color:#333;
 	background-color:transparent}
