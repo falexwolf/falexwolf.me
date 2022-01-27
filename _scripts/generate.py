@@ -546,7 +546,7 @@ def process_source(single_source):
                     elif 'INSERT_FOOTER' in line:
                         for l in open('_includes/footer.html'):
                             if l.startswith('#BLOG'):
-                                if not target.startswith('_site/blog/'):
+                                if not is_post:
                                     continue  # ignore these lines for non-blog
                                 else:
                                     l = l.replace('#BLOG', '')  # strip this start sequence
