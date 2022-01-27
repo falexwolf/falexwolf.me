@@ -456,18 +456,15 @@ def process_source(single_source):
             # now, deal with .md and .rst sources
             if source_out == 'about.md':  # generate the page root (index.html)
                 target_dir = '_site'
-                child = False
             elif is_post:  # deal with posts
                 year = source_out.split('-')[0].lstrip('_posts/')  # get year
                 date = '-'.join(source_out.split('-')[:3]).lstrip('_posts/')  # extract ISO-format date
                 string = '-'.join(source_out.split('-')[3:])   # strip ISO-format date
                 target_link = year + '/' + string.split('.')[0]
                 target_dir = '_site/' + target_link
-                child = True
                 posts[source_out] = [target_link, date]
             else:
                 target_dir = '_site/' + source_out.split('.')[0]
-                child = True
             if not os.path.exists(target_dir):
                 os.makedirs(target_dir)
             if source_isdir:
@@ -521,17 +518,6 @@ def process_source(single_source):
                               .format(source_file, raw_html))
                     remove_docutils_header_footer(raw_html)
 
-                def adjust_child_dir(line):
-                    if (line.startswith('    <link href="_vendor/')
-                        or line.startswith('    <link href="_css/')
-                        or line.startswith('    <link href="_js/')):
-                        return line.replace('href="', 'href="../../')
-                    elif (line.startswith('    <script src="_vendor/')
-                          or line.startswith('    <script src="_js/')):
-                        return line.replace('src="', 'src="../../')
-                    else:
-                        return line
-
                 out = open(target, 'w')
                 publications = read_file('publications.bib')
                 for line in open('_includes/blog.html'):
@@ -542,7 +528,7 @@ def process_source(single_source):
                             if '{title}' in l:
                                 title = source_out_stripped[0].upper() + source_out_stripped[1:]
                                 l = l.format(title=title)
-                            out.write(adjust_child_dir(l) if child else l)
+                            out.write(l)
                     elif 'INSERT_FOOTER' in line:
                         for l in open('_includes/footer.html'):
                             if l.startswith('#BLOG'):
@@ -550,7 +536,7 @@ def process_source(single_source):
                                     continue  # ignore these lines for non-blog
                                 else:
                                     l = l.replace('#BLOG', '')  # strip this start sequence
-                            out.write(adjust_child_dir(l) if child else l)
+                            out.write(l)
                     elif 'INSERT_CONTENT' in line:
                         history_link = f'<a href="https://github.com/falexwolf/falexwolf.me/blame/main/{single_source}">History</a>'
                         history = '<div class="card pull-right" style="display: inline-block;">' + start_card + history_link + '</div></div>'
