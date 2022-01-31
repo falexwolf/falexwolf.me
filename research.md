@@ -10,7 +10,7 @@ Title: Research
 ## Software for single-cell analytics and data management
 
 [<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_BrightFG.svg" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
-[Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. Together with [anndata](http://anndata.readthedocs.org/) [[P33](/publications#P33)] it has become widely used and lead to an ecosystem of tools, with >700k downloads and >600 dependent repositories. It got featured within the first cycle of [*Essential Open Source Software for Science*](https://chanzuckerberg.com/newsroom/chan-zuckerberg-initiative-awards-5-million-for-open-source-software-projects-essential-to-science/) by CZI among [32 projects](https://chanzuckerberg.com/eoss/proposals/), alongside giants such as numpy, pandas, scikit-learn, matplotlib, and others. Also see [software](../software/).
+[Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. Together with [anndata](http://anndata.readthedocs.org/) [[P33](/publications#P33)], it has become widely used and led to an ecosystem of tools, with >700k downloads and >600 dependent repositories. It got featured within the first cycle of [*Essential Open Source Software for Science*](https://chanzuckerberg.com/newsroom/chan-zuckerberg-initiative-awards-5-million-for-open-source-software-projects-essential-to-science/) by CZI among [32 projects](https://chanzuckerberg.com/eoss/proposals/), alongside giants such as numpy, pandas, scikit-learn, matplotlib, and others.
 
 {P33}
 
@@ -20,7 +20,7 @@ Title: Research
 ## Dynamical modeling of RNA velocity
 
 [<img src="./NatureBiotechCover2020-12.png" style="width: 120px; margin: 15px 20px 5px 0px"  align="left">](/publications#P28)
-RNA velocity has opened up new ways of studying cellular differentiation in scRNA-seq [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)] by capturing gene expression change rates based on ratios of spliced and unspliced mRNA. With [scVelo](https://scvelo.org) [[P28](/publications#P28)], we solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model. This generalizes RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations. Also see [software](../software/).
+RNA velocity has opened up new ways of studying cellular differentiation in scRNA-seq [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)] by capturing gene expression change rates based on ratios of spliced and unspliced mRNA. With [scVelo](https://scvelo.org) [[P28](/publications#P28)], we solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model. This generalizes RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations.
 
 {P28}
 
@@ -62,7 +62,7 @@ Existing methods for learning latent representations for single-cell RNA-seq dat
 
 ## Reconstructing cell cycle and disease progression using deep learning
 
-[<img src="./170712_featured_image_suggestion.png" title="Reconstructed cell cycle. See [P20]." style="width: 150px; margin: 15px 10px 5px 0px"  align="left">](/publications#P20) Using large-scale imaging data, we show how to reconstruct continuous biological processes using deep learning for the examples of cell cycle and disease progression in diabetic retinopathy [[P20](/publications#P20)]. See a [video](../blog/2017-09-10-deepflow).
+[<img src="./170712_featured_image_suggestion.png" title="Reconstructed cell cycle. See [P20]." style="width: 150px; margin: 15px 10px 5px 0px"  align="left">](/publications#P20) Using large-scale imaging data, we show how to reconstruct continuous biological processes using deep learning for the examples of cell cycle and disease progression in diabetic retinopathy [[P20](/publications#P20)]. See a [video](/2017/deepflow/).
 
 {P20}
 
@@ -145,7 +145,7 @@ Collapse and revival oscillations and coherent expansions have been suggested fo
 
 ## Relaxation of a quantum many-body system after perturbation
 
-We investigated the non-equilibrium behavior of quantum many-body systems [[P1-P4](/publications#P4)], in particular, the fundamental problem of how such systems transition from an excited state to equilibrium. This happens through chaotic dynamics in the classical case, but is an active area of research in the [quantum case](http://dx.doi.org/10.1038/nature06838). We showed that the transition proceeds through an intermediate, prethermalized, plateau for which we developed a statistical theory. I contributed the central analytical calculation [[T1](../talks/#T1)] to the highly cited paper [[P3](/publications#P3)] during a summer lab project.
+We investigated the non-equilibrium behavior of quantum many-body systems [[P1-P4](/publications#P4)], in particular, the fundamental problem of how such systems transition from an excited state to equilibrium. This happens through chaotic dynamics in the classical case, but is an active area of research in the [quantum case](http://dx.doi.org/10.1038/nature06838). We showed that the transition proceeds through an intermediate, prethermalized, plateau for which we developed a statistical theory. I contributed the central analytical calculation [[T1](/talks/#T1)] to the highly cited paper [[P3](/publications#P3)] during a summer lab project.
 
 {P3}
 
