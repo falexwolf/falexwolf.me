@@ -1,16 +1,11 @@
 Title: Research
 
-* Much of this page covers public research on how computational models have started to help map, understand, and predict the biology of single cells.
-* The industry research performed at Cellarity from 2018 to 2022 is largely unpublished.
-* Currently, I focus most on building data infra for enabling research in this space.
+* Much here covers public research on how computational models help map, understand, and predict the biology of single cells.
+* Industry research performed at Cellarity from 2018 to 2022 is largely unpublished.
+* Currently, I focus on building data infra for enabling research in this space.
 * Before 2015, I worked on computational models for strongly correlated materials, quantum computers, and chemical reactions in solar cells.
 
 ---
-
-[TOC]
-
----
-
 
 ## Software for single-cell analytics and data management
 
