@@ -2,7 +2,7 @@ Title: About
 
 Currently working on new data infra at the interface of biomedicine \& software!
 
-Previously, led the build-up of [Cellarity](https://cellarity.com/)’s compute platform,
+Previously, led building [Cellarity](https://cellarity.com/)’s compute platform,
 founded [Scanpy](https://scanpy.org/),
 co-created [anndata](https://anndata.readthedocs.io),
 and performed quite broad \href{/research/}{research}.
