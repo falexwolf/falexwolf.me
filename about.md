@@ -1,6 +1,6 @@
 Title: About
 
-Currently working on new data infra at the interface of biomedicine \& software!
+Currently working on new data infra at the interface of biomedicine & software!
 
 Previously, led building [Cellarity](https://cellarity.com/)’s compute platform,
 founded [Scanpy](https://scanpy.org/),
