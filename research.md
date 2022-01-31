@@ -1,15 +1,11 @@
 Title: Research
 
-In the past years, computational models have started to help map, understand, and predict the biology of single cells.
-
-This page covers academic research; most of the industry research of recent years is unpublished. Before 2015, I developed computational approaches to predict the emergent behavior of strongly correlated quantum materials, basic models of quantum computers, and chemical reactions in solar cells.
-
----
-
-[TOC]
+* This page mostly covers research on how computational models help map, understand, and predict the biology of single cells.
+* It does not cover research performed at Cellarity from 2018 to 2022, which is largely unpublished.
+* Currently, I focus on building data infra for enabling science in this space.
+* Before 2015, I worked on computational models for strongly correlated materials, quantum computers, and chemical reactions in solar cells.
 
 ---
-
 
 ## Software for single-cell analytics and data management
 
