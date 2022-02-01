@@ -1,0 +1,722 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+
+  <title>Machine Learning Basics</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <link rel="stylesheet" href="reveal.js-3.3.0/css/reveal.css">
+  <link rel="stylesheet" href="2016-06-10-nanotemper/mywhite.css" id="theme"> 
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    <!-- if "print-pdf" is in the querry, use the pdf.css style sheet (in the regexp: gi=global, case-insensitive) -->
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js-3.3.0/css/print/pdf.css' : 'reveal.js-3.3.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  
+</head>
+
+<style type="text/css">
+/* This is for making visible the boundary of the slide.  To change the visibility,
+toggle the border color in the class "slidebds" between black or white.  The
+height and width attributes must match the dimensions given as parameters when
+calling reveal.js. */
+.reveal .slides .slidebds {
+    border: 1px solid white;
+    width: 1100px;
+    height: 700px;
+    background: none;
+    position: absolute;
+    z-index: -100;
+}
+/* bug fix : prevent firefox from changing background to black in full screen */
+html { background-color: white !important; }
+/* centered class, depends on the slide size set when calling reveal.js */
+.reveal .slides .centered {
+    position: absolute;
+    transform: translate(550px,350px) translate(-50%,-50%);
+ /* the following does not work as it conflicts
+    with the @page option injected upon calling 'print', which 
+    messes up the 'transform' presumably because the image extends
+    to a new page
+    top: 350px;
+    left: 550px;
+    transform: translate(-50%,-50%); */
+}
+</style>
+
+<body>  
+<div class="reveal">
+  <div class="slides">
+ 
+    <section>
+      <div class="slidebds"></div>
+      <h3>Machine Learning Basics</h3>
+      <div style="position:absolute; top:60px">
+        <p style="font-size:70%"> <span style="font-size:80%"> pedagogic talk mainly based on</span>
+          <br>
+          <cit>Murphy, <i>Machine Learning - A Probabilistic Perspective </i> (2012)</cit>
+          <br>
+          <cit>Theis, <i>Lecture Notes on Statistical Learning</i>, TU Munich (2016)</cit>
+          <br>
+          <cit>Goodfellow, Bengio & Courville, <i>Deep Learning</i> (2016)</cit>
+        </p>
+      </div>
+
+      <!-- there is some margin at the bottom on purpose: otherwise in pdf export,
+           the icons appear on the next slide -->
+      <div style="position:absolute; top:446px; width:1100px">
+        <p style="text-align:left">Nanotemper Technologies · Munich · 10 June 2016</p>
+        <br>
+        <p>F. Alexander Wolf | <a href="http://falexwolf.de"><cit>falexwolf.de</cit></a>
+        <p>Institute of Computational Biology</p>
+        <p>Helmholtz Zentrum München</p>
+      </div>
+      <div style="position:absolute; right:355px; top:608px; height:60px">
+        <img data-src="logos/helmholtz.png">
+      </div>
+      <div style="position:absolute; right:0px; top:619.5px; height:100px">
+    	<img data-src="logos/helmholtzmunich.svg">
+      </div>
+
+      <!-- Notes on usage -->
+      <div style="position:absolute; top:720px; right:0px; font-size:50%; color:grey">
+      fullscreen: 'f' / navigation: arrow keys / black screen: 'b' / overview: 'o'
+      </div>
+      
+    </section>
+    
+    <section>
+      <div class="slidebds"></div>
+      <div style="position:absolute; top:40px; left:50px">
+        <iframe width="1000" height="600"
+                data-src="https://www.youtube.com/embed/AY4ajbu_G3k?start=45"
+                frameborder="0" allowfullscreen></iframe>
+        <br>
+        <cit>
+          <i>The Future of Robotics and Artificial Intelligence</i>, Andrew Ng, Stanford University, 2011</cit>
+      </div>
+    </section>
+    
+    <section>
+      <div class="slidebds"></div>
+
+      <div style="position:absolute; top:40px; left:40px; width:500px">
+         <img data-src="2016-06-10-nanotemper/figs/scienceAI_1.jpg">
+      </div>
+
+      <div class="fragment" style="position:absolute; top:40px; left:540px; width:500px">
+         <img data-src="2016-06-10-nanotemper/figs/scienceAI_2.jpg">
+      </div>
+
+      <div style="position:absolute; top:540px; left:40px">
+      <p> Machine learning in robotics,
+      natural language processing, neuroscience research,
+      and computer vision. <br>
+      <cit>Jordan & Mitchell, Science <b>349</b>, 255 (2015)</cit></p>
+      </div>
+    </section>
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>What is Machine Learning?</h3>
+
+      <div style="position:absolute; top:200px; left:40px; width:500px">
+        <p>
+          It's statistics using models with higher complexity.
+          <br>
+          <br>
+          <span class="fragment">
+          These might yield higher precision but are less interpretable.
+          </span>
+          </p>
+      </div>
+
+      <div class="fragment">
+      <div style="position:absolute; top:40px; left:540px; width:500px">
+        <img data-src="2016-06-10-nanotemper/figs/MLvsStat.png">
+      </div>
+      <div style="position:absolute; top:650px; left:500px; width:600px">
+        <cit>
+          R. Tibshirani, Lecture Notes, Stanford U (2012)</cit>
+      </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>What does Machine Learning?</h3>
+
+      <div style="position:absolute; top:80px; left:0px; width:1000px">
+        <ul style="line-height:1.8">
+        <li class="fragment"> Estimate a functional relation
+            $$f : \mathcal{X} \rightarrow \mathcal{Y} \qquad X \mapsto Y$$
+          from <i>data</i> $\mathcal{D} = \{(x_i,y_i)\}_{i=1}^{N}$
+          (<i>supervised case</i>).
+        </li>
+        <li class="fragment"> Estimate similarity in the space $\mathcal{X}$ from
+          <i>data</i> $\mathcal{D} = \{x_i\}_{i=1}^{N}$, $x_i \in \mathcal{X}$
+          (<i>unsupervised case</i>).
+        </li>
+        </ul>
+        <br>
+        <p class="fragment"><b>Comments</b></p>
+        <ul style="line-height:1.8">
+          <li class="fragment"> <i>Estimation based on data</i> is referred to as <i>learning</i>. </li>
+          <li class="fragment"> Also the supervised case requires <i>learning similarity</i>
+            in $\mathcal{X}$.</li>
+          <!-- &nbsp; &#9655 example: classification -->
+        </ul>
+      </div>
+           
+    </section>
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>Classification example</h3>
+
+      <div style="position:absolute; top:40px; left:620px; width:400px">
+         <img data-src="2016-06-10-nanotemper/figs/twofour.jpg">
+      </div>
+      
+      <div class="fragment" style="position:absolute; top:80px; left:0px; width:580px">
+        <p> Learn function $$f : \mathbb{R}^{28\times 28} \rightarrow \{2,4\}.$$ </p>
+          <cit>Examples from MNIST data base.</cit>
+      </div>
+      
+      <div class="fragment" style="position:absolute; top:290px; left:0px; width:600px">
+        <p> In which way are samples, e.g. for the label $y=2$, similar to each other? </p>
+      </div>
+     
+      <div class="fragment" style="position:absolute; top:240px; left:620px; width:400px">
+        <img data-src="2016-06-10-nanotemper/figs/twofour2.jpg">
+      </div>
+
+      <div class="fragment" style="position:absolute; top:420px; left:0px; width:600px">
+        <p> &#9655; Strategy: find coordinates = <i>features</i> that reveal the similarity! </p>
+      </div>
+      
+      <div class="fragment" style="position:absolute; top:550px; left:0px; width:600px">
+        <p> &#9655; Here PCA: diagonalize the covariance matrix $(x_i^\top \cdot x_j)_{ij=1}^N$. </p>
+      </div>
+      
+    </section>
+
+   <section>
+      <div class="slidebds"></div>
+      <h3>A simple model: k Nearest Neighbors</h3>
+
+      <div style="position:absolute; top:80px; left:0px; width:1000px">
+        <p>
+          Model function $\hat f$: <i>estimator</i> $\hat y_x$ for $Y$ given $X=x$
+          $$ \hat y_x = \hat f_\mathcal{D}(x) = \mathrm{E}_{p(y\,|\,x,\mathcal{D})}[y] = \frac{1}{k} \sum_{i \in N_k(x,\mathcal{D})} y_i
+          $$
+        </p>
+      </div>
+      
+      <div class="fragment">
+      <div style="position:absolute; top:260px; left:80px; width:400px">
+         <img data-src="2016-06-10-nanotemper/figs/knn1.png">
+      </div>
+
+      <div style="position:absolute; top:260px; left:580px; width:400px">
+        <img data-src="2016-06-10-nanotemper/figs/knn2.png">
+      </div>
+
+      <div style="position:absolute; top:640px; left:80px; width:1000px">
+        <cit style="font-size=70%">Hastie et al., <i>Elements of Statistical Learning</i> (2009)</cit>
+      </div>
+      </div>
+        
+    </section>
+ 
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>A simple model: k Nearest Neighbors</h3>
+
+      <div style="position:absolute; top:80px; left:0px; width:1000px">
+        <p>
+          Model function $\hat f$: estimator for $Y$ given $X=x$
+          $$ \hat y_x = \hat f_\mathcal{D}(x) = \mathrm{E}_{p(y\,|\,x,\mathcal{D})}[y] = \frac{1}{k} \sum_{i \in N_k(x,\mathcal{D})} y_i
+          $$
+          <span class="fragment"> Probabilistic model definition reflects uncertainty
+          $$ p(y\,|\,x,\mathcal{D}) =
+              \frac{1}{k} \sum_{i \in N_k(x,\mathcal{D})} \mathbb{I}(y_i = y)
+          $$
+          </span>
+        </p>
+      </div>
+      <div style="position:absolute; top:430px; left:0px; width:1100px">
+        <ul>
+          <li>Overfitting and Bias-Variance tradeoff: the lower the variance, the higher the bias.</li>
+          <li class="fragment">Is non-parametric, so no <i>learning</i> of parameters.</li>
+          <li class="fragment">Assumption: Euclidean distance is good similarity measure for $x$.</li>
+          <li class="fragment">Curse of dimensionality: does not work in high dimensions.</li>
+        </ul>
+      </div>
+    </section>
+ 
+    <section>
+      <div class="slidebds"></div>
+      <h3>Another simple model: linear regression</h3>
+
+      <div style="position:absolute; top:80px; left:0px; width:1000px">
+        <p style="line-height:1.7">
+          Estimator for $y$ given $x$
+          $$ \hat y_x =  \hat f_{\theta}(x) = \mathrm{E}_{p(y\,|\,x,\theta)}[y] = w_0 + x^\top w
+          $$
+          <span class="fragment">
+          Probabilistic model definition
+          $$ p(y\,|\,x,\theta) = \mathcal{N}(y \,|\, \hat y_x,\sigma), \quad \theta = (w_0,w,\sigma)
+          $$
+          </span>
+          <span class="fragment">
+          Estimate parameters from data $\mathcal{D}$
+          $$ \theta^*  = \text{argmax}_\theta p(\theta\,|\,\mathcal{D})
+          $$
+          </span>
+        </p>
+      </div>
+      
+      <div style="position:absolute; top:500px; left:0px; width:1100px">
+        <ul>
+          <li class="fragment">Parametric, parameters $\theta$ have to be <i>learned</i>.</li>
+          <li class="fragment">High bias due to linearity assumption, but works in high dimensions,
+              and is easily interpretable.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>Learning parameters</h3>
+      <div style="position:absolute; top:80px; left:0px; width:1100px">
+        <p style="line-height:1.9">
+          Estimate parameters from data $\mathcal{D}$
+          $$ \theta^*  = \text{argmax}_\theta p(\theta\,|\,\mathcal{D},\mathrm{model},\mathrm{beliefs}), \qquad {Optimization}
+          $$
+          assuming a <i>model</i> and <i>prior beliefs</i> about parameters.
+          <span class="fragment"> Now
+          <br>
+          $$  p(\theta\,|\,\mathcal{D})
+                = p(\mathcal{D}\,|\,\theta)p(\theta)/p(\mathcal{D}). \qquad\quad {Bayes'~rule}
+          $$
+          </span>
+          <span class="fragment">
+          Evaluate: assume uniform prior $p(\theta)$ and iid samples $(y_i, x_i)$
+          $$
+                p(\theta\,|\,\mathcal{D})
+                \propto p(\mathcal{D}\,|\,\theta)
+                = \prod_{i=1}^N p(y_i, x_i \,|\,\theta)
+                \propto \prod_{i=1}^N p(y_i \,|\, x_i, \theta)
+            $$
+          </span>
+        </p>
+      </div>
+      <div class="fragment" style="position:absolute; top:610px; left:0px; width:1100px">
+        <p> Linear regression:
+          $ \log p(\theta\,|\,\mathcal{D}) \simeq \sum_{i=1}^N (y_i - \hat f_{x_1})^2$ &nbsp; &#9655; least squares!
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>Learning parameters: robot example</h3>
+      <div class="centered" style="width:800px;">
+        <img data-src="2016-06-10-nanotemper/figs/robot.jpg">
+        <cit>Example based on S. Thrun, <i>Statistics</i>, Udacity (2012)</cit>
+      </div>      
+    </section>
+    
+    <section>
+     <div class="slidebds"></div>
+     <div class="centered" style="width:400px;font-size:150%">
+      One example: <b>Deep Learning</b>
+     </div>  
+    </section>  
+    
+    <section>
+      <div class="slidebds"></div>
+
+      <h3>Deep Learning: Neural Network Model</h3>
+
+      <div style="position:absolute; top:80px; left:660px; width:440px">
+        <img data-src="2016-06-10-nanotemper/figs/neuralnetwork_wikip.png">
+        <cit>Wikipedia</cit>
+      </div>
+      
+      <div style="position:absolute; top:80px; left:0px; width:600px"
+           class="fragment">
+      <p> A <i>Neural Network </i> consists of
+        <i>layered</i> linear regressions (one for each <i>neuron</i>) stacked
+        with non-linear activation functions $\phi$.</p>
+      <br>
+        <span class="fragment">
+       \begin{align}
+        P(y\,|\,x,\theta)  & =  \mathcal{N}(y \,|\, v^\top z(x), \sigma^2)\\
+        z(x)           & = (\phi(w_1^\top x), \ldots, \phi(w_H^\top x))
+       \end{align}
+        </span>
+      <br>
+
+      <ul>
+        <li class="fragment"><i>Deep learning</i> means <i>many</i> layers.</li>
+        <li class="fragment">In each hidden layer, combine weights $ w_i$ to matrix $\mathbf{W}$. </li>
+      </ul>
+      </div>
+            
+    </section>
+        
+    <section>
+      <div class="slidebds"></div>
+      <h3>Deep Learning: Idea</h3>
+      <div style="position: absolute; left: 0px; top: 80px">
+        <p>
+          <cit> Hubel and Wiesel (1959, 1962, 1968)</cit>:
+          Nobel prize 1981 for work on mammalian vision system.
+          <span class="fragment">
+            &nbsp; &#9655; Results on primary visual cortex (V1).</span>
+        </p>
+      </div>
+
+      <div style="position: absolute; left: 0px; top: 180px">
+        <ul style="line-height:1.5">
+          <li class="fragment">
+            V1 is arranged in a spatial map mirroring the structure of the image
+            in the retina.
+          </li>
+          <li class="fragment">
+            V1 has <i>simple cells</i> whose activity is a linear function of
+            the image in a small localized <i>receptive field</i>.
+          </li>
+          <li class="fragment">
+            V1 has <i>complex cells</i> whose activity is invariant to small
+            spatial translations.
+          </li>
+          <li class="fragment" style="color:#AA0000">
+            Neurons in V1 respond most strongly to very
+            specific, simple patterns of light, such as oriented bars, but
+            respond hardly to any other patterns.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Mention 2014 Nobel prize for O'Keefe and Mosers for their work on
+           positioning system.  Mention that there are many differences between
+           a CNN and the human vision system!!
+      -->
+      
+    </section>
+    
+    <section>
+      <div class="slidebds"></div>
+      
+      <h3>Deep Learning: Convolution Layer</h3>
+
+      <div style="position:absolute; top:70px">
+        <ul style="line-height:1.5">
+          <li class="fragment"> <div style="margin-bottom:30px">
+            discrete convolution of functions $f_t$ and
+            $w_t$, $t\in\{1,2,...,D\}$,</div>
+            $$ \mathbf{\tilde f} = \sum_\tau w_{t-\tau}\, f_\tau
+               = \mathbf{W} \mathbf{f}, \quad \mathbf{\tilde f},\mathbf{f} \in \mathbb{R}^D $$
+            where $W_{t\tau} = w_{t-\tau}$, $\mathbf{W} \in
+            \mathbb{R}^{D\times D}$.
+          </li>
+        </ul>
+      </div>
+        
+      <div class="fragment" style="width:1100px; line-height:1.5">
+        <p style="margin-left:80px; position:absolute; top:320px">
+          &#9655;&nbsp;
+          Instead of $D^2$, only $D$ <i>independent</i> components.
+        </p>
+      </div>
+        
+      <div class="fragment" style="position:absolute; top:400px">
+        <h4>Natural extension: sparsity</h4>
+        <ul style="line-height:1.5">
+        <li class="fragment">
+          demand: $w_{t-\tau} \stackrel{!}{=} 0$ for $|t-\tau| > d$
+          <span class="fragment"><br>
+          [usual property of kernels: e.g. Gaussian $ W_{t\tau} =
+          e^{-\frac{(t-\tau)^2}{2d^2}}$] </span>
+        </li>
+        </ul>
+      </div>
+      <div class="fragment" style="width:1100px; line-height:1.5">
+        <p style="margin-left:80px; position:absolute; top:620px">
+          &#9655;&nbsp;
+          Instead of $D^2$, only $2d$ nonzero components.
+          <span class="fragment"> &nbsp;&#9655;&nbsp; Statistics &#9786;!
+            </span>
+        </p>
+      </div>
+      
+    </section>
+
+    <section>
+      <div class="slidebds"></div>
+      
+      <h3>Deep Learning: Convolution Layer </h3>
+
+      <div style="position:absolute; top:150px; left:60px; line-height:1.5">
+        general weight matrix $\mathbf{W}$
+        <br> <span style="font-size:70%"> (arrows represent arbitrary values) </span>
+      </div>
+      
+      <div style="position:absolute; top:80px; left:495px; height:300px">
+         <img data-src="2016-06-10-nanotemper/figs/sparse2.png">
+      </div>
+
+      <div style="position:absolute; top:100px; left:950px; line-height:1.5">
+        $\mathbf{\tilde f}$ </div>
+      <div style="position:absolute; top:235px; left:950px; line-height:1.5">
+        $\mathbf{f}$ </div>
+
+      <div style="position:absolute; top:300px; left:550px; font-size:70%">
+        <i>receptive field</i> of $\tilde f_t$: full range $D$</div>
+
+      <div style="position:absolute; top:460px; left:5px; line-height:1.5">
+        convolution type $\mathbf{W}$
+        <br> <span style="font-size:70%;line-height:0.6"> (arrows: same values across <i>receptive fields</i> ) </span>
+      </div>
+      
+      <div style="position:absolute; top:380px; left:495px; height:300px">
+         <img data-src="2016-06-10-nanotemper/figs/sparse1.png">
+      </div>
+
+      <div style="position:absolute; top:410px; left:950px; line-height:1.5">
+        $\mathbf{\tilde f}$ </div>
+      <div style="position:absolute; top:545px; left:950px; line-height:1.5">
+        $\mathbf{f}$ </div>
+
+      <div style="position:absolute; top:620px; left:550px; font-size:70%">
+        <i>receptive field</i> of $\tilde f_t$: local range $2d$</div>
+      
+    </section>
+
+    
+    <section>
+      <div class="slidebds"></div>
+      
+      <h3>Deep Learning: Why is convolution useful?</h3>
+
+      <div class="fragment" style="position:absolute; top:80px">
+      <p style="margin-bottom:30px">Consider an example ($d=1$)</p>
+      <p style="margin-left:60px"> $ \mathbf{W} = \left(\begin{array}{ccccc}
+            \ddots & -1 & 1 & 0 & \ddots\\
+            \ddots & 0 & -1 & 1 & \ddots \end{array} \right)$
+          $\,\Leftrightarrow\,$ $\tilde f_t = f_t - f_{t-1}$,
+      </p>
+      </div>
+      
+      <p style="position:absolute; top:400px; left:60px" class="fragment">
+        that is, $\,\,\mathbf{f}$ = </p>
+      <div style="position:absolute; top:320px; left:240px; height:200px" class="fragment">
+        <img data-src="2016-06-10-nanotemper/figs/dog1.png" > </div>
+      
+      <p style="position:absolute; top:400px; left:480px" class="fragment">
+          $\mapsto\,\, \mathbf{\tilde f}$ = </p>
+      <div style="position:absolute; top:320px; left:610px; height:200px" class="fragment">
+         <img data-src="2016-06-10-nanotemper/figs/dog2.png" > </div>
+
+      <div class="fragment" style="width:1100px; line-height:1.5">
+        <p style="margin-left:40px; position:absolute; top:580px">
+          &#9655;&nbsp;
+            Simple edge structures revealed! Just as the <i>simple cells</i> in V1!
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="slidebds"></div>
+      
+      <h3>Deep Learning: Pooling layers</h3>
+      
+      <div class="fragment" style="width:1100px; line-height:1.5; position:absolute; top:80px">
+        <h4>Assumption</h4>
+        <ul>
+          <li>
+            In most cases, classification information does not depend strongly
+            on the location (index $t$) of a pattern.
+            That is, the <i>presence of a pattern</i> is more
+            important than its <i>location</i>.
+          </li>
+          <li class="fragment"> In many cases, our <i>only</i>
+            interest is the presence or absence of a pattern.
+          </li>
+        </ul>
+      </div>
+
+      <div class="fragment" style="width:1100px; line-height:1.5; position:absolute; top:450px">
+        <h4>Max-Pooling Layer</h4>
+        <ul style="width:550px">
+          <li>implement local translational invariance
+          </li>
+          <li class="fragment">Just as <i>complex cells</i> in V1.
+            <div style="position:absolute; top:-100px; left:630px">
+              <img data-src="2016-06-10-nanotemper/figs/trans_invariance1.png"
+                   width="450px">
+            </div>
+            <div style="position:absolute; top:60px; left:630px">
+              <img data-src="2016-06-10-nanotemper/figs/trans_invariance2.png"
+                   width="450px">
+             </div>
+
+          </li>
+        </ul>
+      </div>
+
+    </section>
+      
+    <section>
+      <div class="slidebds"></div>
+      
+      <h3>Deep Learning: Convolutional Neural Network</h3>
+
+      <div style="position:absolute; top:30px; left:650px">
+        <img data-src="2016-06-10-nanotemper/figs/scheme.png"
+             width="400px">
+      </div>
+      
+      <div style="width:1100px; line-height:1.5; position:absolute; top:80px">
+        <ol style="width:550px">
+          <li class="fragment">
+            Read input $\mathbf{f}$. </li>
+          <li class="fragment">
+            <i>Convolution stage</i> <br>
+            $\,\mathbf{\tilde f}^{(k)} := \mathbf{W}^{(k)} \mathbf{f},$
+            <br> where $\mathbf{W}^{(k)}$ is one of $K$ <i>convolution kernels</i>,
+                 $k=1,...,K$.
+          </li>
+          <li class="fragment">
+            <i>Detector stage</i>
+            $\, \tilde f_t^{(k)} := \phi(\tilde f_t^{(k)} + b)$
+            where $\phi$ is an activation function, $b$ a bias.
+          </li>
+          <li class="fragment">
+            <i>Pooling stage</i>
+            $\, \tilde f_t^{(k)} := \max_{\tau \in [t-d,t+d]} \tilde f_t^{(k)}$
+          </li>
+        </ol>
+      </div>
+      
+    </section>
+
+    <section>
+      <div class="slidebds"></div>
+      
+      <h3>Deep Learning: Comments</h3>
+      
+      <div style="width:1100px; line-height:1.5; position:absolute; top:80px">
+        <ul style="width:550px">
+          <li class="fragment">
+            Receptive field grows and
+            more and more complex features are constructed in each layer.
+            <div style="position:absolute; top:-80px; left:650px">
+              <img data-src="2016-06-10-nanotemper/figs/receptive_field.png"
+                   width="400px">
+            </div>
+          </li>
+          <br>
+          <li class="fragment" style="width:1000px">
+            <b>What to generally learn from deep learning?</b>
+            <br>
+            Convolutional networks are so successful because they efficiently
+            encode our (correct) beliefs
+            about the structure of certain data
+            <span style="font-size:60%">(translation-invariant,
+              simple local features,
+              complex features from simple features)</span>.
+            <br>
+            <span class="fragment" style="color:#AA0000">
+            &#9655 Understand the similarity structure of your data
+            and use a model that reflects it! </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    
+    <section>
+      <div class="slidebds"></div>
+      <h3>Summary</h3>
+
+      <div style="position: absolute; left: 0px; top: 80px">
+        <ul style="line-height:2">
+         <li class="fragment">
+           Machine Learning ist Statistics with models of higher complexity.
+         </li>
+         <li class="fragment">
+           It's all about <i>similarity</i> in the data space.
+         </li>         
+         <li class="fragment">
+           Two simple examples: kNN and linear regression
+         </li>
+         <li class="fragment">
+           <i>Learning</i> is Bayes rule followed by an optimization.
+         </li>
+         <li class="fragment">
+           Deep Learning: very successful way of understanding and exploiting
+           the similarity structure of e.g. image data.
+         </li>
+        </ul>
+      </div>
+    </section>
+    
+    <section>
+      <div class="slidebds"></div>
+      <div class="centered" style="width:800px">
+        <img data-src="2016-06-10-nanotemper/figs/helmholtz.jpg">
+      </div>
+      <p class="centered" style="font-size:150%;color:white"><b>Thank you!</b></p>
+    </section>
+    
+  </div>    
+</div>
+
+<script src="reveal.js-3.3.0/lib/js/head.min.js"></script>
+<script src="reveal.js-3.3.0/js/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    width: 1100,
+    height: 700,
+    controls: false,
+    slideNumber: 'c/t',
+    progress: false,
+    keyboard: true,
+    center: false,
+    // set history = true for developing, 
+    // consider setting false when finished because this pushes 
+    // the hash to the browser history (which is not a problem,
+    // but can be a matter of taste)
+    history: true,
+    fragements: true,
+    transition: 'none',
+    // we want no margin when printing! 
+    margin:  window.location.search.match( /print-pdf/gi ) ? 0.01 : 0.15,
+    viewDistance: 3,
+
+    math: {
+      // mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+      config: 'TeX-AMS_HTML-full'
+    },
+
+    dependencies: [
+      { src: 'reveal.js-3.3.0/lib/js/classList.js' },
+      { src: 'reveal.js-3.3.0/plugin/math/math.js', async: true }
+    ]
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,527 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+  <meta charset="utf-8">
+
+  <title>Causality in branching time series</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <link rel="stylesheet" href="reveal.js-3.3.0/css/reveal.css">
+  <link rel="stylesheet" href="2016-06-22-hofer-retreat/mywhite.css" id="theme"> 
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    <!-- if "print-pdf" is in the querry, use the pdf.css style sheet (in the regexp: gi=global, case-insensitive) -->
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js-3.3.0/css/print/pdf.css' : 'reveal.js-3.3.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  
+</head>
+
+<style type="text/css">  
+/* This is for making visible the boundary of the slide.  To change the visibility,
+toggle the border color in the class "slidebds" between black or white.  The
+height and width attributes must match the dimensions given as parameters when
+calling reveal.js. */
+.reveal .slides .slidebds {
+    border: 1px solid white;
+    width: 1100px;
+    height: 700px;
+    background: none;
+    position: absolute;
+    z-index: -100;
+}
+/* bug fix : prevent firefox from changing background to black in full screen */
+html { background-color: white !important; }
+/* centered class, depends on the slide size set when calling reveal.js */
+.reveal .slides .centered {
+    position: absolute;
+    transform: translate(550px,350px) translate(-50%,-50%);
+ /* the following does not work as it conflicts
+    with the @page option injected upon calling 'print', which 
+    messes up the 'transform' presumably because the image extends
+    to a new page
+    top: 350px;
+    left: 550px;
+    transform: translate(-50%,-50%); */
+}
+/* command for citatoins */
+.reveal .slides cit {
+    font-size: 60%;
+    color: rgb(52,52,166);
+}
+/* unordered list */
+.reveal ul {
+  text-align: left;
+  margin: 0 0 0 40px; }
+</style>
+
+<body>  
+<div class="reveal">
+  <div class="slides">
+ 
+    <section>
+      <div class="slidebds"></div>
+      <h3>Causality in branching time series</h3>
+
+      <!-- there is some margin at the bottom on purpose: otherwise in pdf export,
+           the icons appear on the next slide -->
+      <div style="position:absolute; top:400px; width:1100px">
+        <p>Theoretical Systems Biology Retreat
+          <span style="font-size:60%"> (German Cancer Resarch Center, Heidelberg)</span> <br>
+          Ellwangen · 22 June 2016</p>
+      </div>
+      <div style="position:absolute; top:446px; width:1100px">
+        <br><!-- dummy newline -->
+        <br><!-- dummy newline -->
+        <p>F. Alexander Wolf | <a href="http://falexwolf.de"><cit>falexwolf.de</cit></a>
+        <p>Institute of Computational Biology</p>
+        <p>Helmholtz Zentrum München</p>
+      </div>
+      <div style="position:absolute; right:355px; top:608px; height:60px">
+        <img data-src="logos/helmholtz.png">
+      </div>
+      <div style="position:absolute; right:0px; top:619.5px; height:100px">
+    	<img data-src="logos/helmholtzmunich.svg">
+      </div>
+      
+      <!-- Notes on usage -->
+      <div style="position:absolute; top:720px; right:0px; font-size:50%; color:grey">
+      fullscreen: 'f' / navigation: arrow keys / black screen: 'b' / overview: 'o'
+      </div>      
+      
+    </section>
+    
+    <section>
+      <div class="slidebds"></div>
+      <h3>Gene expression data for branching lineages</h3>
+
+      <div class="fragment" style="position:absolute; top:50px; left:780px; width:320px">
+     	  <img data-src="2016-06-22-hofer-retreat/figs/moignard15_diffmap.png">
+      </div>
+
+      <div class="fragment">
+      <div style="position:absolute; top:260px; left:450px; width:560px; z-index:-1">
+     	  <img data-src="2016-06-22-hofer-retreat/figs/haghverdi16_diffmap.png">
+      </div>
+      <div style="position:absolute; top:80px; left:0px; width:580px">
+        <ul>
+          <li>branching pseudotime evolution of gene expression</li>
+        </ul>
+      </div>
+      </div>
+
+      <div class="fragment" style="position:absolute; top:180px; left:0px; width:570px">
+     	  <img data-src="2016-06-22-hofer-retreat/figs/haghverdi16_singlegenes.png">
+      </div>
+
+      <div style="position:absolute; top:640px; left:0px; width:570px">
+      <p style="line-height:0.8">
+      <cit>Haghverdi ... Theis, bioRxiv (2016)</cit><br>
+      <cit>Moignard, Woodhoouse ... G&ouml;ttgens, Nat. Biotechn. (2015)</cit>
+      </p>
+      </div>
+      
+    </section>
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>Gene expression data for branching lineages</h3>
+
+      <div style="position:absolute; top:80px; left:0px; width:580px">
+        <ul>
+          <li>branching pseudotime evolution of gene expression</li>
+        </ul>
+      </div>
+
+      <div style="position:absolute; top:180px; left:0px; width:570px">
+     	  <img data-src="2016-06-22-hofer-retreat/figs/haghverdi16_singlegenes.png">
+      </div>
+
+      <div style="position:absolute; top:80px; left:560px; width:550px">
+     	  <img data-src="2016-06-22-hofer-retreat/figs/haghverdi16_onset.png">
+      </div>  
+
+      <div style="position:absolute; top:640px; left:0px; width:570px">
+      <p style="line-height:0.8">
+      <cit>Haghverdi ... Theis, bioRxiv (2016)</cit><br>
+      <cit>Moignard, Woodhoouse ... G&ouml;ttgens, Nat. Biotechn. (2015)</cit>
+      </p>
+      </div>
+      
+    </section>
+
+    
+    <section>
+      <div class="slidebds"></div>
+      <h3>Gene expression data for branching lineages</h3>
+
+      <div style="position:absolute; top:80px; left:0px; width:580px; line-height:1.3">
+        <ul>
+          <li>branching pseudotime evolution of gene expression</li>
+          <li>here: ordered by <i>switching time</i></li>
+        </ul>
+        <div class="fragment" style="margin-top:20px;margin-bottom:20px">
+          <p> &#9655 <b>Learn about gene regulation?</b> </p>
+        </div>  
+        <ul style="list-style-type:square">        
+          <li class="fragment">Gene that <i>switches early</i> and
+              does <i>not branch</i> candidate
+              for <i>regulator</i>?</li>
+          <li class="fragment">Gene that <i>branches</i>
+              in different fates candidate
+              for <i>regulated gene</i>?</li>          
+        </ul>
+      </div>
+
+      <div style="position:absolute; top:80px; left:560px; width:550px">
+     	  <img data-src="2016-06-22-hofer-retreat/figs/haghverdi16_onset.png">
+      </div>
+
+      <div style="position:absolute; top:640px; left:0px; width:570px">
+      <p style="line-height:0.8">
+      <cit>Haghverdi ... Theis, bioRxiv (2016)</cit><br>
+      <cit>Moignard, Woodhoouse ... G&ouml;ttgens, Nat. Biotechn. (2015)</cit>
+      </p>
+      </div>
+      
+    </section>
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>(Causal) time series analysis</h3>
+
+      <div style="position:absolute; top:80px; left:0px; line-height:1.7">
+        <div class="fragment">
+        <p><b>Model fitting</p></b>
+        <ul>
+          <li>ODE based model <cit>Oconce, Haghverdi, M&uuml;ller & Theis, Bioinformatics (2015)</cit></li>
+          <li>Boolean network <cit>Moignard, Woodhoouse ... G&ouml;ttgens, Nat. Biotechn. (2015)</cit></li>
+        </ul>
+        </div>
+        <div class="fragment">
+        <p style="margin-top:15px"><b>Granger Causality/Transfer Entropy</b> <cit>Granger (1969) / Schreiber, Phys. Rev. Lett. (2000)</cit></p>
+        <ul>
+          <li>Granger Causality $\simeq$ Transfer Entropy <cit>Barnett, Phys. Rev. Lett. (2009)</cit></li>
+        </ul>
+        </div>        
+        <div class="fragment">
+        <p style="margin-top:15px"><b>Causal Inference Methods</p></b>
+        <ul>
+          <li>PC algorithm <cit>Spirtes <i>et al.</i> (2000)</li>
+          <li>Structural equation models <cit>e.g. Peters, ..., Sch&ouml;lkopf, NIPS (2013)</cit></li>
+        </ul>
+        </div>        
+        <div class="fragment">
+        <p style="margin-top:15px"><b>Convergent Cross Mapping</b> <cit>Sugihara <i>et al.</i>, Science (2012)</p>
+        <ul>
+          <li>Taken's Theorem <cit>Takens (1980)</cit></li>
+        </ul>
+        </div>    
+      </div>        
+    </section>
+
+    <section>
+      <div class="slidebds"></div>
+      <div style="position:absolute; top:0px; left:0px; width:1100px">      
+      <h3>Model fitting</h3>
+      <ul style="line-height:1.7">
+        <li> <b>ODE based model</b>
+          <cit>Oconce, Haghverdi, M&uuml;ller & Theis, Bioinformatics (2015)</cit>  <br>
+              &nbsp;&#9655;&nbsp; edges using GENIE3, then optimize for $ u_g(\hat{\boldsymbol{x}})$ <br style="line-heigh:3">
+              $$\frac{d}{dt} \hat x_g = \alpha u_g(\hat{\boldsymbol{x}}) - \lambda \hat x_g,~~
+                \textstyle p(\mathcal{D}|\theta) \propto \prod_{t=1}^T
+                \exp\big(-\frac{(x_{tg} - \hat x_g(t,\theta))^2}{2 \sigma^2}\big)  $$
+        </li>
+        <div class="fragment">
+        <li style="margin-top:30px"> <b>Discrete state space model </b>
+          <cit>Moignard, Woodhouse ... Goettgens, Nat. Biotech. (2015)</cit> </li>
+        <div style="width:400px">
+          <ul style="list-style-type:'&#9655;&nbsp;&nbsp;'">
+          <li style="line-height:1.3">
+            generate discrete state graph of  <i>1-gene transitions</i> </li>
+          <li style="line-height:1.3">
+            check consistency of trial Boolean networks </li>
+          <ul>
+        </div>
+        <div style="position:absolute; top:340px; width:580px; left:515px; z-index:-1">
+     	  <img data-src="2016-06-22-hofer-retreat/figs/moignard15_statespace.jpg">
+        </div>
+        </div>
+        </ul>
+      </div>  
+    </section>
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>(Causal) time series analysis</h3>
+
+      <div style="position:absolute; top:80px; left:0px; line-height:1.7">
+        <div style="color:grey">
+        <p><b>Model fitting</p></b>
+        <ul>
+          <li>ODE based model <cit>Oconce, Haghverdi, M&uuml;ller & Theis, Bioinformatics (2015)</cit></li>
+          <li>Boolean network <cit>Moignard, Woodhoouse ... G&ouml;ttgens, Nat. Biotechn. (2015)</cit></li>
+        </ul>
+        </div>
+        <div>
+        <p style="margin-top:15px"><b>Granger Causality/Transfer Entropy</b> <cit>Granger (1969) / Schreiber, Phys. Rev. Lett. (2000)</cit></p>
+        <ul>
+          <li>Granger Causality $\simeq$ Transfer Entropy <cit>Barnett, Phys. Rev. Lett. (2009)</cit></li>
+        </ul>
+        </div>        
+        <div>
+        <p style="margin-top:15px"><b>Causal Inference Methods</p></b>
+        <ul>
+          <li>PC algorithm <cit>Spirtes <i>et al.</i> (2000)</li>
+          <li>Structural equation models <cit>e.g. Peters, ..., Sch&ouml;lkopf, NIPS (2013)</cit></li>
+        </ul>
+        </div>        
+        <div style="color:grey">
+        <p style="margin-top:15px"><b>Convergent Cross Mapping</b> <cit>Sugihara <i>et al.</i>, Science (2012)</p>
+        <ul>
+          <li>Taken's Theorem <cit>Takens (1980)</cit></li>
+        </ul>
+        </div>    
+      </div>        
+    </section>
+    
+    <section>
+      <div class="slidebds"></div>
+      <h3>Granger Causality / Causal Inference Methods</h3>
+      
+      <div style="position:absolute; top:80px; left:0px; width:640px; line-height:1.8">
+        <p><span style="margin-bottom:20px">Conditional independence tests:</span>
+        
+        $$ X_{ti} \perp\!\!\!\perp X_{(t-1)j} \;|\; X_{(t-1)k_1}, X_{(t-1)k_2}, ... $$
+        
+        <ul style="line-height:1.3">
+          <li class="fragment" style="margin-top:20px">Only works well if there is a high amount of dynamic information and <b>no error</b> in time variable.
+              <span class="fragment">Both is not the case!</span></li>
+          <li class="fragment" style="margin-top:20px">Instead: time series with
+              geometric constraints associated with branchings.
+              <span class="fragment">Cannot be exploited by <i>local</i> independence tests.</span></li>
+        </ul>                
+      </div>
+
+      <div style="position:absolute; top:80px; left:700px; width:350px">
+     	  <img data-src="2016-06-22-hofer-retreat/figs/varprocess.png">
+      </div>
+
+      <div style="position:absolute; top:460px; left:700px; width:350px">
+     	  <img data-src="2016-06-22-hofer-retreat/figs/haghverdi16_singlegenes.png">
+      </div>
+      
+    </section>    
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>(Causal) time series analysis</h3>
+
+      <div style="position:absolute; top:80px; left:0px; line-height:1.7">
+        <div style="color:grey">
+        <p><b>Model fitting</p></b>
+        <ul>
+          <li>ODE based model <cit>Oconce, Haghverdi, M&uuml;ller & Theis, Bioinformatics (2015)</cit></li>
+          <li>Boolean network <cit>Moignard, Woodhoouse ... G&ouml;ttgens, Nat. Biotechn. (2015)</cit></li>
+        </ul>
+        </div>
+        <div style="color:grey">
+        <p style="margin-top:15px"><b>Granger Causality/Transfer Entropy</b> <cit>Granger (1969) / Schreiber, Phys. Rev. Lett. (2000)</cit></p>
+        <ul>
+          <li>Granger Causality $\simeq$ Transfer Entropy <cit>Barnett, Phys. Rev. Lett. (2009)</cit></li>
+        </ul>
+        </div>        
+        <div style="color:grey">
+        <p style="margin-top:15px"><b>Causal Inference Methods</p></b>
+        <ul>
+          <li>PC algorithm <cit>Spirtes <i>et al.</i> (2000)</li>
+          <li>Structural equation models <cit>e.g. Peters, ..., Sch&ouml;lkopf, NIPS (2013)</cit></li>
+        </ul>
+        </div>        
+        <div>
+        <p style="margin-top:15px"><b>Convergent Cross Mapping</b> <cit>Sugihara <i>et al.</i>, Science (2012)</p>
+        <ul>
+          <li>Taken's Theorem <cit>Takens (1980)</cit></li>
+        </ul>
+        </div>    
+      </div>        
+    </section>
+    
+    <section>
+      <div class="slidebds"></div>
+      <h3>Convergent Cross Mapping</h3>
+      
+      <div style="position:absolute; left:730px; top:60px; width:350px">
+    	<img data-src="2016-06-22-hofer-retreat/figs/toggleswitch_scheme.png">
+      </div>
+
+      <div style="position:absolute; top:240px; left:600px; width:500px">
+         <img data-src="2016-06-22-hofer-retreat/figs/toggleswitch_trajectory_cell001.svg">
+      </div>
+
+      <div class="fragment" style="position:absolute; top:80px; left:40px; width:700px">
+        <p>Idea: <i>Reconstruct regulating gene from the history
+            of the regulated gene.</i></p>
+      </div>      
+      
+    </section>
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>Convergent Cross Mapping</h3>
+
+      <div style="position:absolute; top:80px; left:40px; width:700px">
+        <p>Idea: <i>Reconstruct regulating gene from the history
+              of the regulated gene.</i></p>
+        <p class="fragment" style="margin-top:10px">&#9655; Can exploit branching geometry!</p>
+        <p class="fragment" style="margin-top:10px">&#9655; <b>But</b>: no statistical formulation!</p>
+        </p>
+      </div>
+      
+      <div style="position:absolute; left:730px; top:60px; width:350px">
+    	<img data-src="2016-06-22-hofer-retreat/figs/toggleswitch_scheme.png">
+      </div>
+
+      <div style="position:absolute; top:340px; left:0px; width:1100px">
+         <img data-src="2016-06-22-hofer-retreat/figs/toggleswitch_ccm.png">
+      </div>      
+    </section>
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>New method: statistical test for coupling functions</h3>
+
+      <div style="position:absolute; top:80px; left:0px; width:1100px">
+        <p style="margin-bottom:20px"><b>Rationale</b></p>
+        \begin{align}
+        X_{tj} & = f_j(X_{(t-1)j}, X_{(t-1)i_1}, X_{(t-1)i_2}, ...) \\
+        \Leftrightarrow \quad & F_j(X_{tj},X_{(t-1)j}, X_{(t-1)i_1}, X_{(t-1)i_2}, ...) = 0
+        \end{align}
+        <p class="fragment" style="margin-top:40px"><i>Statistically test</i> whether $X_{(t-1)i_1}$ contributes to $F_j$ by testing
+          for the <i>existence</i> of a function $g$
+          $$ g(X_{tj},X_{(t-1)j}, X_{(t-1)i_2}, ...) = X_{(t-1)i_1}. $$
+        </p>
+        <p class="fragment" style="margin-top:40px"> <i>Implicit function theorem</i>: if there is no $g$,
+          $F_j$ is constant w.r.t $X_{(t-1)i_1}$.</p>
+      </div>           
+    </section>    
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>Definition of test: bivariate case</h3>
+
+      <div style="position:absolute; top:75px; left:0px; width:1100px">
+        <p>Consider $X_{tj} = f_j(X_{(t-1)j},X_{(t-1)i})$.
+        How to statistically test for the existence of mapping the 
+        $g : \mathcal{X}_j \rightarrow \mathcal{X}_i ?$ </p>
+        <p class="fragment" style="margin-top:20px">
+           $$ z_{ji} = \frac{\overline{\Delta}_{ji} - \overline{\delta}_{i}}{\sqrt{(\hat\sigma_{ji}^{\Delta})^2/n + (\hat\sigma_{ji}^{\delta})^2/n}}$$
+           where
+           $$ \Delta_{tji}^{(a)} = \frac{1}{|{\mathcal{N}}_{tj}^{(a)}|} \sum_{t' \in {\mathcal{N}}_{tj}^{(a)}} d_{tt'i} $$
+           is the <i>variation across realizations</i> 
+           for a fixed value in the domain $\mathcal{X}_j$
+           $$ {\delta}_{ti}^{(a)} = \frac{1}{2}({d}_{t(t-1)i}^{(a)} + {d}_{(t+1)ti}^{(a)}) $$
+           is the <i>dynamic variation</i> in the codomain.
+        </p>
+        
+      </div>
+    </section>    
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>Numerical experiment</h3>
+
+      <div style="position:absolute; top:100px; left:10px; width:400px; font-size:80%">
+      \begin{align}
+      X_{ti} = \; & (\alpha_{ii} X_{(t-1)i} + \alpha_{ij} X_{(t-1)j}) (X_{(t-1)i}-1) X_{(t-1)i} + N_{ti}, \nonumber\\
+      \text{where} ~ & i,j \in \{0,1\}, ~t \in \{1,2,\dots,t_\text{max} \}, \nonumber\\
+      & N_{ti} \sim \mathcal{N}(0,\sigma^2),  \nonumber\\
+      & X_{0i} \sim \mathcal{U}(0.1,0.9), \nonumber\\
+      & \alpha_{ij} \sim \mathcal{U}(-1,1) ~\forall ~(i,j) \neq (1,0),~\alpha_{10}=0.
+      \end{align}
+      </div>
+
+      <div style="position:absolute; left:70px; top:360px; width:280px">
+    	<img data-src="2016-06-22-hofer-retreat/figs/numexp_data.png">
+      </div>
+
+      <div style="position:absolute; left:370px; top:360px; width:600px">
+    	<img data-src="2016-06-22-hofer-retreat/figs/numexp_phasespace.png">
+      </div>
+
+      <div style="position:absolute; left:700px; top:60px; width:350px">
+    	<img data-src="2016-06-22-hofer-retreat/figs/numexp_result.png">
+      </div>      
+    </section>    
+
+    <section>
+      <div class="slidebds"></div>
+      <h3>Summary</h3>
+
+      <div style="position: absolute; left: 0px; top: 80px">
+        <ul style="line-height:1.8">
+         <li class="fragment">
+           <b>Goal</b>: infer gene regulation from pseudotime order.
+         </li>
+         <li class="fragment">
+           <b>Problem</b>: very little dynamic information, traditional approaches fail, instead use branching geometry.
+         </li>         
+         <li class="fragment">
+           <b>Convergent Cross Mapping</b>: can exploit branching geometry but serious flaws.
+         </li>
+         <li class="fragment">
+           <b>New method</b>: statistical test for coupling functions via implicit function theorem.
+         </li>
+        </ul>
+        <div class="fragment" style="position:absolute;width:800px;top:500px;left:550px;transform:translate(-50%,0%);">
+          <b>Thanks to you, Fabian and ICB-ML group.</b>
+        </div>  
+      </div>
+    </section>
+    
+  </div>    
+</div>
+
+<script src="reveal.js-3.3.0/lib/js/head.min.js"></script>
+<script src="reveal.js-3.3.0/js/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    width: 1100,
+    height: 700,
+    controls: false,
+    slideNumber: 'c/t',
+    progress: false,
+    keyboard: true,
+    center: false,
+    // set history = true for developing, 
+    // consider setting false when finished because this pushes 
+    // the hash to the browser history (which is not a problem,
+    // but can be a matter of taste)
+    history: true,
+    fragements: true,
+    transition: 'none',
+    // we want no margin when printing!
+    // but be careful, sometimes images move on the new page if we set
+    // this value to a very low value!! 
+    margin:  window.location.search.match( /print-pdf/gi ) ? 0.03 : 0.15,
+    viewDistance: 3,
+
+    math: {
+      // mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+      config: 'TeX-AMS_HTML-full'
+    },
+
+    dependencies: [
+      { src: 'reveal.js-3.3.0/lib/js/classList.js' },
+      { src: 'reveal.js-3.3.0/plugin/math/math.js', async: true }
+    ]
+  });
+</script>
+</body>
+</html>

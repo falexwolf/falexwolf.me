@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>Inferring gene regulations using pseudotemporal ordering </title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <link rel="stylesheet" href="reveal.js-3.3.0/css/reveal.css">
+  <link rel="stylesheet" href="2016-02-04-icb-lunch/mywhite.css" id="theme"> 
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    <!-- if "print-pdf" is in the querry, use the pdf.css style sheet (in the regexp: gi=global,case-insensitive) -->
+    <!-- link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js-3.3.0/css/print/pdf.css' : 'reveal.js-3.3.0/css/print/paper.css';  -->
+    link.href = window.location.search.match( /print-pdf/gi ) ? '2016-02-04-icb-lunch/mypdf.css' : 'reveal.js-3.3.0/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  
+</head>
+
+<style type="text/css">
+/* bug fix : prevent firefox from changing background to black in full screen */
+html { background-color: white !important; }
+</style>
+
+<body>
+  
+<div class="reveal">
+
+  <div class="slides">
+
+    <section>
+      <div id="slidebds"></div>
+      <h3>Inference of gene regulation using pseudotemporal ordering of single cell snapshots</h3>
+      <div style="position: absolute; left: 0px; top: 515px">
+        <p>F. Alex Wolf</p>
+        <p>Lunch Seminar, February 3rd 2016</p>
+        <p>Institute of Computational Biology</p>
+        <p>Helmholtz Zentrum München</p>
+      </div>
+      <div style="position: absolute; right: 355px; top: 640px; height: 60px">
+        <img data-src="logos/helmholtz.png">
+      </div>
+      <div style="position: absolute; right: 0px; top: 650px; height: 100px">
+    	<img data-src="logos/helmholtzmunich.svg">
+      </div>
+
+      <!-- Notes on usage -->
+      <div style="position:absolute; top:720px; right:0px; font-size:50%; color:grey">
+      fullscreen: 'f' / navigation: arrow keys / black screen: 'b' / overview: 'o'
+      </div>      
+      
+    </section>
+
+    <section>
+      <div id="slidebds"></div>
+      <h3>Thanks to ...</h3>
+      <div style="position: relative; left: 30px; top: 30px">
+        <p style="line-height:2" class="fragment">
+          Philipp &nbsp;&#9655;&nbsp; reveal.js, jupyter notebook for teaching</p>
+        <p style="line-height:2" class="fragment">
+          Laleh &nbsp;&#9655;&nbsp; pseudotime, diffusion maps </p>
+        <p style="line-height:2" class="fragment">
+          Maren &nbsp;&#9655;&nbsp; biology, bioinformatics, ...</p>
+        <p style="line-height:2" class="fragment">
+          Niklas K&ouml;hler, Philipp Eulenberg &nbsp;&#9655;&nbsp; deep learning</p>
+        <p style="line-height:2" class="fragment">
+          Thomas &nbsp;&#9655;&nbsp; classification, imaging flow cytometry data</p>
+        <p style="line-height:2" class="fragment">
+          Fabian, Norbert, Valeriya Naumova &nbsp;&#9655;&nbsp; teaching, ML basics</p>
+        <p style="line-height:2" class="fragment">
+          Robert K&uuml;ffner, Fabian &nbsp;&#9655;&nbsp; GRN inference</p>
+      </div>
+    </section>
+
+    <section>
+      <div id="slidebds"></div>
+      <h3>Motivation</h3>
+      <div class="fragment">
+      <div style="position:absolute; left:0px; top:100px; width:650px">
+        <h4>Standard approach to GRN inference</h4>
+        <ul style="line-height:1.5">
+          <li class="fragment">perturb system (drug, ...)</li>
+          <li class="fragment">$\boldsymbol{x}_i \in \mathbb{R}^D$ state of <b>single condition</b> $i$, averaged over all cells</li>
+          <li class="fragment"><b>no or few</b> dynamic information
+        </ul>
+      </div>
+      <div style="position:absolute; left:590px; top:10px; width:500px; z-index:-1">
+    	<img data-src="2016-02-04-icb-lunch/figs/illustrate_1.svg">
+      </div>
+      </div>
+
+      <div class="fragment">
+        <div style="position:absolute; left:0px; top:410px">
+          <h4>Single-cell based GRN inference</h4>
+          <ul style="line-height:1.5">
+          <li class="fragment">take snapshot of evolving system</li>
+          <li class="fragment">$\boldsymbol{x}_i \in \mathbb{R}^D$ state of <b>single cell</b> $i$</li>
+          <li class="fragment"><b>dense but hidden</b> dyn. information</li>
+          </ul>
+          <ul style="list-style-type:'&#9655;&nbsp;&nbsp;'; color:red; line-height:1.5">
+          <li class="fragment">How can we reveal and exploit this?</li>
+          </ul>
+        </div>
+        <div style="position:absolute; left:590px; top:350px; width:500px; z-index:-1">
+    	  <img data-src="2016-02-04-icb-lunch/figs/illustrate_2.svg">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div id="slidebds"></div>
+      <h3> Introduction: Correlation</h3>
+      <ul style="line-height:1.5">
+        <li> Correlation does not imply causation. </li>
+        <li> Absence of correlation does not
+             imply absence of causation. </li>
+      </ul>
+
+      <div style="position:absolute; left: 50px; top: 145px; width: 1030px; z-index:-1"
+           class="fragment">
+    	<img data-src="2016-02-04-icb-lunch/figs/toggleswitch.png">
+        <div style="position:absolute; left: 30px; top: 100px; width: 1030px; z-index:0">
+        <p style="line-height:0.7">
+          <cit> example from Haghverdi, Buettner & Theis, Bioinformatics (2015) </cit><br>
+          <cit> data from M. Strasser</cit>
+           </p>
+        </div>
+      </div>
+
+      <div class="fragment">
+        <div style="position:absolute; top:190px; z-index:1; background:white; left:10px; height:530px; width:1050px;"></div>
+     	<div style="position:absolute; top:240px; left:20px; z-index:3; width:500px">
+           <img data-src="2016-02-04-icb-lunch/figs/toggleswitch_trajectory_cell001.svg">
+        </div>
+        <div style="position:absolute; top:220px; left:450px; z-index:2; width:600px"
+             class="fragment">
+          <img data-src="2016-02-04-icb-lunch/figs/illustrate_2.svg">
+        </div>
+      </div>
+
+      <div>
+        <div style="position:absolute; top:70px; width:1150px; left:-20px; z-index:5"
+             class="fragment">
+       	  <img data-src="2016-02-04-icb-lunch/figs/toggleswitch_convrank1.png">
+        </div>
+        <div style="position:absolute; top:70px; width:1150px; left:-20px; z-index:5"
+             class="fragment">
+       	  <img data-src="2016-02-04-icb-lunch/figs/toggleswitch_convrank2.png">
+        </div>
+        <div style="position:absolute; top:70px; width:1150px; left:-20px; z-index:5"
+             class="fragment">
+       	  <img data-src="2016-02-04-icb-lunch/figs/toggleswitch_convrank3.png">
+        </div>
+        <div style="position:absolute; top:70px; width:1150px; left:-20px; z-index:5"
+             class="fragment">
+       	  <img data-src="2016-02-04-icb-lunch/figs/toggleswitch_convrank4.png">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div id="slidebds"></div>
+      <h3> Introduction: Is $Y$ causal for $X$? </h3>
+      <ul>
+        <li style="line-height:1.7em;margin-top:-5px" class="fragment"> <b>Granger causality</b>
+           <cit>Granger, Econometrica (1969)</cit>
+          $$ \text{Var}(X|\text{Universe}) < \text{Var}(X|\text{Universe}\backslash Y) $$</li>
+        <p style="line-height:1.7em" class="fragment">  <b>Transfer entropy</b>
+           <cit>Schreiber, Phys. Rev. Lett. (2000)</cit>
+          $$ \text{Entropy}(X|Y) < \text{Entropy}(X)$$ </p>
+        <p style="line-height:1.8;margin:2px;color:red" class="fragment">
+          &#9655;&nbsp; uncertainty in pred. $\simeq$ information flow
+        <cit>Barnett <i>et al.</i>, Phys. Rev. Lett. (2009)</cit>
+        </p>
+        <p style="lineheight:1.8;margin:5px;color:red" class="fragment">
+          &#9655;&nbsp; applicable to stochastic system</p>
+        <li style="line-height:1.7em" class="fragment"> <b>Convergent cross mapping (CCM)</b>
+          <cit>Sugihara <i>et al.</i>, Science (2012),</cit>
+          <cit>Takens' Theorem (1980)</cit>
+          $$ \text{Var}(X|Y) = 0 \text{ if } 'Y \text{ is coupled to } X' $$
+        <p style="lineheight:1.8;margin:5px;color:red" class="fragment">
+          &#9655;&nbsp; functional coupling</p>
+        <p style="lineheight:1.8;margin:5px;color:red" class="fragment">
+          &#9655;&nbsp; applicable to deterministic (chaotic) system</p>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <div id="slidebds"></div>
+      <h3>CCM for temporal data <cit>Sugihara <i>et al.</i>, Science (2012)</cit></h3>
+      <p style="position:absolute;left:40px;top:108px;z-index:10">
+         &#9655;&nbsp; predict $X_{g'}$ given $X_{g}$: </p>
+      <p style="position:absolute;left:440px;top:41px;z-index:10"
+         class="fragment">
+         $$~~~~\hat X_{t g'} | M_{g} =
+                {\textstyle\sum_{\scriptscriptstyle \underline{x}_{t'g}\in\, \mathcal{N}_{t g}}}
+                \!\!\!\!\!\!\!\overbrace{w(\underline{x}_{tg},\underline{x}_{t'g})}^{\text{"selects } t' \text{ based on } M_g \text{"}}
+                \!\!\!\!\!x_{t'g'}$$
+      </p>
+      <div class="fragment">
+        <div style="position:absolute; left: 350px; top: 160px; width: 500px; z-index:1">
+        <img data-src="2016-02-04-icb-lunch/figs/toggleswitch_trajectory_cell001.svg">
+        </div>
+        <div style="position:absolute; top:140px; width:1100px; left:-10px; z-index:0">
+   	<img data-src="2016-02-04-icb-lunch/figs/CCManalysis1.png">
+        </div>
+      </div>
+      <div style="position:absolute; top:140px; width:1100px; left:-10px; z-index:1"
+           class="fragment">
+   	  <img data-src="2016-02-04-icb-lunch/figs/CCManalysis2.png">
+      </div>
+      <div style="position:absolute; top:140px; width:1100px; left:-10px; z-index:2"
+           class="fragment">
+   	  <img data-src="2016-02-04-icb-lunch/figs/CCManalysis3.png">
+      </div>
+      <div style="position:absolute; top:140px; width:1100px; left:-10px; z-index:3"
+           class="fragment">
+   	  <img data-src="2016-02-04-icb-lunch/figs/CCManalysis4.png">
+      </div>
+      <div style="position:absolute; top:140px; width:1100px; left:-10px; z-index:4"
+           class="fragment">
+   	  <img data-src="2016-02-04-icb-lunch/figs/CCManalysis5.png">
+      </div>
+      <div style="position:absolute; top:140px; width:1100px; left:-10px; z-index:5"
+           class="fragment">
+   	  <img data-src="2016-02-04-icb-lunch/figs/CCManalysis6.png">
+      </div>
+    </section>
+
+    <section>
+      <div id="slidebds"></div>
+      <h3>CCM for snapshot data</h3>
+      <p style="position:absolute;left:40px;top:108px;z-index:10">
+         &#9655;&nbsp; predict $X_{g'}$ given $X_{g}$: </p>
+      <p style="position:absolute;left:440px;top:41px;z-index:10">
+         $$~~~~\hat X_{t g'} | M_{g} =
+                {\textstyle\sum_{\scriptscriptstyle \underline{x}_{t'g}\in\, \mathcal{N}_{t g}}}
+                \!\!\!\!\!\!\!\overbrace{w(\underline{x}_{tg},\underline{x}_{t'g})}^{\text{"selects } t' \text{ based on } M_g \text{"}}
+                \!\!\!\!\!x_{t'g'}$$
+      </p>
+      <div style="position:absolute; top:143px; width:1095px; left:350px; z-index:3"
+           class="fragment">
+   	  <img data-src="2016-02-04-icb-lunch/figs/CCMsnap0.png">
+      </div>
+      <div class="fragment">
+      <div style="position:absolute; top:147px; width:1100px; left:-9px; z-index:2">
+   	  <img data-src="2016-02-04-icb-lunch/figs/CCMsnap1.png">
+      </div>
+          <div style="position:absolute; left: 30px; top: 450px; width: 1030px; z-index:3">
+            <p style="line-height:0.7">
+              <cit> Bendall, Davis, ... Peer & Nolan, Cell (2014) </cit><br>
+              <cit> Trapnell, Cacchiarelli, ... Mikkelsen & Rinn, Nat. Biotechn. (2014) </cit> <br>
+              <cit> Haghverdi, B&uuml;ttner, ... Buettner & Theis, submitted (2016) </cit>
+            </p>
+          </div>
+      </div>
+      <div style="position:absolute; top:147px; width:1100px; left:-9px; z-index:3"
+           class="fragment">
+   	  <img data-src="2016-02-04-icb-lunch/figs/CCMsnap1.png">
+      </div>
+      <div style="position:absolute; top:147px; width:1100px; left:-9px; z-index:4"
+           class="fragment">
+   	  <img data-src="2016-02-04-icb-lunch/figs/CCMsnap3.png">
+      </div>
+      <div style="position:absolute; top:147px; width:1100px; left:-9px; z-index:5"
+           class="fragment">
+   	  <img data-src="2016-02-04-icb-lunch/figs/CCMsnap6.png">
+      </div>
+    </section>
+
+    <section>
+      <div id="slidebds"></div>
+      <h3>CCM for snapshot data</h3>
+      <div style="position:absolute; top:120px; width:1160px; left:-35px; z-index:0">
+   	  <img data-src="2016-02-04-icb-lunch/figs/CCMsum.png">
+      </div>
+      <div class="fragment">
+        <div style="position:absolute; top:20px; width:300px; left:760px; z-index:2">
+     	  <img data-src="2016-02-04-icb-lunch/figs/toggleswitch_scheme.png">
+        </div>
+        <div style="position:absolute; top:110px; width:1700px; left:-560px; z-index:1">
+     	  <img data-src="2016-02-04-icb-lunch/figs/CCMsum1.png">
+        </div>
+        <div style="position:absolute; top:110px; left:0px; z-index:2; width:660px">
+          <p style="margin:10px"><b class="fragment"> Straight-forward improvements</b></p>
+          <ul>
+            <li class="fragment"> use monotonicity / variance </li>
+            <li class="fragment"> use relative predictivity and time lag &nbsp;&#9655;&nbsp; transitivity</li>
+          </ul>
+          <br>
+          <p style="margin:10px"><b class="fragment"> Conceptual comparisons</b></p>
+          <ul>
+            <li class="fragment"> Transfer Entropy </li>
+            <li class="fragment"> GENIE3: Random Forests
+                <div style="line-height:0.55;margin-top:-20px;margin-bottom:10px"><br><cit>Huynh-Thu, ..., Geurts, PLOS One (2010)</cit></div>
+                $$ \sum_{i=1}^N (x_{ig} - f_g(\boldsymbol{x}_i))^2 $$
+
+            </li>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div id="slidebds"></div>
+      <h3>What is already there?</h3>
+      <ul style="line-height:1.7">
+        <li> <b>ODE based model</b>
+          <cit>Oconce, Haghverdi, M&uuml;ller & Theis, Bioinformatics (2015)</cit>  <br>
+              &nbsp;&#9655;&nbsp; edges using GENIE3, then optimize for $ u_g(\hat{\boldsymbol{x}})$ <br style="line-heigh:3">
+              $$\frac{d}{dt} \hat x_g = \alpha u_g(\hat{\boldsymbol{x}}) - \lambda \hat x_g,~~
+                \textstyle p(\mathcal{D}|\theta) \propto \prod_{t=1}^T
+                \exp\big(-\frac{(x_{tg} - \hat x_g(t,\theta))^2}{2 \sigma^2}\big)  $$
+        </li>
+        <div class="fragment">
+        <li style="margin-top:30px"> <b>Discrete state space model </b>
+          <cit>Moignard, Woodhouse ... Goettgens, Nat. Biotech. (2015)</cit> </li>
+        <div style="width:400px">
+          <ul style="list-style-type:'&#9655;&nbsp;&nbsp;'">
+          <li style="line-height:1.3">
+            generate discrete state graph of  <i>1-gene transitions</i> </li>
+          <li style="line-height:1.3">
+            check consistency of trial Boolean networks </li>
+          <ul>
+        </div>
+        <div style="position:absolute; top:365px; width:620px; left:515px; z-index:1">
+     	  <img data-src="2016-02-04-icb-lunch/figs/moignard15_statespace.png">
+        </div>
+        </div>
+      </ul>
+    </section>
+
+    <section>
+      <div id="slidebds"></div>
+      <h3>Summary</h3>
+      <h4 style="margin-top:20px"
+          class="fragment">
+          Convergent Cross mapping (CCM) <cit>Sugihara <i>et al.</i>, Science (2012)</cit></h4> 
+      <ul>
+        <li style="margin-top:10px"
+            class="fragment"> detects "causality"=<i>couplings</i> in noisy deterministic systems <br>
+             <span style="font-size:70%" class="fragment"> 
+                 (even without noise, such systems might seem stochastic 
+                  when they are "merely" chaotic)</span> </li>
+        <li class="fragment"> is alternative to <i>Transfer Entropy / Granger Causality</i> <br>
+             <span style="font-size:70%">(for "purely" stochastic systems)</span> </li>
+      </ul>
+      <h4 style="margin-top:20px"
+          class="fragment">Pseudotime + CCM for GRN inference</h4>
+      <ul>
+        <li style="margin-top:10px" class="fragment"> <i>pseudotime</i>: reveals structure of manifold associated 
+             with "deterministic part" of a GRN (i.e. a dynamic system)</li>
+        <li style="margin-top:5px" class="fragment"> peudotime+CCM: <i>qualitatively</i> better than naive approaches</li>
+        <li style="margin-top:5px" class="fragment"> many questions still open ... <span style="font-size:150%;line-height:0">&#9786; </span> </li>
+      </ul>
+      <p style="text-align:center;color:red;font-size:150%;margin-top:10px"
+         class="fragment"><b>Thank you!</b></p>
+      
+    </section>
+
+  </div>
+</div>
+
+<script src="reveal.js-3.3.0/lib/js/head.min.js"></script>
+<script src="reveal.js-3.3.0/js/reveal.js"></script>
+<script>
+  Reveal.initialize({
+    width: 1100,
+    height: 700,
+    controls: false,
+    slideNumber: 'c/t',
+    progress: false,
+    keyboard: true,
+    center: false,
+    // set true for developing, 
+    // consider setting false when finished because this pushes 
+    // the hash to the browser history
+    history: true,
+    fragements: true,
+    transition: 'none',
+    margin: 0.15,
+    viewDistance: 3,
+
+    math: {
+      // mathjax: 'http://cdn.mathjax.org/mathjax/latest/MathJax.js',
+      config: 'TeX-AMS_HTML-full'
+    },
+
+    dependencies: [
+      { src: 'reveal.js-3.3.0/lib/js/classList.js' },
+      { src: 'reveal.js-3.3.0/plugin/math/math.js', async: true }
+    ]
+  });
+</script>
+</body>
+</html>
