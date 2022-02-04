@@ -21,10 +21,10 @@ body {
 	font-family:'Source Sans Pro', 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif}
 p {
 	line-height:1.5;
-	margin:20px 0}
+	margin-bottom:10px}
 ul {
 	line-height:1.5;
-	margin:20px 0}
+	margin:10px 0}
 p a {
 	color:#0645AD}
 a:focus,a:hover {
@@ -55,7 +55,7 @@ hr.small {
 	border-color: #eee}
 .navbar-custom .navbar-brand {
 	color:#333;
-	padding:20px}
+	padding:20px 0px 0px 30px}
 .navbar-custom .navbar-brand:focus,.navbar-custom .navbar-brand:hover {
 	color:#333}
 .navbar-custom .nav li a {
