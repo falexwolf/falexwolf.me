@@ -1,6 +1,6 @@
 Title: About
 
-Working on data infra for biomedicine.
+Building data infra for biomedicine.
 Previously, led building [Cellarity](https://cellarity.com/)’s compute platform,
 founded [Scanpy](https://scanpy.org/),
 co-created [anndata](https://anndata.readthedocs.io),
