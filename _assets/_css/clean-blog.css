@@ -55,7 +55,7 @@ hr.small {
 	border-color: #eee}
 .navbar-custom .navbar-brand {
 	color:#333;
-	padding:20px}
+	padding:20px 0px 0px 30px}
 .navbar-custom .navbar-brand:focus,.navbar-custom .navbar-brand:hover {
 	color:#333}
 .navbar-custom .nav li a {
