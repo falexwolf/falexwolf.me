@@ -153,9 +153,12 @@ We investigated the non-equilibrium behavior of quantum many-body systems [[P1-P
 {P1}
 
 
-## Sartre at Stammheim
+## High school
 
 [<img src="./sartre_a_stammheim.jpg" title="Sartre in Stammheim. From [O1], original from H. M. Schleyer: RAF Geschichte." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#O1)
-During high school, I tried to gain a better understanding of how philosophical and political ideas stimulate change in society and culture. In my thesis, I investigated why J.-P. Sartre publicly supported the German terrorist group RAF upon his visit in Stammheim in 1974 [[O1](/publications#O1)]. For more context, see [Der Spiegel (2013)](http://www.spiegel.de/spiegel/print/d-90848693.html).
+During high school, I spent a lot of time writing & playing music, being out in the nature, and aimed at becoming a chef for one year.
+I also made some clumsy efforts to better understand how ideological ideas stimulate change in society and culture.
+For instance, in my thesis, I investigated why J.-P. Sartre publicly supported the German terrorist group RAF upon his visit in Stammheim in 1974 [[O1](/publications#O1), or better [Der Spiegel (2013)](http://www.spiegel.de/spiegel/print/d-90848693.html)].
+As a teenager, I neither liked technology, nor science, nor mathematics.
 
 {O1}
