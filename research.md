@@ -10,7 +10,8 @@ Title: Research
 ## Software for single-cell analytics and data management
 
 [<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_BrightFG.svg" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
-[Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data. Together with [anndata](http://anndata.readthedocs.org/) [[P33](/publications#P33)], it has become widely used and led to an ecosystem of tools, with >700k downloads and >600 dependent repositories. It got featured within the first cycle of [*Essential Open Source Software for Science*](https://chanzuckerberg.com/newsroom/chan-zuckerberg-initiative-awards-5-million-for-open-source-software-projects-essential-to-science/) by CZI among [32 projects](https://chanzuckerberg.com/eoss/proposals/), alongside giants such as numpy, pandas, scikit-learn, matplotlib, and others.
+[Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data.
+Together with [anndata](http://anndata.readthedocs.org/) [[P33](/publications#P33)], it has become widely used and led to an ecosystem of tools, with >700k downloads and >600 dependent repositories. In 2019, it got featured within the first cycle of [*Essential Open Source Software for Science*](https://chanzuckerberg.com/newsroom/chan-zuckerberg-initiative-awards-5-million-for-open-source-software-projects-essential-to-science/) by CZI among [32 projects](https://chanzuckerberg.com/eoss/proposals/), alongside giants such as numpy, pandas, scikit-learn, matplotlib, and others.
 
 {P33}
 
