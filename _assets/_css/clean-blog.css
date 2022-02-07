@@ -2,15 +2,10 @@
  * Start Bootstrap - Clean Blog v3.3.7+1 (http://startbootstrap.com/template-overviews/clean-blog)
  * Copyright 2013-2016 Start Bootstrap
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
- */@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
-	a {
-	color:#0645AD;
-	 /* blue */}
-;
-	a,body {
-	color:#333}
-/* .navbar-custom .nav li a,.navbar-custom .navbar-brand,h1,h2,h3,h4,h5,h6 {
-	font-weight:800} */
+ */
+ @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+a {
+	color:#0645AD;}
 .caption,.intro-header .page-heading,.intro-header .site-heading,footer .copyright {
 	text-align:center}
 body {
@@ -18,7 +13,7 @@ body {
 	font-size:20px;
 	-webkit-tap-highlight-color:#0085A1}
 .intro-header .page-heading .subheading,.intro-header .post-heading .subheading,.intro-header .site-heading .subheading,.navbar-custom,h1,h2,h3,h4,h5,h6 {
-	font-family:'Source Sans Pro', 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif}
+	font-family:'Source Sans Pro','Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif}
 p {
 	line-height:1.5;
 	margin-bottom:10px}
