@@ -136,7 +136,7 @@ During studies, I focused on emergent properties of quantum-many body systems an
 
 ## Coherent expansions of quantum matter and matter wave lasers
 
-[<img src="./jreissaty12.png" title="Expanding cloud of coherent atoms - a 'matter laser' - in a 2d lattice. From [P4]." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#P4)
+[<img src="./jreissaty12.png" title="Expanding cloud of coherent atoms - a 'matter laser' - in a 2d lattice. From [P4]." style="width: 80px; margin: 10px 15px 10px 10px"  align="left">](/publications#P4)
 Collapse and revival oscillations and coherent expansions have been suggested for realizing matter-wave lasers. The following two projects [[P2,P4](/publications#P4)] provided first in-depth models in one- and two-dimensional lattices.
 
 {P4}
