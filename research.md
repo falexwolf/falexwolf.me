@@ -1,9 +1,9 @@
 Title: Research
 
 * This page mostly covers research on how computational models help map, understand, and predict the biology of single cells.
-* It does not cover research performed at Cellarity from 2018 to 2022, which is largely unpublished.
+* It doesn't cover my work for Cellarity from 2018 to 2022, which is largely unpublished.
 * Currently, I focus on building data infra for enabling science in this space.
-* Before 2015, I worked on computational models for strongly correlated materials, quantum computers, and chemical reactions in solar cells.
+* Before 2015, I worked on computational models for strongly correlated systems, solar cell materials, and basic quantum mechanics.
 
 ---
 
@@ -11,7 +11,8 @@ Title: Research
 
 [<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_BrightFG.svg" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
 [Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a scalable toolkit for analyzing single-cell gene expression data.
-Together with [anndata](http://anndata.readthedocs.org/) [[P33](/publications#P33)], it has become widely used and led to an ecosystem of tools, with >700k downloads and >600 dependent repositories. In 2019, it got featured within the first cycle of [*Essential Open Source Software for Science*](https://chanzuckerberg.com/newsroom/chan-zuckerberg-initiative-awards-5-million-for-open-source-software-projects-essential-to-science/) by CZI among [32 projects](https://chanzuckerberg.com/eoss/proposals/), alongside giants such as numpy, pandas, scikit-learn, matplotlib, and others.
+Together with [anndata](http://anndata.readthedocs.org/) [[P33](/publications#P33)], it has become widely used and led to an ecosystem of tools, with >700k downloads and >600 dependent repositories.
+In 2019, it got featured within the first cycle of [Essential Open Source Software for Science](https://chanzuckerberg.com/newsroom/chan-zuckerberg-initiative-awards-5-million-for-open-source-software-projects-essential-to-science/) by CZI among [32 projects](https://chanzuckerberg.com/eoss/proposals/), alongside giants such as numpy, pandas, scikit-learn, matplotlib, and others.
 
 {P33}
 
