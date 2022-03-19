@@ -4,6 +4,7 @@ Title: Research
 * It doesn't cover my work for Cellarity from 2018 to 2022, which is largely unpublished.
 * Currently, I focus on building data infra for enabling science in this space.
 * Before 2015, I worked on computational models for strongly correlated systems, solar cell materials, and basic quantum mechanics.
+* For a full list of publications and further links see [research](/research).
 
 ---
 
