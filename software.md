@@ -1,6 +1,6 @@
 title: Software
 
-This page lists open source software. Beyond what is listed, I have created and contributed to unpublished software in industry (machine learning, data science & engineering, photovoltaics simulations) and published academic research (computational physics, causal inference) since 2009.
+This page lists open source software. Beyond what is listed, I have created and contributed to unpublished software in industry (machine learning, data science & engineering, photovoltaics simulations) and academic research (computational physics, causal inference) since 2009.
 
 
 ## Initial conception & development
@@ -19,5 +19,3 @@ This page lists open source software. Beyond what is listed, I have created and 
 ## Major contributions
 
 * [Data Science Bowl 2017](https://github.com/NDKoehler/DataScienceBowl2017_7th_place): major contributions to 7th prize (out of 2400 participating teams) winning deep learning pipeline in highest endowed ($1M prize money) machine learning competition 2017
-
-
