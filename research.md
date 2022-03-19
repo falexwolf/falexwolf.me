@@ -13,7 +13,8 @@ Title: Research
 [Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a toolkit for analyzing single-cell gene expression data.
 Together with [anndata](http://anndata.readthedocs.org/) [[P33](/publications#P33)], it has become widely used and led to an ecosystem of tools, with >700k downloads and >600 dependent repositories.
 In 2019, it got featured within the first cycle of [Essential Open Source Software for Science](https://chanzuckerberg.com/newsroom/chan-zuckerberg-initiative-awards-5-million-for-open-source-software-projects-essential-to-science/) by CZI among [32 projects](https://chanzuckerberg.com/eoss/proposals/), alongside giants such as numpy, pandas, scikit-learn, matplotlib, and others.
-To sustain the project long-term and further professionalize development, we started [scverse](https://scverse.org) with other community members: a consortium for foundational tools for omics data in the life sciences.
+
+To sustain the project long-term and further professionalize development, we started [scverse](https://scverse.org) with other community members in early 2022.
 
 {P33}
 
@@ -23,7 +24,9 @@ To sustain the project long-term and further professionalize development, we sta
 ## Dynamical modeling of RNA velocity
 
 [<img src="./NatureBiotechCover2020-12.png" style="width: 120px; margin: 15px 20px 5px 0px"  align="left">](/publications#P28)
-RNA velocity has opened up new ways of studying cellular differentiation in scRNA-seq [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)] by capturing gene expression change rates based on ratios of spliced and unspliced mRNA. With [scVelo](https://scvelo.org) [[P28](/publications#P28)], we solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model. This generalizes RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations.
+RNA velocity has opened up new ways of studying cellular differentiation in scRNA-seq [[LaManno18](https://www.nature.com/articles/s41586-018-0414-6/)] by capturing gene expression change rates based on ratios of spliced and unspliced mRNA.
+
+With [scVelo](https://scvelo.org) [[P28](/publications#P28)], we solve the full transcriptional dynamics of splicing kinetics using a likelihood-based dynamical model. It generalizes RNA velocity to a wide variety of systems comprising transient cell states, which are common in development and in response to perturbations.
 
 {P28}
 
@@ -31,7 +34,9 @@ RNA velocity has opened up new ways of studying cellular differentiation in scRN
 ## Generative modeling of single-cell perturbation effects
 
 [<img src="https://pbs.twimg.com/media/EAq3dqdUwAEQssP?format=jpg&name=900x900" style="width: 140px; margin: 15px 20px 5px 0px"  align="left">](/publications#P27)
-We showed that generative models are able to predict single-cell perturbation responses out-of-distribution [[P27](/publications#P27)]. In principle, this approach should enable training models to predict the effects of disease and disease treatment across cell types, systems and species. While the first implementation of the approach (scGen) relied on latent space vector arithmetics, we then developed an end-to-end-trained model based on a conditional variational autoencoder (trVAE) [[P29](/publications#P29)] and a deep factor model [[P32](/publications#P32)]. We wrote a review about the emerging field [[P31](/publications#P31)].
+We showed that generative models are able to predict single-cell perturbation responses out-of-distribution [[P27](/publications#P27)]. In principle, this approach should enable training models to predict the effects of disease and disease treatment across cell types, systems and species.
+
+While the first implementation of the approach (scGen) relied on latent space vector arithmetics, we then developed an end-to-end-trained model based on a conditional variational autoencoder (trVAE) [[P29](/publications#P29)] and a deep factor model [[P32](/publications#P32)]. We wrote a review about the emerging field [[P31](/publications#P31)].
 
 {P32}
 
@@ -45,7 +50,9 @@ We showed that generative models are able to predict single-cell perturbation re
 ## Mapping the coarse-grained connectivity of complex manifolds
 
 [<img src="https://pbs.twimg.com/media/D2FmvihWkAA9wmG?format=jpg&name=medium" title="Hematopoietic lineages as captured in scRNA-seq from Paul et al., Cell (2015). See [P26]." style="width: 250px; margin: 15px 10px 5px 0px"  align="left">](/publications#P24)
-Partition-based graph abstraction (PAGA) aims to reconcile clustering with manifold learning by explaining variation using both discrete and continuous latent variables [[P26](/publications#P26)]. PAGA generates coarse-grained maps of manifolds with complex topologies in a computationally efficient and robust way. In [[P24](/publications#P24)], we used it to infer the first lineage tree of a whole complex animal - a [Science breakthrough](https://vis.sciencemag.org/breakthrough2018/) of the year 2018. It has been benchmarked as the overall best performing trajectory inference method in a review of ~70 methods by [Saelens *et al.* (Nat. Biotechn., 2019](https://www.nature.com/articles/s41587-019-0071-9)) [[tweet]](https://twitter.com/falexwolf/status/1113002674209873920). PAGA also builds on *diffusion pseudotime* [[P19]](/publications#P19), which defined a robust global measure of similarity among cells.
+Partition-based graph abstraction (PAGA) tries to reconcile clustering with manifold learning by explaining variation using both discrete and continuous latent variables [[P26](/publications#P26)]. PAGA generates coarse-grained maps of manifolds with complex topologies in a computationally efficient and robust way.
+
+In [[P24](/publications#P24)], we used it to infer the first lineage tree of a whole complex animal - a [Science breakthrough](https://vis.sciencemag.org/breakthrough2018/) of the year 2018. It has been benchmarked as the overall best performing trajectory inference method in a review of ~70 methods by [Saelens *et al.* (Nat. Biotechn., 2019](https://www.nature.com/articles/s41587-019-0071-9)) [[tweet]](https://twitter.com/falexwolf/status/1113002674209873920). PAGA also builds on *diffusion pseudotime* [[P19]](/publications#P19), which defined a robust global measure of similarity among cells.
 
 {P26}
 
@@ -103,7 +110,7 @@ We developed a way to use tensor trains within [dynamical mean-field theory](htt
 
 ## Modeling diffusion-reaction chemistry of solar cells to improve conversion efficiency
 
-The low energy conversion efficiency of established solar cells is largely due to chemical imperfections of the material at which excited photons recombine. While at Bosch research, I established models for material syntheses to optimize processes for the minimization of such imperfections [[O5](/publications#O5),[P8-P11](/publications#P11)]. Mathematically, these models reduce to diffusion-reaction equations. I wrote a proprietary software, which was productionized at Bosch Solar Energy.
+The low energy conversion efficiency of established solar cells is largely due to chemical imperfections of the material at which excited photons recombine. While at Bosch Research, I established models for material syntheses to optimize processes for the minimization of such imperfections [[O5](/publications#O5),[P8-P11](/publications#P11)]. These models are all diffusion-reaction equations. I wrote a proprietary software, which was productionized at Bosch Solar Energy.
 
 {O5}
 
@@ -148,7 +155,9 @@ Collapse and revival oscillations and coherent expansions have been suggested fo
 
 ## Relaxation of a quantum many-body system after perturbation
 
-We investigated the non-equilibrium behavior of quantum many-body systems [[P1-P4](/publications#P4)], in particular, the fundamental problem of how such systems transition from an excited state to equilibrium. This happens through chaotic dynamics in the classical case, but is an active area of research in the [quantum case](http://dx.doi.org/10.1038/nature06838). We showed that the transition proceeds through an intermediate, prethermalized, plateau for which we developed a statistical theory. I contributed the central analytical calculation [[T1](/talks/#T1)] to the highly cited paper [[P3](/publications#P3)] during a summer lab project.
+We investigated the non-equilibrium behavior of quantum many-body systems [[P1-P4](/publications#P4)], in particular, the fundamental problem of how such systems transition from an excited state to equilibrium. This happens through chaotic dynamics in the classical case, but is an active area of research in the [quantum case](http://dx.doi.org/10.1038/nature06838).
+
+We showed that the transition proceeds through an intermediate, prethermalized, plateau for which we developed a statistical theory. I contributed the central analytical calculation [[T1](/talks/#T1)] to the highly cited paper [[P3](/publications#P3)] during a summer lab project.
 
 {P3}
 
@@ -158,9 +167,9 @@ We investigated the non-equilibrium behavior of quantum many-body systems [[P1-P
 ## High school
 
 [<img src="./sartre_a_stammheim.jpg" title="Sartre in Stammheim. From [O1], original from H. M. Schleyer: RAF Geschichte." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#O1)
-During high school, I spent a lot of time writing & playing music, being out in the nature, and aimed at becoming a chef for one year.
-I also made some clumsy efforts to better understand how ideological ideas stimulate change in society and culture.
+During high school, I spent a lot of time writing & playing music, hiking & cycling in the close-by mountains, reading novels, arts & social sciences, and cooking (I wanted to become a chef for a while). I hadn't yet learned to appreciate technology, natural sciences, mathematics, and entrepreneurship.
+
+I also made clumsy efforts to better understand how ideological ideas stimulate change in society and culture.
 For instance, in my thesis, I investigated why J.-P. Sartre publicly supported the German terrorist group RAF upon his visit in Stammheim in 1974 [[O1](/publications#O1), or better [Der Spiegel (2013)](http://www.spiegel.de/spiegel/print/d-90848693.html)].
-As a teenager, I neither liked technology, nor science, nor mathematics.
 
 {O1}
