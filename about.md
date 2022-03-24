@@ -1,6 +1,6 @@
 Title: About
 
-Working on data management for computational biology.
+Data management for computational biology.
 
 Previously, led building [Cellarity](https://cellarity.com/)’s compute platform,
 created [Scanpy](https://scanpy.org/),
