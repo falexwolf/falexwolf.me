@@ -1,6 +1,6 @@
-Title: _
+Title: Hi there!
 
-I work at [Lamin Labs](https://lamin.ai/).
+I work on [Lamin Labs](https://lamin.ai/).
 We want to make data & analysis management for computational biology a lot more pleasant, robust and effective.
 
 Previously, I created [Scanpy](https://scanpy.org/),
