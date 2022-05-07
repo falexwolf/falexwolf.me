@@ -1,5 +1,7 @@
 Title: Hi there!
 
+Thanks for stopping by, I'm Alex.
+
 I work on [Lamin Labs](https://lamin.ai/).
 We want to make data & analysis management for computational biology a lot more pleasant, robust and effective.
 
