@@ -9,3 +9,5 @@ blog.md
 */__pycache__
 _scripts/mirror.sh
 .ipynb_checkpoints/
+_css
+_includes
