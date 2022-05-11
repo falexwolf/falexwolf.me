@@ -1,9 +1,9 @@
 Title: Research
 
-* This page mostly covers research on how computational models help map, understand, and predict the biology of single cells. It doesn't cover work in industry from 2018 to 2022, which is largely unpublished.
-* Currently, I focus on building data infra for enabling science in this space.
+* This page mostly covers research on how computational models help map, understand, and predict the biology of cells.
+* Currently, I focus on building infra for enabling data science in this space: [lamin.ai](https://lamin.ai).
 * Before 2015, I worked on computational models for strongly correlated systems, solar cell materials, and basic quantum mechanics.
-* For a full list of publications and further links see [publications](/publications).
+* For a full list of publications see [publications](/publications) or [Google Scholar](https://scholar.google.de/citations?user=1FnOtMoAAAAJ).
 
 ---
 
