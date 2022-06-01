@@ -168,9 +168,9 @@ We showed that the transition proceeds through an intermediate, prethermalized, 
 ## High school
 
 [<img src="./sartre_a_stammheim.jpg" title="Sartre in Stammheim. From [O1], original from H. M. Schleyer: RAF Geschichte." style="width: 100px; margin: 15px 10px 5px 0px"  align="left">](/publications#O1)
-During high school, I spent a lot of time writing & playing music, hiking & cycling in the close-by mountains, reading novels, arts & social sciences, and cooking (I wanted to become a chef for a while). I hadn't yet learned to appreciate technology, natural sciences, mathematics, and entrepreneurship.
+During high school, I spent a lot of time doing different things quite excessively: writing & playing music, sports, reading books (novels, arts, social sciences), cooking (with summer work in restaurants), and working in non-profits (a full year after high school).
 
-I also made clumsy efforts to better understand how ideological ideas stimulate change in society and culture.
-For instance, in my thesis, I investigated why J.-P. Sartre publicly supported the German terrorist group RAF upon his visit in Stammheim in 1974 [[O1](/publications#O1), or better [Der Spiegel (2013)](http://www.spiegel.de/spiegel/print/d-90848693.html)].
+For instance, I made clumsy efforts to better understand how ideological ideas stimulate change in society and culture.
+In my thesis, I investigated why J.-P. Sartre publicly supported the German terrorist group RAF upon his visit in Stammheim in 1974 [[O1](/publications#O1), or better [Der Spiegel (2013)](https://www.spiegel.de/politik/der-alte-und-das-arschloch-a-2b102adf-0002-0001-0000-000090848693)].
 
 {O1}
