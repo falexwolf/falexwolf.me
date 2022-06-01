@@ -8,7 +8,7 @@ I'm contributing to a few organizations on their scientific advisory boards:
 * [Retro](https://retro.bio/): a company to treat age-related diseases.
 * [scverse](https://scverse.org/): a non-profit to advance Python tools for omics data in the life sciences.
 
-I've been an academic researcher for several years, and so far I still have an [academic CV](/CV.pdf) and a [Google Scholar profile](http://scholar.google.de/citations?user=1FnOtMoAAAAJ).
+I have an [academic CV](/CV.pdf) and a Google Scholar [profile](http://scholar.google.de/citations?user=1FnOtMoAAAAJ).
 
 If you want to drop me a message, please connect on [LinkedIn](https://linkedin.com/in/falexwolf)!
 
