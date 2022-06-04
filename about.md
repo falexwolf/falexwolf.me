@@ -1,8 +1,8 @@
 Title: About
 
-Most of my time is spent on [Lamin Labs](http://lamin.ai).
+I work at [Lamin Labs](http://lamin.ai).
 
-I'm contributing to a few organizations on their scientific advisory boards:
+Organizations for whom I have official advisor roles:
  
 * [Doloromics](https://www.doloromics.com/): a company to treat chronic pain.
 * [Retro](https://retro.bio/): a company to treat age-related diseases.
