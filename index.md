@@ -2,12 +2,12 @@ Title: Hi there!
 
 Thanks for stopping by, I'm Alex.
 
-I work on [Lamin Labs](https://lamin.ai/).
+I work at [Lamin Labs](https://lamin.ai/).
 We want to make data & analysis management for computational biology a lot more pleasant, robust and effective.
 
 Previously, I created [Scanpy](https://scanpy.org/),
 led the build-up of [Cellarity](https://cellarity.com/)’s compute platform,
-and performed quite broad [research](/research/).
+and did [research](/research/) in computational sciences.
 
 <center style="margin-top:1.5em">
 <a href="https://twitter.com/falexwolf"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a>
