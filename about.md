@@ -1,7 +1,5 @@
 Title: About
 
-I work at [Lamin Labs](http://lamin.ai).
-
 Organizations for whom I have official advisor roles:
  
 * [Doloromics](https://www.doloromics.com/): a company to treat chronic pain.
