@@ -3,6 +3,7 @@ Title: About
 Organizations for whom I have official advisor roles:
  
 * [Doloromics](https://www.doloromics.com/): a company to treat chronic pain.
+* [Helmholtz Munich](https://www.helmholtz-munich.de/): German national science center for environmental health.
 * [Retro](https://retro.bio/): a company to treat age-related diseases.
 * [scverse](https://scverse.org/): a non-profit to advance Python tools for omics data in the life sciences.
 
