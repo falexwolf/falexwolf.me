@@ -1,7 +1,6 @@
 Title: Hi there!
 
-I work at [Lamin Labs](https://lamin.ai/).
-We want to make data & analysis management for computational biology a lot more pleasant, robust, and effective.
+I work on data APIs for biology at [Lamin Labs](https://lamin.ai/).
 
 Previously, I created [Scanpy](https://scanpy.org/),
 led the build-up of [Cellarity](https://cellarity.com/)’s compute platform,
