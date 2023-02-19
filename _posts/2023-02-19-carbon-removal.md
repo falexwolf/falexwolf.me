@@ -19,11 +19,11 @@ Until someone provides other evidence, I'll start to offset my past & future fli
 
 **Notes**
 
-[1] Since around 2000, I've tried to live without causing climate (and nature more generally) too much damage [2]. But flying became a problem for me after taking a job in Cambridge, MA, while raising kids in Munich. In 2018, I flew 3 times, in 2019, 10 times, and in 2020+2021+2022, 4 times. That's 16 flights, totaling around 16 tons of CO2.
+[1] Since around 2000, I've tried to live without causing climate (and nature more generally) too much damage. But flying became a problem after taking a job in Cambridge, MA, while raising kids in Munich. In 2018, I flew 3 times, in 2019, 10 times, and in 2020+2021+2022, 4 times. That's 16 flights, totaling around 16 tons of CO2.
 
-Hence, for a few years already, I had hoped for reliable (auditable) CO2 removal and only rarely clicked Lufthansa's ["CO2 offset" button](https://www.lufthansa.com/de/en/offset-flight), not having much faith in it.
+Hence, I had hoped for reliable (auditable) CO2 removal and only rarely clicked Lufthansa's ["CO2 offset" button](https://www.lufthansa.com/de/en/offset-flight), not having much faith in it.
 
-[2] Things that I felt are [meaningful](https://ourworldindata.org/emissions-by-sector) and that I could rather easily and consistently accomplish:
+To me, it's a missing piece among personal behaviors that I felt are [meaningful](https://ourworldindata.org/emissions-by-sector) and that I could rather easily and consistently accomplish:
 
 * Devoting my career to improving renewable energies until 2015 (unfortunately, without achieving much).
 * Voting for political parties that prioritize climate.
