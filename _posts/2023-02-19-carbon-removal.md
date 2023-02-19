@@ -6,7 +6,7 @@ Paul Graham [tweeted last week](https://twitter.com/paulg/status/162456602828514
 
 The topic matters to me [1], so I researched material that would provide guidance on which initiatives I should trust.
 
-In summary: In the past two years, reliable, auditable CO2 removal got scaled to thousands of tons. Since [late 2022](https://web.archive.org/web/20221001000000*/https://climeworks.com/actnow), individuals can buy it through [ClimeWorks](https://climeworks.com/actnow) and [Charm Industrial](https://charmindustrial.com/buy) (and potentially others).
+In summary: In the past two years, reliable, auditable CO2 removal got scaled to thousands of tons per year. Since [late 2022](https://web.archive.org/web/20221001000000*/https://climeworks.com/actnow), individuals can buy it through [ClimeWorks](https://climeworks.com/actnow) and [Charm Industrial](https://charmindustrial.com/buy) (and potentially others).
 
 1. ClimeWorks and Charm Industrial are the only two companies that allow individuals to buy CO2 removal out of [Stripe Climate](https://stripe.com/en-de/climate)'s [first batch](https://github.com/stripe/carbon-removal-source-materials/tree/master/Project%20Applications/2020) in 2020. Microsoft also evaluated and funded them.
 2. ClimeWorks comes out of [CarbonPlan's CDR proposal database](https://carbonplan.org/research/cdr-database) among 4 approaches estimated to provide CO2 removal beyond 1k years and at an essentially unlimited scale. A recent [CarbonPlan report](https://carbonplan.org/research/cdr-scale-barriers) found no fundamental problems with the current absence of standards, given the nascence of the field: it seems on track to become more regulated as it scales.
