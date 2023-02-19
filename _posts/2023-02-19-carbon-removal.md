@@ -1,4 +1,4 @@
-Title: Buying carbon removal to compensate for flights
+Title: Buying CO2 removal to compensate for flying
 
 *Published: 2023-02-19.*
 
@@ -13,9 +13,11 @@ In summary: In the past 2 years, reliable, auditable CO2 removal got scaled to t
 3. A [Grist article](https://grist.org/climate-energy/lucky-charm/) on Charm and a [Quartz article](https://qz.com/1100221/the-worlds-first-negative-emissions-plant-has-opened-in-iceland-turning-carbon-dioxide-into-stone) on ClimeWorks provide additional context. They're a bit outdated, and things have improved since then. For instance, ClimeWorks [aims to deploy a 36k tons plant in 2024](https://en.wikipedia.org/wiki/Climeworks), running the 4k removal plant stably.
 4. Mainstream press articles confirm the conclusions on a high level.
 
-The sources seem aligned on that scaling to $50 or $100 per ton removed CO2 equivalent could be possible over the upcoming years if the industry keeps scaling.
+The sources seem aligned on that scaling to 50 USD or 100 USD per ton removed CO2 equivalent could be possible over the upcoming years if the industry keeps scaling.
 
-This is enough to convince me until someone provides different evidence, and I'll start to offset my past & future flights with ClimeWorks & Charm Industrials and keep watching out to also support new players in that space.
+This is enough to convince me until someone provides different evidence, and I'll start to offset my past & future flights with ClimeWorks & Charm Industrials and watch out to support new players in this space. Browsing the references above, it's clear that 100s of initiatives exist.
+
+**Notes**
 
 [1]: Since around 2000, I've tried to live without causing climate (and nature more generally) too much damage [2]. But then flying became a problem for me after taking a job in Cambridge, MA, while raising kids in Munich. In 2018, I flew 3 times, in 2019, 10 times, and in 2020+2021+2022, 4 times. That's 16 flights, totaling around 16 tons of CO2.
 
