@@ -1,4 +1,4 @@
-Title: How much can we simplify the joint probability $P(A, B, C)$ if two events are independent?
+Title: How much can we simplify $P(A, B, C)$ if two events are independent?
 
 *Published: 2017-05-11.*
 
