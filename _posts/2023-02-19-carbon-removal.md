@@ -15,11 +15,11 @@ In summary: In the past two years, reliable, auditable CO2 removal got scaled to
 
 The sources seem aligned that scaling to 50 - 100 USD per ton removed CO2 equivalent could be possible over the upcoming years if the industry keeps scaling.
 
-Until someone provides other evidence, I'll start to offset my past & future flights with ClimeWorks & Charm Industrials and watch out to support new players in this space (the Stripe & CarbonPlan references link to many initiatives).
+Until someone provides other evidence, I'll start to offset my past & future flights with ClimeWorks & Charm Industrials and watch out to support new players in this space (the Stripe & CarbonPlan pages link to many initiatives).
 
 **Notes**
 
-[1] Since around 2000, I've tried to live without causing climate (and nature more generally) too much damage. But flying became a problem after taking a job in Cambridge, MA, while raising kids in Munich. In 2018, I flew 3 times, in 2019, 10 times, and in 2020+2021+2022, 4 times. That's 16 flights, totaling around 16 tons of CO2.
+[1] Since around 2000, I've tried to live without causing climate (and nature more generally) too much damage. But flying became a problem after taking a job in Cambridge, MA, while raising kids in Munich. In 2018, I flew 3 times, in 2019, 10 times, and across 2020, 2021, and 2022, 4 times. That's 16 flights, totaling around 16 tons of CO2 (according to Google).
 
 Hence, I had hoped for reliable (auditable) CO2 removal and only rarely clicked Lufthansa's ["CO2 offset" button](https://www.lufthansa.com/de/en/offset-flight), not having much faith in it.
 
