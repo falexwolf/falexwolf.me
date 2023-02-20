@@ -1,6 +1,6 @@
 Title: Buying CO2 removal to compensate for flying
 
-*Published: 2023-02-20.*
+*Published: 2023-02-19.*
 
 Paul Graham [tweeted last week](https://twitter.com/paulg/status/1624566028285145091): "Charm Industrial now lets you buy CO2 removal direct through an online form. You can take a flight, and after landing, pay to have the CO2 taken back out of the atmosphere."
 
