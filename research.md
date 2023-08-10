@@ -7,7 +7,7 @@ Title: Research
 
 ---
 
-## Software for single-cell analytics and data management
+## Software for omics analytics and data management
 
 [<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_BrightFG.svg" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
 [Scanpy](https://scanpy.readthedocs.io) [[P23](/publications#P23)] is a toolkit for analyzing single-cell gene expression data.
@@ -16,6 +16,8 @@ Together with [anndata](http://anndata.readthedocs.org/) [[P33](/publications#P3
 In 2019, it got featured within the first cycle of [Essential Open Source Software for Science](https://chanzuckerberg.com/newsroom/chan-zuckerberg-initiative-awards-5-million-for-open-source-software-projects-essential-to-science/) by CZI among [32 projects](https://chanzuckerberg.com/eoss/proposals/), alongside giants such as numpy, pandas, scikit-learn, matplotlib, and others.
 
 To sustain the project long-term and further professionalize development, we started [scverse](https://scverse.org) with other community members in early 2022.
+
+{P34}
 
 {P33}
 
