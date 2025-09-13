@@ -12,7 +12,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        python-version: ["3.8"]
+        python-version: ["3.12"]
     timeout-minutes: 20
 
     steps:
@@ -28,7 +28,7 @@ jobs:
           pip install uv
           uv pip install --system git+https://github.com/falexwolf/resport
       - run: resport init
-      - run: resport deploy
+      - run: resport build
       - uses: cloudflare/wrangler-action@v3
         id: cloudflare
         with:
