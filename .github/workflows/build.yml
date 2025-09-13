@@ -1,0 +1,47 @@
+name: build
+
+on:
+  push:
+    branches: [data]
+  pull_request:
+    branches: [data]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.12"]
+    timeout-minutes: 20
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+          cache-dependency-path: ".github/workflows/build.yml"
+      - run: |
+          pip install uv
+          uv pip install --system git+https://github.com/falexwolf/resport
+      - run: resport init
+      - run: resport deploy
+      - uses: cloudflare/wrangler-action@v3
+        id: cloudflare
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 472bdad691b4483dea759eadb37110bd
+          command: pages deploy "_build/html" --project-name=falexwolf-com
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      - uses: edumserrano/find-create-or-update-comment@v2
+        if: github.event_name == 'pull_request'
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body-includes: "Deployment URL"
+          comment-author: "github-actions[bot]"
+          body: |
+            Deployment URL: ${{ steps.cloudflare.outputs.deployment-url }}
+          edit-mode: replace
