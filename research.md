@@ -7,6 +7,10 @@ Title: Research
 
 ---
 
+## Data infrastructure for biology
+
+[blog.lamin.ai](https://blog.lamin.ai) is currently the best place to find things I wrote & edited.
+
 ## Software for omics analytics and data management
 
 [<img src="https://scanpy.readthedocs.io/en/latest/_static/Scanpy_Logo_BrightFG.svg" style="width: 120px; margin: 15px 10px 5px 0px"  align="left">](/publications#P23)
