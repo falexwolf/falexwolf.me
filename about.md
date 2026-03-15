@@ -11,7 +11,9 @@ I'm trained as a scientist and so I have an [academic CV](/CV.pdf) and a Google 
 * I enjoy playing all kinds of sports with the kids and running & hiking. As a teen I competed in running, cycling, judo & jujutsu.
 * I've enjoyed living & working in different places, as a scientist & engineer and in my teens as a social worker & kitchen aide: Rosenheim, Ribeauvillé, Dehradun, Augsburg, DC, Paris, Stuttgart, NYC, Boston. In my late teens & early twenties I backpacked doing things like hiking through central Romania using only a national map and a compass.
 * I had pretty much missed out on LLMs until late 2022, similar to missing out on the interesting parts of the internet & technology until the late 2000s. 
-* As a teen -- having been classically trained as a child -- I taught myself a bunch of instruments and played shows. I always hoped to get back to playing music with the kids but it's taking longer than expected, and maybe we'll keep exploring things other than music.
+* As a teen - having been classically trained as a child - I taught myself a bunch of instruments and played shows. I always hoped to get back to playing music with the kids but it's taking longer than expected, and maybe we'll keep exploring things other than music.
+* I've never owned a car and typically cycle everywhere. If it's too far, I take the train.
+* Our family is quite obsessed with cooking, although I personally now do less of it.
 * ...
 
 Organizations for whom I have official advisor roles:
