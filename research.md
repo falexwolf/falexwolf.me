@@ -1,14 +1,12 @@
 Title: Research
 
-[blog.lamin.ai](https://blog.lamin.ai) is currently the best place to find things I wrote & edited. This page mostly covers research on how computational models help map, understand, and predict the biology of cells. Before 2015, I worked on computational models for strongly correlated systems, solar cell materials, and basic quantum mechanics.
+[blog.lamin.ai](https://blog.lamin.ai) is currently the best place to find things I wrote & edited. 
+
+This page mostly covers previous research on how computational models help map, understand, and predict the biology of cells. Before 2015, I worked on computational models for strongly correlated systems, solar cell materials, and basic quantum mechanics.
 
 For a list of academic publications, see [here](/publications), [Google Scholar](https://scholar.google.de/citations?user=1FnOtMoAAAAJ), or [ORCID](http://orcid.org/0000-0002-8760-7838).
 
 ---
-
-## Data infrastructure for biology
-
-[blog.lamin.ai](https://blog.lamin.ai) is currently the best place to find things I wrote & edited.
 
 ## Software for omics analytics and data management
 
