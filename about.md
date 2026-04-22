@@ -7,7 +7,7 @@ I am the co-founder and CEO of [Lamin](https://lamin.ai). You can read up on wha
 I'm trained as a scientist and so I have an [academic CV](/CV.pdf) and a Google Scholar [profile](http://scholar.google.de/citations?user=1FnOtMoAAAAJ). Misc things that you don't find on the CV:
 
 * I love the work.
-* I'm grateful to have found a good problem space to work on after a long journey through different areas of interest since childhood. I'm grateful to be working alongside my wife.
+* I'm happy to have found a good problem space to work on after a long journey through different areas of interest since childhood.
 * I enjoy playing all kinds of sports with the kids and running & hiking. As a teen I competed in running, cycling, judo & jujutsu.
 * I've enjoyed living & working in different places, as a scientist & engineer and in my teens as a social worker & kitchen aide: Rosenheim, Ribeauvillé, Dehradun, Augsburg, DC, Paris, Stuttgart, NYC, Boston. In my late teens & early twenties I backpacked doing things like hiking through central Romania using only a national map and a compass.
 * I had pretty much missed out on LLMs until late 2022, similar to missing out on the interesting parts of the internet & technology until the late 2000s. 
