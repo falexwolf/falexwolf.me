@@ -7,7 +7,7 @@ This page lists open source software. Beyond what is listed, I have created and 
 
 * [lamindb](https://docs.lamin.ai):  A data framework for biology <img src="https://img.shields.io/github/stars/laminlabs/lamindb?logo=GitHub&color=yellow"> <img src="https://pepy.tech/badge/lamindb"> <img src="https://img.shields.io/pypi/dm/lamindb?logo=PyPI&color=blue">
 * [Scanpy](https://scanpy.readthedocs.io/en/latest/):  Single-cell analysis in Python <img src="https://img.shields.io/github/stars/scverse/scanpy?logo=GitHub&color=yellow"> <img src="https://pepy.tech/badge/scanpy"> <img src="https://img.shields.io/pypi/dm/scanpy?logo=PyPI&color=blue"> <img src="https://img.shields.io/conda/dn/bioconda/scanpy?logo=Anaconda">
-* [anndata](https://anndata.readthedocs.io/en/latest/): anndata: Access and store annotated data matrices <img src="https://img.shields.io/github/stars/theislab/anndata?logo=GitHub&color=yellow"> <img src="https://pepy.tech/badge/anndata"> <img src="https://img.shields.io/pypi/dm/anndata?logo=PyPI&color=blue"> <img src="https://img.shields.io/conda/dn/bioconda/anndata?logo=Anaconda">
+* [anndata](https://anndata.readthedocs.io/en/latest/): Access and store annotated data matrices <img src="https://img.shields.io/github/stars/theislab/anndata?logo=GitHub&color=yellow"> <img src="https://pepy.tech/badge/anndata"> <img src="https://img.shields.io/pypi/dm/anndata?logo=PyPI&color=blue"> <img src="https://img.shields.io/conda/dn/bioconda/anndata?logo=Anaconda">
 * [PAGA](https://github.com/theislab/paga): Mapping out the global connectivity structure of manifolds <img src="https://img.shields.io/github/stars/theislab/paga?logo=GitHub&color=yellow">
 
 
