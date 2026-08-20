@@ -1,6 +1,6 @@
 Title: Hi there!
 
-I work on data infra for bio/AI at [Lamin](https://lamin.ai/).
+I work on open data infra for bio/AI at [Lamin](https://lamin.ai/).
 
 Previously, I created [Scanpy](https://scanpy.readthedocs.io/) and led the build-up of [Cellarity](https://cellarity.com/)’s compute platform.
 
