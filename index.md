@@ -7,7 +7,6 @@ Previously, I created [Scanpy](https://scanpy.readthedocs.io/) and led the build
 <center style="margin-top:1.5em">
 <a href="https://linkedin.com/in/falexwolf"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span></a>
 <a href="https://github.com/falexwolf"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-github fa-stack-1x fa-inverse"></i></span></a>
-<a href="http://scholar.google.de/citations?user=1FnOtMoAAAAJ"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="ai ai-google-scholar fa-stack-1x fa-inverse">
+<a href="http://scholar.google.de/citations?user=1FnOtMoAAAAJ"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="ai ai-google-scholar fa-stack-1x fa-inverse"></i></span></a>
 <a href="https://twitter.com/falexwolf"><span class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a>
-</i></span></a>
 </center>
